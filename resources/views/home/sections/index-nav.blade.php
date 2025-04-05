@@ -45,8 +45,8 @@
                                     <li><a href="{{ route('register') }}">Register</a></li>
                                 </ul>
                             </li>
-                            
-                            <li><a href="contact.html">Contact Us</a></li>
+
+                            <li><a href="{{ route('contact') }}">Contact Us</a></li>
 
                         </ul>
                         <div class="menu_side_area">

@@ -49,7 +49,7 @@
                                 </ul>
                             </li>
 
-                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="{{ route('contact') }}">Contact Us</a></li>
                             @auth
                                 <!-- Check if user is authenticated -->
                                 <!-- If user is logged in, show Profile menu -->
@@ -58,7 +58,7 @@
                                     <ul>
                                         <li><a href="{{ route('profile') }}"><i class="fa fa-user"></i> My
                                                 Profile</a></li>
-                                        
+
                                         <li>
                                             <form method="POST" action="{{ route('logout') }}">
                                                 @csrf
