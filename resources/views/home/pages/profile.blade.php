@@ -9,7 +9,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <h1>Edit Profile</h1>
+                            <h1 class='text-[2.5rem] md:text-[4rem] font-bold'>Edit Profile</h1>
                         </div>
                         <div class="clearfix"></div>
                     </div>

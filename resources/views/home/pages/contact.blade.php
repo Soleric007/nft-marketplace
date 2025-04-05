@@ -10,7 +10,7 @@
                     <div class="row">
 
                         <div class="col-md-12 text-center">
-                            <h1>Contact Us</h1>
+                            <h1 class='text-[2.5rem] md:text-[4rem] font-bold'>Contact Us</h1>
                             <p>Anim pariatur cliche reprehenderit</p>
                         </div>
                         <div class="clearfix"></div>

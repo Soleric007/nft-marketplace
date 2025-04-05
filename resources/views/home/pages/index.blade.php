@@ -20,6 +20,8 @@
     <link href="/template/assets/css/coloring-gradient.css" rel="stylesheet" type="text/css" />
     <!-- custom font -->
     <link href="/template/assets/css/custom-font-3.css" rel="stylesheet" type="text/css" />
+    @vite('resources/css/app.css')
+
 </head>
 
 <body class="switch-scheme">

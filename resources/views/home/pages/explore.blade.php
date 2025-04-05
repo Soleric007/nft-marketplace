@@ -10,7 +10,7 @@
                     <div class="row">
 
                         <div class="col-md-12 text-center">
-                            <h1>Explore</h1>
+                            <h1 class='text-[2.5rem] md:text-[4rem] font-bold'>Explore</h1>
                         </div>
                         <div class="clearfix"></div>
                     </div>
