@@ -1,4 +1,6 @@
 <header class="header-light scroll-light">
+    @vite('resources/css/app.css')
+
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -24,30 +26,53 @@
                         <ul id="mainmenu">
                             <li>
                                 <a href="{{ route('index') }}">Home<span></span></a>
-
                             </li>
                             <li>
-                                <a href="#">Market Place<sname: pan></sname:></a>
+                                <a href="#">Market Place<span></span></a>
                                 <ul>
                                     <li><a href="{{ route('explore') }}">Explore</a></li>
                                     <li><a href="{{ route('author') }}">Authors</a></li>
                                     <li><a href="{{ route('activity') }}">Activity</a></li>
                                     <li><a href="{{ route('rankings') }}">Rankings</a></li>
                                 </ul>
-
                             </li>
+
+
+
                             <li>
                                 <a href="#">User<span></span></a>
                                 <ul>
                                     <li><a href="{{ route('wallet') }}">Wallet</a></li>
                                     <li><a href="{{ route('create') }}">Create NFT</a></li>
-                                    <li><a href="{{ route('login') }}">Login</a></li>
-                                    <li><a href="{{ route('register') }}">Register</a></li>
+                                    @if (!Auth::user())
+                                        <li><a href="{{ route('login') }}">Login</a></li>
+                                        <li><a href="{{ route('register') }}">Register</a></li>
+                                    @endif
                                 </ul>
                             </li>
 
                             <li><a href="{{ route('contact') }}">Contact Us</a></li>
+                            @auth
+                                <!-- Check if user is authenticated -->
+                                <!-- If user is logged in, show Profile menu -->
+                                <li>
+                                    <a href="#">Profile <span></span></a>
+                                    <ul>
+                                        <li><a href="{{ route('profile') }}"><i class="fa fa-user"></i> My
+                                                Profile</a></li>
+                                        <li><a href="{{ route('dashboard') }}"><i class="fa fa-user"></i> My Dashboard</a></li>
 
+                                        <li>
+                                            <form method="POST" action="{{ route('logout') }}">
+                                                @csrf
+                                                <button type="submit" class="dropdown-item text-white">
+                                                    <i class="fa fa-sign-out"></i> Sign out
+                                                </button>
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </li>
+                            @endauth
                         </ul>
                         <div class="menu_side_area">
                             <a href="{{ route('wallet') }}" class="btn-main btn-wallet"><i

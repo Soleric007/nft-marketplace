@@ -58,6 +58,9 @@
                                     <ul>
                                         <li><a href="{{ route('profile') }}"><i class="fa fa-user"></i> My
                                                 Profile</a></li>
+                                        <li><a href="{{ route('dashboard') }}"><i class="fa fa-user"></i> My Dashboard</a>
+                                        </li>
+
 
                                         <li>
                                             <form method="POST" action="{{ route('logout') }}">
