@@ -17,7 +17,7 @@
     <!-- color scheme -->
     <link id="colors" href="/template/assets/css/colors/scheme-01.css" rel="stylesheet" type="text/css" />
     <link href="/template/assets/css/coloring.css" rel="stylesheet" type="text/css" />
-    @vite('resources/css/app.css')
+    {{-- @vite('resources/css/app.css') --}}
 
 </head>
 
@@ -132,6 +132,28 @@
     <script src="/template/assets/js/plugins.js"></script>
     <script src="/template/assets/js/designesia.js"></script>
 
+    <!-- Include SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        @if(session('success'))
+            Swal.fire({
+                title: "Success!",
+                text: "{{ session('success') }}",
+                icon: "success",
+                confirmButtonText: "OK"
+            });
+        @endif
+
+        @if(session('error'))
+            Swal.fire({
+                title: "Error!",
+                text: "{{ session('error') }}",
+                icon: "error",
+                confirmButtonText: "OK"
+            });
+        @endif
+    </script>
 
 </body>
 

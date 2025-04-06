@@ -1,4 +1,5 @@
 <x-home-layout>
+    @vite('resources/css/app.css')
     <div class="no-bottom no-top" id="content">
         <div id="top"></div>
 
@@ -20,57 +21,250 @@
 
 
         <!-- section begin -->
-        <section class="px-4 lg:px-[10rem]" id="section-main" aria-label="section">
-            <div class="max-w-6xl mx-auto p-6">
+        <section id="section-main" aria-label="section">
+            <div class="container">
                 <!-- User Details Section -->
-                <div class="bg-white shadow-lg rounded-lg p-6 mb-6">
-                    <div class="flex items-center space-x-6">
-                        <img src="{{asset('template/assets/images/default.jpeg')}}" alt="Profile Image"
-                            class="w-16 h-16 rounded-full border-2 border-indigo-600">
-                        <div>
-                            <h2 class="text-xl font-semibold text-gray-900">{{Auth::user()->name}}</h2>
-                            <p class="text-gray-600">{{Auth::user()->email}}</p>
-                            <p class="text-gray-600">Wallet: {{Auth::user()->wallet ? Auth::user()->wallet : 'Not Set'}}
+                <div class="user-details">
+                    <div class="profile">
+                        <img src="{{ asset('template/assets/images/default.jpeg') }}" alt="Profile Image"
+                            class="profile-image">
+                        <div class="user-info">
+                            <h2 class="user-name">{{ Auth::user()->name }}</h2>
+                            <p class="user-email">{{ Auth::user()->email }}</p>
+                            <p class="user-wallet">Wallet: {{ Auth::user()->wallet ? Auth::user()->wallet : 'Not Set' }}
                             </p>
-                            <p class="text-gray-600">Phone: {{Auth::user()->phone}}</p>
+                            <p class="user-phone">Phone: {{ Auth::user()->phone }}</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Ethereum Balance & Actions -->
-                <div class="bg-white shadow-lg rounded-lg p-6 mb-6">
-                    <div class="flex justify-between items-center">
-                        <h2 class="text-lg font-semibold text-gray-900">Ethereum Balance</h2>
-                        <p class="text-indigo-600 text-xl font-bold">
-                            {{Auth::user()->balance ? Auth::user()->balance : '0.25' }}ETH
+                <div class="balance-actions">
+                    <div class="balance-info">
+                        <h2 class="balance-heading">Ethereum Balance</h2>
+                        <p class="balance-amount">
+                            {{ Auth::user()->balance ? Auth::user()->balance : '0.25' }} ETH
                         </p>
                     </div>
-                    <div class="mt-4 flex space-x-4">
-                        <a href="{{route('wallet')}}" class="bg-indigo-600 text-white px-4 py-2 rounded-lg">Connect
-                            Wallet</a>
-                        <a href='{{route('create')}}' class="bg-indigo-600 text-white px-4 py-2 rounded-lg">Create
-                            NFT</a>
+                    <div class="action-buttons">
+                        <a href="{{ route('wallet') }}" class="action-button">Connect Wallet</a>
+                        <a href="{{ route('create') }}" class="action-button">Create NFT</a>
                     </div>
                 </div>
 
                 <!-- NFTs Section -->
-                <div class="bg-white shadow-lg rounded-lg p-6">
-                    <h2 class="text-lg font-semibold text-gray-900 mb-4">Your NFTs (0)</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                        <!-- NFT Card Example -->
-                        <div class="bg-gray-100 p-4 rounded-lg shadow">
-                            <img src="{{asset('template/assets/images/default.jpeg')}}" alt="NFT Image"
-                                class="w-full h-40 object-cover rounded-lg">
-                            <h3 class="text-lg font-semibold mt-2">NFT Title</h3>
-                            <p class="text-gray-600">Price: 0.1 ETH</p>
-                            <span class="bg-green-500 text-white px-2 py-1 text-xs rounded">Minted</span>
-                            <button class="mt-3 bg-indigo-600 text-white px-4 py-2 rounded-lg w-full">Mint NFT</button>
-                        </div>
+                <div class="nfts-section">
+                    <h2 class="nfts-heading">Your NFTs ({{ count($nfts) }})</h2>
+
+                    <div class="nft-cards">
+                        @forelse($nfts as $nft)
+                            <div class="nft-card">
+                                <img src="{{ asset('storage/' . $nft->file_path) }}" alt="NFT Image" class="nft-image">
+                                <h3 class="nft-title">{{ $nft->title }}</h3>
+                                <p class="nft-price">Price: {{ $nft->price }} ETH</p>
+                                <div class="nft-status">
+                                    <span class="status-badge {{ $nft->status ? 'minted' : 'not-minted' }}">
+                                        {{ $nft->status ? 'Minted' : 'Not Minted' }}
+                                    </span>
+                                </div>
+                                @if(!$nft->status)
+                                    <button class="mint-button">Mint NFT</button>
+                                @endif
+                            </div>
+                        @empty
+                            <p class="no-nfts">You haven't created any NFTs yet.</p>
+                        @endforelse
                     </div>
                 </div>
             </div>
-
         </section>
+
+
+
 
     </div>
 </x-home-layout>
+
+<style>
+    /* Container */
+    .container {
+        padding: 24px 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* User Details Section */
+    .user-details {
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 24px;
+        margin-bottom: 24px;
+    }
+
+    .profile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .profile-image {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        border: 4px solid #4C51BF;
+        margin-right: 24px;
+    }
+
+    .user-info h2 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #2D3748;
+    }
+
+    .user-info p {
+        color: #718096;
+    }
+
+    /* Ethereum Balance & Actions */
+    .balance-actions {
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+    }
+
+    .balance-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .balance-heading {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #2D3748;
+    }
+
+    .balance-amount {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #4C51BF;
+    }
+
+    .action-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .action-button {
+        background-color: #4C51BF;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .action-button:hover {
+        background-color: #434190;
+    }
+
+    /* NFTs Section */
+    .nfts-section {
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 24px;
+    }
+
+    .nfts-heading {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #2D3748;
+        margin-bottom: 16px;
+    }
+
+    .nft-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 24px;
+    }
+
+    .nft-card {
+        background-color: #F7FAFC;
+        padding: 24px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+
+    .nft-card:hover {
+        transform: scale(1.05);
+    }
+
+    .nft-image {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 16px;
+    }
+
+    .nft-title {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: #2D3748;
+        margin-bottom: 8px;
+    }
+
+    .nft-price {
+        color: #718096;
+    }
+
+    .nft-status {
+        margin-top: 12px;
+    }
+
+    .status-badge {
+        display: inline-block;
+        padding: 4px 8px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        border-radius: 4px;
+        color: white;
+    }
+
+    .status-badge.minted {
+        background-color: #38A169;
+    }
+
+    .status-badge.not-minted {
+        background-color: #E53E3E;
+    }
+
+    .mint-button {
+        background-color: #4C51BF;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        width: 100%;
+        margin-top: 16px;
+        cursor: pointer;
+    }
+
+    .mint-button:hover {
+        background-color: #434190;
+    }
+
+    .no-nfts {
+        color: #718096;
+        text-align: center;
+        margin-top: 16px;
+    }
+</style>

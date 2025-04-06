@@ -4,6 +4,11 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NFTController;
+use Illuminate\Support\Facades\Auth;
+
+Route::post('/nfts', [NFTController::class, 'store'])->name('nfts.store')->middleware('auth');
+
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/activity', [HomeController::class, 'showActivity'])->name('activity');
@@ -15,13 +20,15 @@ Route::get('/help-center', [HomeController::class, 'showHelp'])->name('help-cent
 Route::get('/item-details', [HomeController::class, 'showItemDetails'])->name('item-details');
 Route::get('/login', [HomeController::class, 'showLogin'])->name('login');
 Route::get('/rankings', [HomeController::class, 'showRankings'])->name('rankings');
-Route::middleware(['auth', 'verified'])->group(function(){
+Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/profile', [HomeController::class, 'showProfile'])->name('profile');
     Route::get('/create', [HomeController::class, 'showCreate'])->name('create');
     Route::get('/wallet', [HomeController::class, 'showWallet'])->name('wallet');
 });
 Route::get('/dashboard', function () {
-    return view('home.pages.dashboard');
+    $user = Auth::user();  // Get the currently authenticated user
+    $nfts = $user->nfts;   // Get the NFTs associated with the user
+    return view('home.pages.dashboard', compact('user', 'nfts'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 // Route::middleware('auth')->group(function () {
@@ -30,8 +37,8 @@ Route::get('/dashboard', function () {
 //     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 // });
 
-Route::middleware(['auth', 'verified', 'role:admin'])->group(function(){
+Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
