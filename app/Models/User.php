@@ -25,6 +25,8 @@ class User extends Authenticatable implements MustVerifyEmail
         'role',
         'username',
         'phone',
+        'address',
+        'profile_image',
     ];
     public function nfts()
     {

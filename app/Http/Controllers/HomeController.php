@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -48,7 +49,8 @@ class HomeController extends Controller
     }
     public function showProfile()
     {
-        return view('home.pages.profile');
+        $user = Auth::user();
+        return view('home.pages.profile', compact('user'));
     }
     public function showRankings()
     {

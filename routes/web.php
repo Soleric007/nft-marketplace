@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NFTController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 
 Route::post('/nfts', [NFTController::class, 'store'])->name('nfts.store')->middleware('auth');
@@ -22,6 +23,7 @@ Route::get('/login', [HomeController::class, 'showLogin'])->name('login');
 Route::get('/rankings', [HomeController::class, 'showRankings'])->name('rankings');
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/profile', [HomeController::class, 'showProfile'])->name('profile');
+    Route::post('/profile/update', [UserController::class, 'updateProfile'])->name('profile.update');
     Route::get('/create', [HomeController::class, 'showCreate'])->name('create');
     Route::get('/wallet', [HomeController::class, 'showWallet'])->name('wallet');
 });

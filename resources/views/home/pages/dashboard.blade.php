@@ -26,14 +26,21 @@
                 <!-- User Details Section -->
                 <div class="user-details">
                     <div class="profile">
-                        <img src="{{ asset('template/assets/images/default.jpeg') }}" alt="Profile Image"
-                            class="profile-image">
-                        <div class="user-info">
-                            <h2 class="user-name">{{ Auth::user()->name }}</h2>
-                            <p class="user-email">{{ Auth::user()->email }}</p>
-                            <p class="user-wallet">Wallet: {{ Auth::user()->wallet ? Auth::user()->wallet : 'Not Set' }}
-                            </p>
-                            <p class="user-phone">Phone: {{ Auth::user()->phone }}</p>
+                        <div class="flex items-center space-x-3">
+                            <img src="{{ asset($user->profile_image ? 'storage/' . ($user->profile_image) : 'template/assets/images/default.jpeg') }}" alt="Profile Image"
+                                class="profile-image">
+                            <div class="user-info">
+                                <h2 class="user-name">{{ Auth::user()->name }}</h2>
+                                <p class="user-email">Email: {{ Auth::user()->email }}</p>
+                                <p class="user-wallet">Wallet: {{ Auth::user()->wallet ? Auth::user()->wallet : 'Not Set' }}
+                                </p>
+                                <p class="user-phone">Phone: {{ Auth::user()->phone }}</p>
+                                <p class="user-phone">Address: {{ Auth::user()->address }}</p>
+                            </div>
+                        </div>
+                        <div class="">
+                            <a href="{{ route('profile') }}" class="action-button">Edit Profile</a>
+
                         </div>
                     </div>
                 </div>
@@ -106,6 +113,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: space-between;
     }
 
     .profile-image {
