@@ -1,5 +1,5 @@
 <header class="header-light scroll-light">
-    @vite('resources/css/app.css')
+    {{-- @vite('resources/css/app.css') --}}
 
     <div class="container">
         <div class="row">

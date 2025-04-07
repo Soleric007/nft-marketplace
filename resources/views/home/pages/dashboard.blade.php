@@ -27,12 +27,13 @@
                 <div class="user-details">
                     <div class="profile">
                         <div class="flex items-center space-x-3">
-                            <img src="{{ asset($user->profile_image ? 'storage/' . ($user->profile_image) : 'template/assets/images/default.jpeg') }}" alt="Profile Image"
-                                class="profile-image">
+                            <img src="{{ asset($user->profile_image ? 'storage/' . ($user->profile_image) : 'template/assets/images/default.jpeg') }}"
+                                alt="Profile Image" class="profile-image">
                             <div class="user-info">
                                 <h2 class="user-name">{{ Auth::user()->name }}</h2>
                                 <p class="user-email">Email: {{ Auth::user()->email }}</p>
-                                <p class="user-wallet">Wallet: {{ Auth::user()->wallet ? Auth::user()->wallet : 'Not Set' }}
+                                <p class="user-wallet">Wallet:
+                                    {{ Auth::user()->wallet->wallet_address ? Auth::user()->wallet->wallet_address : 'Not Set' }}
                                 </p>
                                 <p class="user-phone">Phone: {{ Auth::user()->phone }}</p>
                                 <p class="user-phone">Address: {{ Auth::user()->address }}</p>
@@ -50,12 +51,24 @@
                     <div class="balance-info">
                         <h2 class="balance-heading">Ethereum Balance</h2>
                         <p class="balance-amount">
-                            {{ Auth::user()->balance ? Auth::user()->balance : '0.25' }} ETH
+                            {{ $wallet->balance ? $wallet->balance : '0.05' }} ETH
                         </p>
                     </div>
                     <div class="action-buttons">
                         <a href="{{ route('wallet') }}" class="action-button">Connect Wallet</a>
                         <a href="{{ route('create') }}" class="action-button">Create NFT</a>
+                        <div class="dropdown-pill" id="moreOptions">
+                            <p class="p-1 pl-3 pr-3">
+                                <b>More Options </b> <i class="fas fa-chevron-down"></i>
+                            </p>
+
+                            <div class="dropdown-content">
+                                <!-- Add your dropdown content here -->
+                                <a href="{{route('wallet.fund')}}">Fund Account</a>
+                                <a href="{{route('withdrawal.wallet')}}">Withdrawal Wallet</a>
+                                <a href="{{route('request.withdrawal')}}">Request Withdrawal</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -168,20 +181,81 @@
         display: flex;
         flex-wrap: wrap;
         gap: 16px;
+        align-items: center;
     }
 
+    /* Primary Action Buttons */
     .action-button {
         background-color: #4C51BF;
+        /* Indigo-600 */
         color: white;
         padding: 12px 24px;
         border-radius: 8px;
         text-align: center;
         text-decoration: none;
+        transition: background 0.3s ease-in-out;
     }
 
     .action-button:hover {
         background-color: #434190;
+        /* Darker shade */
     }
+
+    /* More Options Dropdown */
+    .dropdown-pill {
+        position: relative;
+        background-color: #4C51BF;
+        /* Indigo-600 */
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-align: center;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
+    }
+
+    .dropdown-pill:hover {
+        background-color: #434190;
+    }
+
+    /* Dropdown Content */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 220px;
+        z-index: 100;
+        padding: 8px 0;
+        overflow: hidden;
+    }
+
+    /* Dropdown Links */
+    .dropdown-content a {
+        display: block;
+        padding: 12px 16px;
+        color: #333;
+        text-decoration: none;
+        transition: background 0.3s ease-in-out;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+    /* Show dropdown on hover */
+    .dropdown-pill:hover .dropdown-content {
+        display: block;
+    }
+
+    /* Show dropdown on click using JavaScript */
+    .dropdown-pill.active .dropdown-content {
+        display: block;
+    }
+
 
     /* NFTs Section */
     .nfts-section {
@@ -276,3 +350,22 @@
         margin-top: 16px;
     }
 </style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const moreOptions = document.getElementById("moreOptions");
+
+        moreOptions.addEventListener("click", function (event) {
+            event.stopPropagation(); // Prevents event from bubbling up
+            this.classList.toggle("active");
+        });
+
+        // Close dropdown if clicked outside
+        document.addEventListener("click", function (event) {
+            if (!moreOptions.contains(event.target)) {
+                moreOptions.classList.remove("active");
+            }
+        });
+    });
+
+</script>

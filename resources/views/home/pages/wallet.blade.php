@@ -24,7 +24,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 mb30">
-                        <a class="box-url" href="{{ route('login') }}">
+                        <a class="box-url" href="{{ route('connect.wallet') }}">
                             <span class="box-url-label">Most Popular</span>
                             <img src="/template/assets/images/wallet/1.png" alt="" class="mb20">
                             <h4>Metamask</h4>
@@ -34,7 +34,7 @@
                     </div>
 
                     <div class="col-lg-3 mb30">
-                        <a class="box-url" href="{{ route('login') }}">
+                        <a class="box-url" href="{{ route('connect.wallet') }}">
                             <img src="/template/assets/images/wallet/2.png" alt="" class="mb20">
                             <h4>Bitski</h4>
                             <p>Bitski connects communities, creators and brands through unique, ownable digital content.
@@ -43,7 +43,7 @@
                     </div>
 
                     <div class="col-lg-3 mb30">
-                        <a class="box-url" href="{{ route('login') }}">
+                        <a class="box-url" href="{{ route('connect.wallet') }}">
                             <img src="/template/assets/images/wallet/3.png" alt="" class="mb20">
                             <h4>Fortmatic</h4>
                             <p>Let users access your Ethereum app from anywhere. No more browser extensions.</p>
@@ -51,7 +51,7 @@
                     </div>
 
                     <div class="col-lg-3 mb30">
-                        <a class="box-url" href="{{ route('login') }}">
+                        <a class="box-url" href="{{ route('connect.wallet') }}">
                             <img src="/template/assets/images/wallet/4.png" alt="" class="mb20">
                             <h4>WalletConnect</h4>
                             <p>Open source protocol for connecting decentralised applications to mobile wallets.</p>
@@ -59,7 +59,7 @@
                     </div>
 
                     <div class="col-lg-3 mb30">
-                        <a class="box-url" href="{{ route('login') }}">
+                        <a class="box-url" href="{{ route('connect.wallet') }}">
                             <img src="/template/assets/images/wallet/5.png" alt="" class="mb20">
                             <h4>Coinbase Wallet</h4>
                             <p>The easiest and most secure crypto wallet. ... No Coinbase account required.
@@ -68,7 +68,7 @@
                     </div>
 
                     <div class="col-lg-3 mb30">
-                        <a class="box-url" href="{{ route('login') }}">
+                        <a class="box-url" href="{{ route('connect.wallet') }}">
                             <img src="/template/assets/images/wallet/6.png" alt="" class="mb20">
                             <h4>Arkane</h4>
                             <p>Make it easy to create blockchain applications with secure wallets solutions.</p>
@@ -76,7 +76,7 @@
                     </div>
 
                     <div class="col-lg-3 mb30">
-                        <a class="box-url" href="{{ route('login') }}">
+                        <a class="box-url" href="{{ route('connect.wallet') }}">
                             <img src="/template/assets/images/wallet/7.png" alt="" class="mb20">
                             <h4>Authereum</h4>
                             <p>Your wallet where you want it. Log into your favorite dapps with Authereum.</p>
@@ -84,7 +84,7 @@
                     </div>
 
                     <div class="col-lg-3 mb30">
-                        <a class="box-url" href="{{ route('login') }}">
+                        <a class="box-url" href="{{ route('connect.wallet') }}">
                             <span class="box-url-label">Most Simple</span>
                             <img src="/template/assets/images/wallet/8.png" alt="" class="mb20">
                             <h4>Torus</h4>

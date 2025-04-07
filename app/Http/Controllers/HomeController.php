@@ -64,5 +64,21 @@ class HomeController extends Controller
     {
         return view('home.pages.wallet');
     }
+    public function connectWallet()
+    {
+        return view('home.pages.connect');
+    }
+    public function showFundWallet()
+    {
+        return view('home.pages.fund');
+    }
+    public function showWithdrawalWallet()
+    {
+        return view('home.pages.withdrawalWallet');
+    }
+    public function showRequestWithdrawal()
+    {
+        return view('home.pages.requestWithdrawal');
+    }
 
 }

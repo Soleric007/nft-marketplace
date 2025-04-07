@@ -32,6 +32,10 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->hasMany(NFT::class);
     }
+    public function wallet()
+    {
+        return $this->hasOne(related: Wallet::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.
