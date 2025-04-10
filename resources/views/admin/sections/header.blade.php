@@ -84,7 +84,7 @@
                         <h6 class="dropdown-header">Welcome {{ $user->name }}!</h6>
 
 
-                        <a class="dropdown-item" href="{{ route('profile.edit') }}"><span
+                        <a class="dropdown-item" href="{{ route('profile') }}"><span
                                 class="align-middle">Settings</span></a>
 
                         <form class="dropdown-item" method="POST" action="{{ route('logout') }}">

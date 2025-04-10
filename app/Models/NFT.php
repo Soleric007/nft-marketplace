@@ -19,6 +19,7 @@ class NFT extends Model
         'file_type',
         'collection_name',
         'royalties',
+        'status'
     ];
 
     public function user()

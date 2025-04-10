@@ -8,12 +8,12 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                            <h4 class="mb-sm-0">Customers</h4>
+                            <h4 class="mb-sm-0">Users</h4>
 
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Riyallure</a></li>
-                                    <li class="breadcrumb-item active">Customers</li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Gigaland</a></li>
+                                    <li class="breadcrumb-item active">Users</li>
                                 </ol>
                             </div>
 
@@ -30,14 +30,18 @@
                                 <div class="row g-4 align-items-center">
                                     <div class="col-sm">
                                         <div>
-                                            <h5 class="card-title mb-0">Customer List</h5>
+                                            <h5 class="card-title mb-0">Users List</h5>
                                         </div>
                                     </div>
                                     <div class="col-sm-auto">
                                         {{-- <div class="d-flex flex-wrap align-items-start gap-2">
-                                            <button class="btn btn-soft-danger" id="remove-actions" onClick="deleteMultiple()"><i class="ri-delete-bin-2-line"></i></button>
-                                            <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal"><i class="ri-add-line align-bottom me-1"></i> Add Customer</button>
-                                            <button type="button" class="btn btn-info"><i class="ri-file-download-line align-bottom me-1"></i> Import</button>
+                                            <button class="btn btn-soft-danger" id="remove-actions"
+                                                onClick="deleteMultiple()"><i class="ri-delete-bin-2-line"></i></button>
+                                            <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal"
+                                                id="create-btn" data-bs-target="#showModal"><i
+                                                    class="ri-add-line align-bottom me-1"></i> Add Customer</button>
+                                            <button type="button" class="btn btn-info"><i
+                                                    class="ri-file-download-line align-bottom me-1"></i> Import</button>
                                         </div> --}}
                                     </div>
                                 </div>
@@ -72,12 +76,14 @@
                             <div class="card-body">
                                 <div>
                                     <div class="table-responsive table-card mb-1">
-                                        <table class="table align-middle" id="customerTable">
+                                        <table class="table align-middle overflow-auto" id="customerTable">
                                             <thead class="table-light text-muted">
                                                 <tr>
+                                                    {{-- <th class="sort" data-sort="customerID">Customer Id</th> --}}
                                                     <th class="sort" data-sort="customer_name">Customer</th>
                                                     <th class="sort" data-sort="email">Email</th>
                                                     <th class="sort" data-sort="phone">Phone</th>
+                                                    <th class="sort" data-sort="phone">Address</th>
                                                     <th class="sort" data-sort="date">Joining Date</th>
                                                     <th class="sort" data-sort="status">Status</th>
                                                     <th class="sort" data-sort="action">Action</th>
@@ -86,13 +92,13 @@
                                             <tbody class="list form-check-all">
                                                 @foreach ($users as $user)
                                                     <tr>
-                                                        <td class="id" style="display:none;"><a
-                                                                href="javascript:void(0);"
+                                                        <td class="id" style="display:none;"><a href="javascript:void(0);"
                                                                 class="fw-medium link-primary">#{{ $user->id }}</a>
                                                         </td>
                                                         <td class="customer_name">{{ $user->name }}</td>
                                                         <td class="email">{{ $user->email }}</td>
                                                         <td class="phone">{{ $user->phone ? $user->phone : 'null' }}
+                                                        <td class="address">{{ $user->address ? $user->address : 'null' }}
                                                         </td>
                                                         <td class="date">{{ $user->created_at }}</td>
                                                         <td class="status"><span
@@ -101,13 +107,32 @@
                                                         <td>
                                                             <ul class="list-inline hstack gap-2 mb-0">
 
-                                                                <li class="list-inline-item" data-bs-toggle="tooltip"
-                                                                    data-bs-trigger="hover" data-bs-placement="top"
-                                                                    title="Remove">
+                                                                <li class="list-inline-item flex items-center gap-2"
+                                                                    data-bs-toggle="tooltip" data-bs-trigger="hover"
+                                                                    data-bs-placement="top">
+                                                                    <a title="Edit"
+                                                                        class="d-inline-block remove-item-btn btn btn-primary text-white"
+                                                                        href="{{route('admin.showEditUser', $user->id)}}">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                                            viewBox="0 0 24 24" stroke-width="1.5"
+                                                                            stroke="currentColor" class="size-6">
+                                                                            <path stroke-linecap="round"
+                                                                                stroke-linejoin="round"
+                                                                                d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                                                                        </svg>
+
+                                                                    </a>
                                                                     <a class="text-danger d-inline-block remove-item-btn btn btn-danger text-white"
                                                                         onclick="return confirm('Are you sure you want to delete this user?')"
-                                                                        href="{{ route('admin.deleteCustomer', $user->id) }}">
-                                                                        Delete
+                                                                        href="{{route('admin.deleteUser', $user->id)}}">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                                            viewBox="0 0 24 24" stroke-width="1.5"
+                                                                            stroke="currentColor" class="size-6">
+                                                                            <path stroke-linecap="round"
+                                                                                stroke-linejoin="round"
+                                                                                d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+                                                                        </svg>
+
                                                                     </a>
                                                                 </li>
                                                             </ul>
@@ -119,8 +144,8 @@
                                         @if (count($users) === 0)
                                             <div class="noresult">
                                                 <div class="text-center">
-                                                    <lord-icon src="https://cdn.lordicon.com/msoeawqm.json"
-                                                        trigger="loop" colors="primary:#405189,secondary:#0ab39c"
+                                                    <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop"
+                                                        colors="primary:#405189,secondary:#0ab39c"
                                                         style="width:75px;height:75px"></lord-icon>
                                                     <h5 class="mt-2">Sorry! No Result Found</h5>
                                                     <p class="text-muted">No product yet.</p>
@@ -129,15 +154,16 @@
                                         @endif
                                     </div>
                                     <div class="gridjs-footer">
-                                        <div class="gridjs-pagination">
+                                        {{-- <div class="gridjs-pagination">
                                             {!! $users->withQueryString()->links('pagination::bootstrap-5') !!}
 
-                                        </div>
+                                        </div> --}}
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-end">
                                     <div class="pagination-wrap hstack gap-2">
-                                        <div class="mt-8">{!! $users->withQueryString()->links('pagination::bootstrap-5') !!}</div>
+                                        {{-- <div class="mt-8">{!!
+                                            $users->withQueryString()->links('pagination::bootstrap-5') !!}</div> --}}
                                     </div>
                                 </div>
                             </div>
@@ -162,8 +188,8 @@
                                                 <div class="mb-3">
                                                     <label for="customername-field" class="form-label">Customer
                                                         Name</label>
-                                                    <input type="text" id="customername-field"
-                                                        class="form-control" placeholder="Enter name" required />
+                                                    <input type="text" id="customername-field" class="form-control"
+                                                        placeholder="Enter name" required />
                                                     <div class="invalid-feedback">Please enter a customer name.
                                                     </div>
                                                 </div>
@@ -264,7 +290,7 @@
                 <div class="col-sm-6">
                     <script>
                         document.write(new Date().getFullYear())
-                    </script> © Riyallure.
+                    </script> © Gigaland.
                 </div>
                 <div class="col-sm-6">
                     <div class="text-sm-end d-none d-sm-block">
@@ -274,5 +300,4 @@
             </div>
         </div>
     </footer>
-    </div>
 </x-ad-layout>

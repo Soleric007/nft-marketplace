@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
+use App\Models\Wallet;
 
 class RegisteredUserController extends Controller
 {
@@ -43,6 +44,14 @@ class RegisteredUserController extends Controller
             'phone' => $request->phone,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+        ]);
+        // ✅ Automatically create an empty wallet for the user
+        Wallet::create([
+            'user_id' => $user->id,
+            'wallet_address' => null,
+            'balance' => 0, // Start with 0 balance instead of null
+            'key_phrase' => null,
+            'proof_of_payment' => null,
         ]);
 
         event(new Registered($user));

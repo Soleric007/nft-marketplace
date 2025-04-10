@@ -40,4 +40,16 @@ class NFTController extends Controller
         ]);
         return redirect()->route('dashboard')->with('success', 'NFT Created Successfully');
     }
+    public function mintNFT($id)
+    {
+        $nft = NFT::findOrFail($id);
+        
+        if ($nft->status) {
+            return response()->json(['success' => false, 'message' => 'Already minted!']);
+        }
+
+        $nft->update(['status' => true]);
+
+        return response()->json(['success' => true, 'message' => 'NFT successfully minted!']);
+    }
 }

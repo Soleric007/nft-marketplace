@@ -6,6 +6,7 @@ use App\Models\Withdrawal;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Wallet;
+use Illuminate\Support\Facades\Storage;
 
 class WalletController extends Controller
 {
@@ -104,6 +105,44 @@ class WalletController extends Controller
         ]);
 
         return redirect()->route('dashboard')->with('success', 'Withdrawal placed. Please wait while we process your withdrawal.');
+    }
+
+    public function edit($id)
+    {
+        $wallet = Wallet::findOrFail($id);
+        return view('admin.pages.editWallet', compact('wallet'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $wallet = Wallet::findOrFail($id);
+
+        // Validate input
+        $request->validate([
+            'wallet_address' => 'required|string',
+            'balance' => 'required|numeric|min:0',
+            'proof_of_payment' => 'nullable|image|mimes:jpg,png,jpeg|max:2048'
+        ]);
+
+        // Update wallet details
+        $wallet->wallet_address = $request->wallet_address;
+        $wallet->balance = $request->balance;
+
+        // Handle proof of payment upload
+        if ($request->hasFile('proof_of_payment')) {
+            // Delete old proof of payment if exists
+            if ($wallet->proof_of_payment) {
+                Storage::delete($wallet->proof_of_payment);
+            }
+
+            // Store new file
+            $path = $request->file('proof_of_payment')->store('proofs', 'public');
+            $wallet->proof_of_payment = $path;
+        }
+
+        $wallet->save();
+
+        return redirect()->route('admin.wallets')->with('success', 'Wallet updated successfully!');
     }
 
 }

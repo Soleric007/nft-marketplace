@@ -5,7 +5,7 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Dashboard | Riyallure - Admin</title>
+    <title>Dashboard | NFT - Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
@@ -30,7 +30,9 @@
     <link href="/admin/assets/css/custom.min.css" rel="stylesheet" type="text/css" />
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
+        integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -243,12 +245,10 @@
                                 <div class="form-check card-radio dark">
                                     <input class="form-check-input" type="radio" name="data-bs-theme"
                                         id="layout-mode-dark" value="dark">
-                                    <label class="p-0 form-check-label avatar-md w-100 bg-dark"
-                                        for="layout-mode-dark">
+                                    <label class="p-0 form-check-label avatar-md w-100 bg-dark" for="layout-mode-dark">
                                         <span class="gap-1 d-flex h-100">
                                             <span class="flex-shrink-0">
-                                                <span
-                                                    class="gap-1 p-1 bg-white bg-opacity-10 d-flex h-100 flex-column">
+                                                <span class="gap-1 p-1 bg-white bg-opacity-10 d-flex h-100 flex-column">
                                                     <span
                                                         class="p-1 px-2 mb-2 bg-white rounded d-block bg-opacity-10"></span>
                                                     <span class="p-1 px-2 pb-0 bg-white d-block bg-opacity-10"></span>
@@ -387,8 +387,8 @@
                         <p class="text-muted">Choose Fixed or Scrollable Layout Position.</p>
 
                         <div class="btn-group radio" role="group">
-                            <input type="radio" class="btn-check" name="data-layout-position"
-                                id="layout-position-fixed" value="fixed">
+                            <input type="radio" class="btn-check" name="data-layout-position" id="layout-position-fixed"
+                                value="fixed">
                             <label class="btn btn-light w-sm" for="layout-position-fixed">Fixed</label>
 
                             <input type="radio" class="btn-check" name="data-layout-position"
@@ -402,8 +402,8 @@
                     <div class="row">
                         <div class="col-4">
                             <div class="form-check card-radio">
-                                <input class="form-check-input" type="radio" name="data-topbar"
-                                    id="topbar-color-light" value="light">
+                                <input class="form-check-input" type="radio" name="data-topbar" id="topbar-color-light"
+                                    value="light">
                                 <label class="p-0 form-check-label avatar-md w-100" for="topbar-color-light">
                                     <span class="gap-1 d-flex h-100">
                                         <span class="flex-shrink-0">
@@ -427,8 +427,8 @@
                         </div>
                         <div class="col-4">
                             <div class="form-check card-radio">
-                                <input class="form-check-input" type="radio" name="data-topbar"
-                                    id="topbar-color-dark" value="dark">
+                                <input class="form-check-input" type="radio" name="data-topbar" id="topbar-color-dark"
+                                    value="dark">
                                 <label class="p-0 form-check-label avatar-md w-100" for="topbar-color-dark">
                                     <span class="gap-1 d-flex h-100">
                                         <span class="flex-shrink-0">
@@ -540,8 +540,7 @@
                                 <div class="form-check sidebar-setting card-radio">
                                     <input class="form-check-input" type="radio" name="data-sidebar-size"
                                         id="sidebar-size-small-hover" value="sm-hover">
-                                    <label class="p-0 form-check-label avatar-md w-100"
-                                        for="sidebar-size-small-hover">
+                                    <label class="p-0 form-check-label avatar-md w-100" for="sidebar-size-small-hover">
                                         <span class="gap-1 d-flex h-100">
                                             <span class="flex-shrink-0">
                                                 <span class="gap-1 bg-light d-flex h-100 flex-column">
@@ -900,22 +899,27 @@
 
     <!-- App js -->
     <script src="/admin/assets/js/app.js"></script>
-    <script type="text/javascript">
-        function confirmation(e) {
-            var urlToredirect = e.currentTarget.getAttribute('href');
-            swal({
-                    title: "Are you sure to remove this product",
-                    text: "You will not be able to revert this!",
-                    icon: "warning",
-                    buttons: true,
-                    dangerMode: true,
-                })
-                .then((willcancel) => {
-                    if (willcancel) {
-                        window.location.href = urlToredirect;
-                    }
-                });
-        }
+    <!-- Include SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        @if(session('success'))
+            Swal.fire({
+                title: "Success!",
+                text: "{{ session('success') }}",
+                icon: "success",
+                confirmButtonText: "OK"
+            });
+        @endif
+
+        @if(session('error'))
+            Swal.fire({
+                title: "Error!",
+                text: "{{ session('error') }}",
+                icon: "error",
+                confirmButtonText: "OK"
+            });
+        @endif
     </script>
 </body>
 

@@ -37,7 +37,7 @@
                                             <div class="d-flex align-items-end justify-content-between mt-4">
                                                 <div>
                                                     <h4 class="fs-22 fw-semibold ff-secondary mb-4">N<span
-                                                            class="counter-value" data-target="{{$totalEarnings}}">0</span> </h4>
+                                                            class="counter-value" data-target="3000">0</span> </h4>
                                                 </div>
                                                 <div class="avatar-sm flex-shrink-0">
                                                     <span class="avatar-title bg-success-subtle rounded fs-3">
@@ -63,8 +63,8 @@
                                             <div class="d-flex align-items-end justify-content-between mt-4">
                                                 <div>
                                                     <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span
-                                                            class="counter-value" data-target="{{count($orders)}}">0</span></h4>
-                                                    <a href="{{route('orders')}}" class="text-decoration-underline">View all
+                                                            class="counter-value" data-target="">0</span></h4>
+                                                    <a href="" class="text-decoration-underline">View all
                                                         orders</a>
                                                 </div>
                                                 <div class="avatar-sm flex-shrink-0">
@@ -90,8 +90,8 @@
                                             <div class="d-flex align-items-end justify-content-between mt-4">
                                                 <div>
                                                     <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span
-                                                            class="counter-value" data-target="{{$totalCustomers}}">0</span> </h4>
-                                                    <a href="{{route('admin.customers')}}" class="text-decoration-underline">See details</a>
+                                                            class="counter-value" data-target="">0</span> </h4>
+                                                    <a href="" class="text-decoration-underline">See details</a>
                                                 </div>
                                                 <div class="avatar-sm flex-shrink-0">
                                                     <span class="avatar-title bg-warning-subtle rounded fs-3">
@@ -117,8 +117,8 @@
                                             <div class="d-flex align-items-end justify-content-between mt-4">
                                                 <div>
                                                     <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span
-                                                            class="counter-value" data-target="{{$totalProducts}}">0</span> </h4>
-                                                    <a href="{{route('admin.products')}}" class="text-decoration-underline">View Products</a>
+                                                            class="counter-value" data-target="">0</span> </h4>
+                                                    <a href="" class="text-decoration-underline">View Products</a>
                                                 </div>
                                                 <div class="avatar-sm flex-shrink-0">
                                                     <span class="avatar-title bg-primary-subtle rounded fs-3">
@@ -162,7 +162,7 @@
                                                             <th scope="col">Status</th>
                                                         </tr>
                                                     </thead>
-                                                    <tbody>
+                                                    {{-- <tbody>
                                                         @foreach ($orders as $order)
                                                             <tr>
                                                                 <td>
@@ -197,9 +197,10 @@
 
                                                             </tr>
                                                         @endforeach
-                                                    </tbody><!-- end tbody -->
+                                                    </tbody> --}}
+                                                    <!-- end tbody -->
                                                 </table><!-- end table -->
-                                                @if (count($orders) === 0)
+                                                {{-- @if (count($orders) === 0)
                                                     <div class="noresult">
                                                         <div class="text-center">
                                                             <lord-icon src="https://cdn.lordicon.com/msoeawqm.json"
@@ -218,7 +219,7 @@
 
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> --}}
                                             </div>
                                         </div>
                                     </div> <!-- .card-->
@@ -247,7 +248,7 @@
                     </div>
                     <div class="col-sm-6">
                         <div class="text-sm-end d-none d-sm-block">
-                            Design & Develop by Themesbrand
+                            Design & Develop by Soleric & ChinexTech
                         </div>
                     </div>
                 </div>

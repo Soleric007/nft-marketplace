@@ -42,9 +42,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
 Route::get('/dashboard', function () {
     $user = Auth::user();  // Get the currently authenticated user
     $nfts = $user->nfts;   // Get the NFTs associated with the user
-    
+
     // Get User's Wallet Information
     $wallet = Wallet::where('user_id', $user->id)->first();
+    if (!$wallet) {
+        return redirect()->route('dashboard')->with('error', 'Wallet not found. Please contact support.');
+    }
     return view('home.pages.dashboard', compact('user', 'nfts', 'wallet'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
@@ -56,6 +59,17 @@ Route::get('/dashboard', function () {
 
 Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+    Route::get('/admin/nfts', [AdminController::class, 'nfts'])->name('admin.nfts');
+    Route::post('/admin/nfts/mint/{id}', [NFTController::class, 'mintNFT'])->name('admin.nfts.mint');
+    Route::get('/admin/wallets', [AdminController::class, 'wallets'])->name('admin.wallets');
+    Route::get('/admin/wallets/{id}/edit', [WalletController::class, 'edit'])->name('admin.wallets.edit');
+    Route::put('/admin/wallets/{id}', [WalletController::class, 'update'])->name('admin.wallets.update');
+    Route::get('/admin/deposits', [AdminController::class, 'deposits'])->name('admin.deposits');
+    Route::get('/admin/withdrawals', [AdminController::class, 'withdrawals'])->name('admin.withdrawals');
+    Route::get('/admin/users', [AdminController::class, 'users'])->name('admin.users');
+    Route::get('/admin/edituser/{user}', [AdminController::class, 'showEditUser'])->name('admin.showEditUser');
+    Route::post('/admin/users/update/{id}', [AdminController::class, 'updateUser'])->name('admin.users.update');
+    Route::get('/admin/deleteuser/{user}', [AdminController::class, 'deleteUser'])->name('admin.deleteUser');
 });
 
 require __DIR__ . '/auth.php';
