@@ -12,7 +12,7 @@
 
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Gigaland</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">DigitalVault</a></li>
                                     <li class="breadcrumb-item active">Users</li>
                                 </ol>
                             </div>
@@ -290,7 +290,7 @@
                 <div class="col-sm-6">
                     <script>
                         document.write(new Date().getFullYear())
-                    </script> © Gigaland.
+                    </script> © DigitalVault.
                 </div>
                 <div class="col-sm-6">
                     <div class="text-sm-end d-none d-sm-block">

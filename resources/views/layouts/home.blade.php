@@ -2,11 +2,11 @@
 <html lang="zxx">
 
 <head>
-    <title>@yield('title', 'Gigaland - NFT Marketplace')</title>
+    <title>@yield('title', 'DigitalVault - NFT Marketplace')</title>
     <link rel="icon" href="/template/assets/images/icon.png" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="Gigaland - NFT Marketplace Website Template" name="description" />
+    <meta content="DigitalVault - NFT Marketplace Website Template" name="description" />
     <meta content="" name="keywords" />
     <meta content="" name="author" />
     <!-- CSS Files
@@ -17,7 +17,7 @@
     <!-- color scheme -->
     <link id="colors" href="/template/assets/css/colors/scheme-01.css" rel="stylesheet" type="text/css" />
     <link href="/template/assets/css/coloring.css" rel="stylesheet" type="text/css" />
-    {{-- @vite('resources/css/app.css') --}}
+    {{--  --}}
 
 </head>
 
@@ -41,48 +41,36 @@
                         <div class="widget">
                             <h5>Marketplace</h5>
                             <ul>
-                                <li><a href="#">All NFTs</a></li>
-                                <li><a href="#">Art</a></li>
-                                <li><a href="#">Music</a></li>
-                                <li><a href="#">Domain Names</a></li>
-                                <li><a href="#">Virtual World</a></li>
-                                <li><a href="#">Collectibles</a></li>
+                                <li><a href="{{ route('explore') }}">All NFTs</a></li>
+                                <li><a href="{{ route('explore') }}">Art</a></li>
+                                <li><a href="{{ route('explore') }}">Music</a></li>
+                                <li><a href="{{ route('explore') }}">Domain Names</a></li>
+                                <li><a href="{{ route('explore') }}">Virtual World</a></li>
+                                <li><a href="{{ route('explore') }}">Collectibles</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-1">
                         <div class="widget">
-                            <h5>Resources</h5>
-                            <ul>
-                                <li><a href="#">Help Center</a></li>
-                                <li><a href="#">Partners</a></li>
-                                <li><a href="#">Suggestions</a></li>
-                                <li><a href="#">Discord</a></li>
-                                <li><a href="#">Docs</a></li>
-                                <li><a href="#">Newsletter</a></li>
-                            </ul>
+                            <h5>Quick Links</h5>
+                                    <ul>
+                                        <li><a href="{{ route('login')}}">Login</a></li>
+                                        <li><a href="{{ route('register')}}">Register</a></li>
+                                        <li><a href="{{ route('wallet')}}">Wallet</a></li>
+                                        <li><a href="{{ route('create')}}">Create NFT</a></li>
+                                        <li><a href="{{ route('wallet')}}">Connect Wallet</a></li>
+                                        <li><a href="{{ route('contact')}}">Contact Us</a></li>
+                                    </ul>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-1">
-                        <div class="widget">
-                            <h5>Community</h5>
-                            <ul>
-                                <li><a href="#">Community</a></li>
-                                <li><a href="#">Documentation</a></li>
-                                <li><a href="#">Brand Assets</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Forum</a></li>
-                                <li><a href="#">Mailing List</a></li>
-                            </ul>
-                        </div>
-                    </div>
+
                     <div class="col-md-3 col-sm-6 col-xs-1">
                         <div class="widget">
                             <h5>Newsletter</h5>
                             <p>Signup for our newsletter to get the latest news in your inbox.</p>
-                            <form action="https://madebydesignesia.com/themes/gigaland/blank.php" class="row form-dark"
+                            <form action="https://madebydesignesia.com/themes/DigitalVault/blank.php" class="row form-dark"
                                 id="form_subscribe" method="post" name="form_subscribe">
-                                <div class="col text-center">
+                                <div class="text-center col">
                                     <input class="form-control" id="txt_subscribe" name="txt_subscribe"
                                         placeholder="enter your email" type="text" /> <a href="#" id="btn-subscribe"><i
                                             class="arrow_right bg-color-secondary"></i></a>
@@ -103,7 +91,7 @@
                                 <div class="de-flex-col">
                                     <a href="{{ route('index') }}">
                                         <img alt="" class="f-logo" src="/template/assets/images/logo.png" /><span
-                                            class="copy">&copy; Copyright 2025 - Gigaland by Designesia</span>
+                                            class="copy">&copy; Copyright 2025 - DigitalVault </span>
                                     </a>
                                 </div>
                                 <div class="de-flex-col">

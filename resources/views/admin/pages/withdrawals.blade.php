@@ -1,5 +1,5 @@
 <x-ad-layout>
-    @vite('resources/css/app.css')
+
 
     <div class="main-content">
 
@@ -76,7 +76,7 @@
                     <div class="col-sm-6">
                         <script>
                             document.write(new Date().getFullYear())
-                        </script> © Gigaland.
+                        </script> © DigitalVault.
                     </div>
                     <div class="col-sm-6">
                         <div class="text-sm-end d-none d-sm-block">

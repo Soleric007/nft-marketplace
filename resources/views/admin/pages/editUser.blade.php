@@ -9,7 +9,7 @@
                             <h4 class="mb-sm-0">Edit User</h4>
                             <div class="page-title-right">
                                 <ol class="m-0 breadcrumb">
-                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Gigaland</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">DigitalVault</a></li>
                                     <li class="breadcrumb-item active">Edit User</li>
                                 </ol>
                             </div>
@@ -57,11 +57,11 @@
                                         @enderror
                                     </div>
 
-                                    
+
                                 </div>
                             </div>
                             <!-- end card -->
-                            
+
                             <div class="mb-3 text-end">
                                 <button type="submit" class="btn btn-success w-sm">Submit</button>
                             </div>
@@ -74,7 +74,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-6">
-                        <script>document.write(new Date().getFullYear())</script> © Gigaland.
+                        <script>document.write(new Date().getFullYear())</script> © DigitalVault.
                     </div>
                     <div class="col-sm-6">
                         <div class="text-sm-end d-none d-sm-block">Design & Develop by Soleric</div>

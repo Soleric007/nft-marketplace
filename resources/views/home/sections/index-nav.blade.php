@@ -1,5 +1,5 @@
 <header class="header-light scroll-light">
-    {{-- @vite('resources/css/app.css') --}}
+    {{--  --}}
 
     <div class="container">
         <div class="row">
@@ -10,8 +10,8 @@
                             <!-- logo begin -->
                             <div id="logo">
                                 <a href="{{ route('index') }}">
-                                    <img alt="" class="logo" src="/template/assets/images/logo-7-light.png" />
-                                    <img alt="" class="logo-2" src="/template/assets/images/logo-7.png" />
+                                    <img alt="" class="logo" src="/template/assets/images/logo-8-light.png" />
+                                    <img alt="" class="logo-2" src="/template/assets/images/logo-8.png" />
                                 </a>
                             </div>
                             <!-- logo close -->
@@ -65,7 +65,7 @@
                                         <li>
                                             <form method="POST" action="{{ route('logout') }}">
                                                 @csrf
-                                                <button type="submit" class="dropdown-item text-white">
+                                                <button type="submit" class="text-white dropdown-item">
                                                     <i class="fa fa-sign-out"></i> Sign out
                                                 </button>
                                             </form>

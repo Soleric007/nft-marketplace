@@ -1,18 +1,18 @@
 @section('title', 'Create NFT')
 <x-home-layout>
-    @vite('resources/css/app.css')
 
+    @vite('resources/css/app.css')
     <div class="no-bottom no-top" id="content">
         <div id="top"></div>
 
         <!-- section begin -->
         <section id="subheader" class="text-light"
             data-bgimage="url(/template/assets/images/background/subheader.jpg) top">
-            <div class="center-y relative text-center">
+            <div class="relative text-center center-y">
                 <div class="container">
                     <div class="row">
 
-                        <div class="col-md-12 text-center">
+                        <div class="text-center col-md-12">
                             <h1 class='text-[2.5rem] md:text-[4rem] font-bold'>Create Single Collectible</h1>
                         </div>
                         <div class="clearfix"></div>
@@ -40,7 +40,7 @@
                                     <input type="file" name="file" id="upload_file">
                                 </div>
                                 @error('file')
-                                    <p class="text-danger mt-2">{{ $message }}</p>
+                                    <p class="mt-2 text-danger">{{ $message }}</p>
                                 @enderror
 
                                 <div class="spacer-20"></div>
@@ -75,7 +75,7 @@
                                     <option value="YoungseonYou">YoungseonYou</option>
                                 </select>
                                 @error('collection_name')
-                                    <p class="text-danger mt-2">{{ $message }}</p>
+                                    <p class="mt-2 text-danger">{{ $message }}</p>
                                 @enderror
 
                                 <div class="spacer-20"></div>
@@ -84,14 +84,14 @@
                                 <input type="text" name="title" id="item_title" class="form-control"
                                     placeholder="e.g. 'Crypto Funk'" />
                                 @error('title')
-                                    <p class="text-danger mt-2">{{ $message }}</p>
+                                    <p class="mt-2 text-danger">{{ $message }}</p>
                                 @enderror
 
                                 <h5>Price</h5>
                                 <input type="number" name="price" id="item_price" class="form-control"
                                     placeholder="0.00 ETH" />
                                 @error('price')
-                                    <p class="text-danger mt-2">{{ $message }}</p>
+                                    <p class="mt-2 text-danger">{{ $message }}</p>
                                 @enderror
                                 <div class="spacer-20"></div>
 
@@ -99,7 +99,7 @@
                                 <textarea data-autoresize name="description" id="item_desc" class="form-control"
                                     placeholder="e.g. 'This is very limited item'"></textarea>
                                 @error('description')
-                                    <p class="text-danger mt-2">{{ $message }}</p>
+                                    <p class="mt-2 text-danger">{{ $message }}</p>
                                 @enderror
                                 <h5>NFT Type</h5>
                                 <select name="file_type" id="file_type" class="form-control">
@@ -115,14 +115,14 @@
                                     <option value="pdf">PDF</option>
                                 </select>
                                 @error('file_type')
-                                    <p class="text-danger mt-2">{{ $message }}</p>
+                                    <p class="mt-2 text-danger">{{ $message }}</p>
                                 @enderror
 
                                 <h5>Royalties (%)</h5>
                                 <input type="number" name="royalties" id="item_royalties" class="form-control"
                                     placeholder="suggested: 0, 10%, 20%, 30%. Maximum is 70%" />
                                 @error('royalties')
-                                    <p class="text-danger mt-2">{{ $message }}</p>
+                                    <p class="mt-2 text-danger">{{ $message }}</p>
                                 @enderror
                                 <div class="spacer-single"></div>
 

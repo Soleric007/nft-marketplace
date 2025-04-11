@@ -16,7 +16,7 @@
                 <img src="/admin/assets/images/logo-sm.png" alt="" height="22">
             </span>
             <span class="logo-lg">
-                <h1 class="text-xl md:text-[2rem] font-bold text-white mt-4">GigaLand</h1>
+                <h1 class="text-xl md:text-[2rem] font-bold text-white mt-4">DigitalVault</h1>
                 {{-- <img src="/templates/assets/images/logo/logo.png" alt="" height="17"> --}}
             </span>
         </a>

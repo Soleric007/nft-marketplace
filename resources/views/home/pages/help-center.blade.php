@@ -1,5 +1,5 @@
 <x-home-layout>
-    @vite('resources/css/app.css')
+
 
     <div class="no-bottom no-top" id="content">
         <div id="top"></div>
@@ -16,7 +16,7 @@
                                 <div class="spacer-single"></div>
                                 <h1>Help Center</h1>
 
-                                <form action='https://madebydesignesia.com/themes/gigaland/blank.php' class="row"
+                                <form action='https://madebydesignesia.com/themes/DigitalVault/blank.php' class="row"
                                     id='form_sb' method="post" name="myForm">
                                     <div class="col text-center">
                                         <div class="spacer-10"></div>

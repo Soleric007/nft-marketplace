@@ -2,12 +2,12 @@
 <html lang="zxx">
 
 <head>
-    <title>Gigaland - NFT Marketplace | Home</title>
+    <title>DigitalVault - NFT Marketplace | Home</title>
 
     <link rel="icon" href="/template/assets/images/icon.png" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="Gigaland - NFT Marketplace " name="description" />
+    <meta content="DigitalVault - NFT Marketplace " name="description" />
     <meta content="" name="keywords" />
     <meta content="" name="author" />
     <!-- CSS Files
@@ -21,7 +21,7 @@
     <link href="/template/assets/css/coloring-gradient.css" rel="stylesheet" type="text/css" />
     <!-- custom font -->
     <link href="/template/assets/css/custom-font-3.css" rel="stylesheet" type="text/css" />
-    {{-- @vite('resources/css/app.css') --}}
+    {{--  --}}
 
 </head>
 
@@ -486,7 +486,7 @@
                                             data-hour="8"></div>
                                         <div class="author_list_pp">
                                             <a href="{{ route('author') }}" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" title="Creator: Gigaland">
+                                                data-bs-placement="top" title="Creator: DigitalVault">
                                                 <img class="lazy" src="/template/assets/images/author/author-4.jpg"
                                                     alt="">
                                                 <i class="fa fa-check"></i>
@@ -803,133 +803,6 @@
                 </div>
             </section>
 
-            <section id="section-category" class="pt20 no-bottom">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h2>Popular Categories</h2>
-                        </div>
-                        <div class="col-md-2 col-sm-4 col-12 mb-sm-30 wow fadeInRight" data-wow-delay=".1s">
-                            <a href='{{ route('explore') }}' class="rounded icon-box style-2">
-                                <i class="fa fa-image"></i>
-                                <span>Art</span>
-                            </a>
-                        </div>
-                        <div class="col-md-2 col-sm-4 col-12 mb-sm-30 wow fadeInRight" data-wow-delay=".2s">
-                            <a href='{{ route('explore') }}' class="rounded icon-box style-2">
-                                <i class="fa fa-music"></i>
-                                <span>Music</span>
-                            </a>
-                        </div>
-                        <div class="col-md-2 col-sm-4 col-12 mb-sm-30 wow fadeInRight" data-wow-delay=".3s">
-                            <a href='{{ route('explore') }}' class="rounded icon-box style-2">
-                                <i class="fa fa-search"></i>
-                                <span>Domain Names</span>
-                            </a>
-                        </div>
-                        <div class="col-md-2 col-sm-4 col-12 mb-sm-30 wow fadeInRight" data-wow-delay=".4s">
-                            <a href='{{ route('explore') }}' class="rounded icon-box style-2">
-                                <i class="fa fa-globe"></i>
-                                <span>Virtual Worlds</span>
-                            </a>
-                        </div>
-                        <div class="col-md-2 col-sm-4 col-12 mb-sm-30 wow fadeInRight" data-wow-delay=".5s">
-                            <a href='{{ route('explore') }}' class="rounded icon-box style-2">
-                                <i class="fa fa-vcard"></i>
-                                <span>Trading Cards</span>
-                            </a>
-                        </div>
-                        <div class="col-md-2 col-sm-4 col-12 mb-sm-30 wow fadeInRight" data-wow-delay=".6s">
-                            <a href='{{ route('explore') }}' class="rounded icon-box style-2">
-                                <i class="fa fa-th"></i>
-                                <span>More Categories</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="section-news" class="pt40" data-bgimage="url(/template/assets/images/background/23.jpg) top"
-                data-bgimage-alt="url(/template/assets/images/background/23-alt.jpg) top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h2>Latest News</h2>
-                        </div>
-                    </div>
-
-                    <div class="row wow fadeIn">
-                        <div class="col-lg-4 col-md-6 mb-sm-30">
-                            <div class="bloglist item">
-                                <div class="post-content">
-                                    <div class="post-image">
-                                        <img alt="" src="/template/assets/images/news/news-b1.jpg" class="lazy">
-                                    </div>
-                                    <div class="post-text">
-                                        <span class="p-tagline">Tips &amp; Tricks</span>
-                                        <span class="p-date">October 28, 2020</span>
-                                        <h4><a href="news-single.html">How to create NFT item<span></span></a></h4>
-                                        <p>The NFT can be associated with a particular digital or physical asset such as
-                                            /template/assets/images, art, music, and sport highlights and may confer
-                                            licensing rights....</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 mb-sm-30">
-                            <div class="bloglist item">
-                                <div class="post-content">
-                                    <div class="post-image">
-                                        <img alt="" src="/template/assets/images/news/news-b2.jpg" class="lazy">
-                                    </div>
-                                    <div class="post-text">
-                                        <span class="p-tagline">Tips &amp; Tricks</span>
-                                        <span class="p-date">October 28, 2020</span>
-                                        <h4><a href="news-single.html">How to sell NFT item<span></span></a></h4>
-                                        <p>NFTs function like cryptographic tokens, but unlike cryptocurrencies such as
-                                            Bitcoin or Ethereum, NFTs are not mutually interchangeable...</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 mb-sm-30">
-                            <div class="bloglist item">
-                                <div class="post-content">
-                                    <div class="post-image">
-                                        <img alt="" src="/template/assets/images/news/news-b3.jpg" class="lazy">
-                                    </div>
-                                    <div class="post-text">
-                                        <span class="p-tagline">Tips &amp; Tricks</span>
-                                        <span class="p-date">October 28, 2020</span>
-                                        <h4><a href="news-single.html">Where to sell NFT item<span></span></a></h4>
-                                        <p>The ownership of an NFT as defined by the blockchain has no inherent legal
-                                            meaning, and does not necessarily grant copyright, intellectual property...
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="section-download" class="overflow-hidden pt60 pb50 bg-loop text-light"
-                data-bgimage="url(/template/assets/images/background/24.jpg) top">
-                <div class="container">
-                    <div class="row">
-                        <div class="text-center col-lg-6 wow fadeInLeft">
-                            <h2>Download Gigaland app for your mobile.</h2>
-                        </div>
-                        <div class="text-center col-lg-6 wow fadeInRight">
-                            <a href="#"><img src="/template/assets/images/misc/download-appstore.png" alt=""></a>&nbsp;
-                            <a href="#"><img src="/template/assets/images/misc/download-playstore.png" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
         </div>
         <!-- content close -->
 
@@ -1018,7 +891,7 @@
                         <div class="widget">
                             <h5>Get the latest updates</h5>
                             <p>Signup for our newsletter to get the latest updates in your inbox.</p>
-                            <form action="https://madebydesignesia.com/themes/gigaland/blank.php" class="row form-dark"
+                            <form action="" class="row form-dark"
                                 id="form_subscribe" method="post" name="form_subscribe">
                                 <div class="text-center col">
                                     <input class="form-control" id="txt_subscribe" name="txt_subscribe"
@@ -1036,58 +909,35 @@
                                 <div class="widget">
                                     <h5>Marketplace</h5>
                                     <ul>
-                                        <li><a href="#">All NFTs</a></li>
-                                        <li><a href="#">Art</a></li>
-                                        <li><a href="#">Music</a></li>
-                                        <li><a href="#">Domain Names</a></li>
-                                        <li><a href="#">Virtual World</a></li>
-                                        <li><a href="#">Collectibles</a></li>
+                                        <li><a href="{{ route('explore') }}">All NFTs</a></li>
+                                        <li><a href="{{ route('explore') }}">Art</a></li>
+                                        <li><a href="{{ route('explore') }}">Music</a></li>
+                                        <li><a href="{{ route('explore') }}">Domain Names</a></li>
+                                        <li><a href="{{ route('explore') }}">Virtual World</a></li>
+                                        <li><a href="{{ route('explore') }}">Collectibles</a></li>
                                     </ul>
                                 </div>
                             </div>
 
                             <div class="col-lg-4 col-sm-6 col-xs-1">
                                 <div class="widget">
-                                    <h5>Resources</h5>
+                                    <h5>Quick Links</h5>
                                     <ul>
-                                        <li><a href="#">Help Center</a></li>
-                                        <li><a href="#">Partners</a></li>
-                                        <li><a href="#">Suggestions</a></li>
-                                        <li><a href="#">Discord</a></li>
-                                        <li><a href="#">Docs</a></li>
-                                        <li><a href="#">Newsletter</a></li>
+                                        <li><a href="{{ route('login')}}">Login</a></li>
+                                        <li><a href="{{ route('register')}}">Register</a></li>
+                                        <li><a href="{{ route('wallet')}}">Wallet</a></li>
+                                        <li><a href="{{ route('create')}}">Create NFT</a></li>
+                                        <li><a href="{{ route('wallet')}}">Connect Wallet</a></li>
+                                        <li><a href="{{ route('contact')}}">Contact Us</a></li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <div class="col-lg-4 col-sm-6 col-xs-1">
-                                <div class="widget">
-                                    <h5>Community</h5>
-                                    <ul>
-                                        <li><a href="#">Community</a></li>
-                                        <li><a href="#">Documentation</a></li>
-                                        <li><a href="#">Brand Assets</a></li>
-                                        <li><a href="#">Blog</a></li>
-                                        <li><a href="#">Forum</a></li>
-                                        <li><a href="#">Mailing List</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-sm-6 col-xs-1">
-                        <div class="widget">
-                            <h5>Join the community</h5>
-                            <div class="social-icons">
-                                <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-                                <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
-                                <a href="#"><i class="fa fa-instagram fa-lg"></i></a>
-                                <a href="#"><i class="fa fa-youtube fa-lg"></i></a>
-                                <a href="#"><i class="fa fa-envelope-o fa-lg"></i></a>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
             <div class="subfooter">
@@ -1095,7 +945,7 @@
                     <div class="row">
                         <div class="text-center col-md-12">
                             <a href="{{ route('index') }}">
-                                <span class="copy">&copy; Copyright 2025 - Gigaland by Designesia</span>
+                                <span class="copy">&copy; Copyright 2025 - DigitalVault </span>
                             </a>
                         </div>
                     </div>

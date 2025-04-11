@@ -1,6 +1,6 @@
 @section('title', 'Explore')
 <x-home-layout>
-    @vite('resources/css/app.css')
+
 
     <div class="no-bottom no-top" id="content">
         <div id="top"></div>
@@ -30,7 +30,7 @@
                     <div class="col-lg-12">
 
                         <div class="items_filter">
-                            <form action="https://madebydesignesia.com/themes/gigaland/blank.php" class="row form-dark"
+                            <form action="https://madebydesignesia.com/themes/DigitalVault/blank.php" class="row form-dark"
                                 id="form_quick_search" method="post" name="form_quick_search">
                                 <div class="col text-center">
                                     <input class="form-control" id="name_1" name="name_1"

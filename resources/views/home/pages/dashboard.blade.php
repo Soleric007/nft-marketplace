@@ -2,17 +2,17 @@
 <x-home-layout>
     @vite('resources/css/app.css')
 
-    @vite('resources/css/app.css')
+
     <div class="no-bottom no-top" id="content">
         <div id="top"></div>
 
         <!-- section begin -->
         <section id="subheader" class="text-light"
             data-bgimage="url(/template/assets/images/background/subheader.jpg) top">
-            <div class="center-y relative text-center">
+            <div class="relative text-center center-y">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12 text-center">
+                        <div class="text-center col-md-12">
                             <h1 class="text-[2.5rem] md:text-[4rem] font-bold">My Dashboard</h1>
                         </div>
                         <div class="clearfix"></div>
@@ -93,9 +93,9 @@
                                 @if($nft->status === 'not_minted')
                                     <a href="{{ route('nfts.mint.details', $nft->id) }}" class="mint-button">Mint NFT</a>
                                 @elseif ($nft->status === 'pending')
-                                    <span class="text-gray-500 text-xs">Minting Pending</span>
+                                    <span class="text-xs text-gray-500">Minting Pending</span>
                                 @elseif ($nft->status === 'minted')
-                                    <span class="text-gray-500 text-xs">Already Minted</span>
+                                    <span class="text-xs text-gray-500">Already Minted</span>
                                 @endif
                             </div>
                         @empty

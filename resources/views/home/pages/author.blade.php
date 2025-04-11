@@ -1,6 +1,6 @@
 @section('title', 'Authors')
 <x-home-layout>
-    @vite('resources/css/app.css')
+
 
     <div class="no-bottom no-top" id="content">
         <div id="top"></div>

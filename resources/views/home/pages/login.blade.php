@@ -1,14 +1,14 @@
 @section('title', 'Login Your Account')
 <x-home-layout>
-    @vite('resources/css/app.css')
+    
 
     <div class="no-bottom no-top" id="content">
         <div id="top"></div>
 
-        <section class="full-height relative no-top no-bottom vertical-center"
+        <section class="relative full-height no-top no-bottom vertical-center"
             data-bgimage="url(/template/assets/images/background/subheader.jpg) top" data-stellar-background-ratio=".5">
             <div class="overlay-gradient t50">
-                <div class="center-y relative">
+                <div class="relative center-y">
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col-lg-5 text-light wow fadeInRight" data-wow-delay=".5s">
@@ -43,7 +43,7 @@
 
                                         <div class="mb-4">
                                             @if (Route::has('password.request'))
-                                                <a class="underline text-xs text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                                <a class="text-xs text-gray-600 underline rounded-md hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                                                     href="{{ route('password.request') }}">
                                                     {{ __('Forgot your password?') }}
                                                 </a>
@@ -52,7 +52,7 @@
 
                                         <div class="field-set">
                                             <input type='submit' id='send_message' value='Submit'
-                                                class="btn btn-main btn-fullwidth color-2 py-3">
+                                                class="py-3 btn btn-main btn-fullwidth color-2">
                                         </div>
 
                                         <div class="clearfix"></div>
