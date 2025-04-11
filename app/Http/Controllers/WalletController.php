@@ -6,6 +6,7 @@ use App\Models\Withdrawal;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Wallet;
+use App\Models\Deposit;
 use Illuminate\Support\Facades\Storage;
 
 class WalletController extends Controller
@@ -33,11 +34,11 @@ class WalletController extends Controller
             'proof_of_payment' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
-        // Get the user's wallet (assuming each user has only one wallet)
+        // Get the user's wallet
         $wallet = Wallet::where('user_id', $request->user()->id)->first();
 
         if (!$wallet) {
-            return redirect()->back()->with('error', 'No connected wallet found. Please connect your wallet first.');
+            return redirect()->route('dashboard')->with('error', 'No connected wallet found. Please connect your wallet first.');
         }
 
         // Handle File Upload
@@ -45,13 +46,16 @@ class WalletController extends Controller
             $imagePath = $request->file('proof_of_payment')->store('wallet_proofs', 'public');
         }
 
-        // Update Wallet with Proof of Payment (Balance remains the same)
-        $wallet->update([
+        // Store deposit details in deposits table
+        Deposit::create([
+            'user_id' => $request->user()->id,
+            'amount' => $request->amount,
             'proof_of_payment' => $imagePath,
         ]);
 
         return redirect()->route('dashboard')->with('success', 'Wallet funded! Please wait while we confirm your payment.');
     }
+
     public function storeWalletAddress(Request $request)
     {
         $request->validate([

@@ -4,7 +4,7 @@
         <div class="page-content">
             <div class="container mx-auto px-4 py-6">
                 <h2 class="text-2xl font-bold text-gray-800 mb-4">User Created NFTs</h2>
-            
+
                 <div class="bg-white shadow-md rounded-lg p-6">
                     <div class="overflow-x-auto">
                         <table class="min-w-full border border-gray-300">
@@ -16,6 +16,7 @@
                                     <th class="px-4 py-2 border">Price</th>
                                     <th class="px-4 py-2 border">Creator</th>
                                     <th class="px-4 py-2 border">Status</th>
+                                    <th class="px-4 py-2 border">Miniting PoP</th>
                                     <th class="px-4 py-2 border">Actions</th>
                                 </tr>
                             </thead>
@@ -31,16 +32,23 @@
                                         <td class="px-4 py-2 border">{{ number_format($nft->price, 2) }} ETH</td>
                                         <td class="px-4 py-2 border">{{ $nft->user->name }}</td>
                                         <td class="px-4 py-2 border">
-                                            <span class="px-3 py-1 rounded-full text-white text-xs 
-                                                {{ $nft->is_minted ? 'bg-green-500' : 'bg-red-500' }}">
-                                                {{ $nft->is_minted ? 'Minted' : 'Not Minted' }}
+                                            <span class="px-3 py-1 rounded-full text-white text-xs
+                                                {{ $nft->status === 'minted' ? 'bg-green-500' : 'bg-red-500' }}">
+                                                {{ $nft->status === 'minted' ? 'Minted' : 'Pending' }}
                                             </span>
                                         </td>
                                         <td class="px-4 py-2 border">
-                                            @if(!$nft->is_minted)
-                                                <button data-id="{{ $nft->id }}" class="mint-nft-btn bg-blue-500 hover:bg-blue-700 text-white text-xs font-bold py-2 px-4 rounded">
-                                                    Mint NFT
-                                                </button>
+                                            <a href="{{ asset('storage/' . $nft->mint_proof_of_payment) }}" target="_blank"
+                                                class="text-blue-500 underline">View Proof</a>
+                                        </td>
+                                        <td class="px-4 py-2 border">
+                                            @if($nft->status === 'not_minted' || $nft->status === 'pending')
+                                                <form action="{{route('admin.nfts.mint', $nft->id)}}" method="post">
+                                                    @csrf
+                                                    <button type="submit" class="mint-nft-btn block bg-blue-500 hover:bg-blue-700 text-white text-xs font-bold py-2 px-4 rounded">
+                                                        Mint NFT
+                                                    </button>
+                                                </form>
                                             @else
                                                 <span class="text-gray-500 text-xs">Already Minted</span>
                                             @endif
@@ -55,14 +63,14 @@
                         </table>
                     </div>
                 </div>
-            
+
                 <!-- Pagination -->
                 <div class="mt-4">
                     {{ $nfts->links() }}
                 </div>
             </div>
-            
-            
+
+
             <!--end row-->
 
         </div>

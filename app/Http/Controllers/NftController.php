@@ -43,13 +43,60 @@ class NFTController extends Controller
     public function mintNFT($id)
     {
         $nft = NFT::findOrFail($id);
-        
+
+        // if ($nft->status == 'minted') {
+        //     return response()->json(['success' => false, 'message' => 'Already minted!']);
+        // }
+        // if ($nft->status == 'pending') {
+        //     return response()->json(['success' => false, 'message' => 'NFT minting pending!']);
+        // }
+
+        $nft->update(['status' => 'minted']);
+
+        return redirect()->back()->with('success' , 'NFT successfully minted!');
+    }
+    // Show Mint Details Page
+    public function showMintDetails($id)
+    {
+        $nft = NFT::findOrFail($id);
+
+        return view('home.pages.mint-details', compact('nft'));
+    }
+
+    // Show Payment Form
+    public function showPaymentForm($id)
+    {
+        $nft = NFT::findOrFail($id);
+
         if ($nft->status) {
-            return response()->json(['success' => false, 'message' => 'Already minted!']);
+            return redirect()->route('dashboard')->with('error', 'NFT is already minted.');
         }
 
-        $nft->update(['status' => true]);
+        return view('home.pages.payment-form', compact('nft'));
+    }
 
-        return response()->json(['success' => true, 'message' => 'NFT successfully minted!']);
+    // Process Payment
+    public function processPayment(Request $request, $id)
+    {
+        $request->validate([
+            'proof_of_payment' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+        ]);
+
+        $nft = NFT::findOrFail($id);
+
+        if ($nft->status) {
+            return redirect()->route('dashboard')->with('error', 'NFT is already minted.');
+        }
+
+        // Store the proof of payment
+        $proofPath = $request->file('proof_of_payment')->store('mint-payments', 'public');
+
+        // Update NFT status
+        $nft->update([
+            'status' => 'pending',
+            'mint_proof_of_payment' => $proofPath,
+        ]);
+
+        return redirect()->route('dashboard')->with('success', 'NFT Minting in Progress!');
     }
 }

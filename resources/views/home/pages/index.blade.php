@@ -2,11 +2,12 @@
 <html lang="zxx">
 
 <head>
-    <title>Gigaland - NFT Marketplace Website Template</title>
+    <title>Gigaland - NFT Marketplace | Home</title>
+
     <link rel="icon" href="/template/assets/images/icon.png" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="Gigaland - NFT Marketplace Website Template" name="description" />
+    <meta content="Gigaland - NFT Marketplace " name="description" />
     <meta content="" name="keywords" />
     <meta content="" name="author" />
     <!-- CSS Files

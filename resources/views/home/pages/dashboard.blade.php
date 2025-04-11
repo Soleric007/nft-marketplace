@@ -1,4 +1,7 @@
+@section('title', 'Dashboard')
 <x-home-layout>
+    @vite('resources/css/app.css')
+
     @vite('resources/css/app.css')
     <div class="no-bottom no-top" id="content">
         <div id="top"></div>
@@ -83,12 +86,16 @@
                                 <h3 class="nft-title">{{ $nft->title }}</h3>
                                 <p class="nft-price">Price: {{ $nft->price }} ETH</p>
                                 <div class="nft-status">
-                                    <span class="status-badge {{ $nft->status ? 'minted' : 'not-minted' }}">
-                                        {{ $nft->status ? 'Minted' : 'Not Minted' }}
+                                    <span class="status-badge {{ $nft->status === 'minted' ? 'minted' : 'not-minted' }}">
+                                        {{ $nft->status === 'minted' ? 'Minted' : 'Pending' }}
                                     </span>
                                 </div>
-                                @if(!$nft->status)
-                                    <button class="mint-button">Mint NFT</button>
+                                @if($nft->status === 'not_minted')
+                                    <a href="{{ route('nfts.mint.details', $nft->id) }}" class="mint-button">Mint NFT</a>
+                                @elseif ($nft->status === 'pending')
+                                    <span class="text-gray-500 text-xs">Minting Pending</span>
+                                @elseif ($nft->status === 'minted')
+                                    <span class="text-gray-500 text-xs">Already Minted</span>
                                 @endif
                             </div>
                         @empty
@@ -331,6 +338,8 @@
     }
 
     .mint-button {
+        display: block;
+        text-align: center;
         background-color: #4C51BF;
         color: white;
         padding: 12px 24px;

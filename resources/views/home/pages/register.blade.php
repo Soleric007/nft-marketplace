@@ -1,4 +1,7 @@
+@section('title', 'Sign up with Email')
 <x-home-layout>
+    @vite('resources/css/app.css')
+
     @vite('resources/css/app.css')
 
     <div class="no-bottom no-top" id="content">

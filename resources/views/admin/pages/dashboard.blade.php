@@ -2,238 +2,74 @@
     <div class="main-content">
 
         <div class="page-content">
-            <div class="container-fluid">
+            <div class="container mx-auto p-6">
 
-                <div class="row">
-                    <div class="col">
+                <h2 class="text-2xl font-bold mb-4">Admin Dashboard</h2>
 
-                        <div class="h-100">
-                            <div class="row mb-3 pb-1">
-                                <div class="col-12">
-                                    <div class="d-flex align-items-lg-center flex-lg-row flex-column">
-                                        <div class="flex-grow-1">
-                                            <h4 class="fs-16 mb-1">Good Morning, {{ $user->name }}</h4>
-                                            <p class="text-muted mb-0">Here's what's happening with your store today.
-                                            </p>
-                                        </div>
+                <!-- Statistics Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                                    </div><!-- end card header -->
-                                </div>
-                                <!--end col-->
-                            </div>
-                            <!--end row-->
+                    <div class="bg-white shadow rounded-lg p-4">
+                        <h3 class="text-lg font-semibold text-gray-700">Total Users</h3>
+                        <p class="text-2xl font-bold">{{ $totalUsers }}</p>
+                    </div>
 
-                            <div class="row">
-                                <div class="col-xl-3 col-md-6">
-                                    <!-- card -->
-                                    <div class="card card-animate">
-                                        <div class="card-body">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-grow-1 overflow-hidden">
-                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
-                                                        Total Earnings</p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex align-items-end justify-content-between mt-4">
-                                                <div>
-                                                    <h4 class="fs-22 fw-semibold ff-secondary mb-4">N<span
-                                                            class="counter-value" data-target="3000">0</span> </h4>
-                                                </div>
-                                                <div class="avatar-sm flex-shrink-0">
-                                                    <span class="avatar-title bg-success-subtle rounded fs-3">
-                                                        <i class="bx bx-dollar-circle text-success"></i>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div><!-- end card body -->
-                                    </div><!-- end card -->
-                                </div><!-- end col -->
+                    <div class="bg-white shadow rounded-lg p-4">
+                        <h3 class="text-lg font-semibold text-gray-700">Total NFTs</h3>
+                        <p class="text-2xl font-bold">{{ $totalNFTs }}</p>
+                    </div>
 
-                                <div class="col-xl-3 col-md-6">
-                                    <!-- card -->
-                                    <div class="card card-animate">
-                                        <div class="card-body">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-grow-1 overflow-hidden">
-                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
-                                                        Orders</p>
-                                                </div>
+                    <div class="bg-white shadow rounded-lg p-4">
+                        <h3 class="text-lg font-semibold text-gray-700">Total Wallets Created</h3>
+                        <p class="text-2xl font-bold">{{ $totalWallets }}</p>
+                    </div>
 
-                                            </div>
-                                            <div class="d-flex align-items-end justify-content-between mt-4">
-                                                <div>
-                                                    <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span
-                                                            class="counter-value" data-target="">0</span></h4>
-                                                    <a href="" class="text-decoration-underline">View all
-                                                        orders</a>
-                                                </div>
-                                                <div class="avatar-sm flex-shrink-0">
-                                                    <span class="avatar-title bg-info-subtle rounded fs-3">
-                                                        <i class="bx bx-shopping-bag text-info"></i>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div><!-- end card body -->
-                                    </div><!-- end card -->
-                                </div><!-- end col -->
+                    <div class="bg-white shadow rounded-lg p-4">
+                        <h3 class="text-lg font-semibold text-gray-700">Total Deposits</h3>
+                        <p class="text-2xl font-bold">{{ number_format($totalDeposits, 2) }} ETH</p>
+                    </div>
 
-                                <div class="col-xl-3 col-md-6">
-                                    <!-- card -->
-                                    <div class="card card-animate">
-                                        <div class="card-body">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-grow-1 overflow-hidden">
-                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
-                                                        Customers</p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex align-items-end justify-content-between mt-4">
-                                                <div>
-                                                    <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span
-                                                            class="counter-value" data-target="">0</span> </h4>
-                                                    <a href="" class="text-decoration-underline">See details</a>
-                                                </div>
-                                                <div class="avatar-sm flex-shrink-0">
-                                                    <span class="avatar-title bg-warning-subtle rounded fs-3">
-                                                        <i class="bx bx-user-circle text-warning"></i>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div><!-- end card body -->
-                                    </div><!-- end card -->
-                                </div><!-- end col -->
-
-                                <div class="col-xl-3 col-md-6">
-                                    <!-- card -->
-                                    <div class="card card-animate">
-                                        <div class="card-body">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-grow-1 overflow-hidden">
-                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
-                                                        My Products</p>
-                                                </div>
-
-                                            </div>
-                                            <div class="d-flex align-items-end justify-content-between mt-4">
-                                                <div>
-                                                    <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span
-                                                            class="counter-value" data-target="">0</span> </h4>
-                                                    <a href="" class="text-decoration-underline">View Products</a>
-                                                </div>
-                                                <div class="avatar-sm flex-shrink-0">
-                                                    <span class="avatar-title bg-primary-subtle rounded fs-3">
-                                                        <i class="bx bx-wallet text-primary"></i>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div><!-- end card body -->
-                                    </div><!-- end card -->
-                                </div><!-- end col -->
-                            </div> <!-- end row-->
-
-
-
-
-
-                            <div class="row">
-
-
-                                <div class="col-xl-8">
-                                    <div class="card">
-                                        <div class="card-header align-items-center d-flex">
-                                            <h4 class="card-title mb-0 flex-grow-1">Recent Orders</h4>
-                                            <div class="flex-shrink-0">
-                                                <button type="button" class="btn btn-soft-info btn-sm">
-                                                    <i class="ri-file-list-3-line align-middle"></i> Generate Report
-                                                </button>
-                                            </div>
-                                        </div><!-- end card header -->
-
-                                        <div class="card-body">
-                                            <div class="table-responsive table-card">
-                                                <table
-                                                    class="table table-borderless table-centered align-middle table-nowrap mb-0">
-                                                    <thead class="text-muted table-light">
-                                                        <tr>
-                                                            <th scope="col">Order ID</th>
-                                                            <th scope="col">Customer</th>
-                                                            <th scope="col">Product</th>
-                                                            <th scope="col">Amount</th>
-                                                            <th scope="col">Status</th>
-                                                        </tr>
-                                                    </thead>
-                                                    {{-- <tbody>
-                                                        @foreach ($orders as $order)
-                                                            <tr>
-                                                                <td>
-                                                                    <a href="apps-ecommerce-order-details.html"
-                                                                        class="fw-medium link-primary">#{{ $order->id }}</a>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="d-flex align-items-center">
-                                                                        <div class="flex-shrink-0 me-2">
-                                                                            <img src="/admin/assets/images/users/avatar-1.jpg"
-                                                                                alt=""
-                                                                                class="avatar-xs rounded-circle" />
-                                                                        </div>
-                                                                        <div class="flex-grow-1">
-                                                                            {{ $order->first_name . ' ' . $order->last_name }}
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                <td class="uppercase">
-                                                                    @foreach ($order->items as $item)
-                                                                        {{ $item->product->title }} <br>
-                                                                    @endforeach
-                                                                </td>
-                                                                <td>
-                                                                    <span
-                                                                        class="text-success">${{ $order->total_amount }}</span>
-                                                                </td>
-                                                                <td>
-                                                                    <span
-                                                                        class="badge {{ $order->payment_status === 'paid' ? 'bg-success-subtle text-white' : 'bg-warning-subtle text-warning' }}">{{ $order->payment_status }}</span>
-                                                                </td>
-
-                                                            </tr>
-                                                        @endforeach
-                                                    </tbody> --}}
-                                                    <!-- end tbody -->
-                                                </table><!-- end table -->
-                                                {{-- @if (count($orders) === 0)
-                                                    <div class="noresult">
-                                                        <div class="text-center">
-                                                            <lord-icon src="https://cdn.lordicon.com/msoeawqm.json"
-                                                                trigger="loop"
-                                                                colors="primary:#405189,secondary:#0ab39c"
-                                                                style="width:75px;height:75px"></lord-icon>
-                                                            <h5 class="mt-2">Sorry! No Result Found</h5>
-                                                            <p class="text-muted">No orders yet.</p>
-                                                        </div>
-                                                    </div>
-                                                @endif
-                                                <div class="d-flex justify-content-end">
-                                                    <div class="pagination-wrap hstack gap-2">
-                                                        <div class="gridjs-pagination">
-                                                            {!! $orders->withQueryString()->links('pagination::bootstrap-5') !!}
-
-                                                        </div>
-                                                    </div>
-                                                </div> --}}
-                                            </div>
-                                        </div>
-                                    </div> <!-- .card-->
-                                </div> <!-- .col-->
-                            </div> <!-- end row-->
-
-                        </div> <!-- end .h-100-->
-
-                    </div> <!-- end col -->
-
+                    <div class="bg-white shadow rounded-lg p-4">
+                        <h3 class="text-lg font-semibold text-gray-700">Total Withdrawals</h3>
+                        <p class="text-2xl font-bold">{{ number_format($totalWithdrawals, 2) }} ETH</p>
+                    </div>
 
                 </div>
 
+                <!-- Recent NFTs Created -->
+                <div class="mt-8">
+                    <h3 class="text-xl font-semibold mb-4">Recent NFTs Created</h3>
+
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white shadow rounded-lg">
+                            <thead>
+                                <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+                                    <th class="py-3 px-6 text-left">Title</th>
+                                    <th class="py-3 px-6 text-left">Creator</th>
+                                    <th class="py-3 px-6 text-left">Price</th>
+                                    <th class="py-3 px-6 text-left">Created At</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-600 text-sm font-light">
+                                @foreach ($recentNFTs as $nft)
+                                    <tr class="border-b border-gray-200 hover:bg-gray-100">
+                                        <td class="py-3 px-6 text-left">{{ $nft->title }}</td>
+                                        <td class="py-3 px-6 text-left">{{ $nft->user->name }}</td>
+                                        <td class="py-3 px-6 text-left">{{ number_format($nft->price, 2) }} ETH</td>
+                                        <td class="py-3 px-6 text-left">{{ $nft->created_at->format('d M Y') }}</td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+
+                        @if ($recentNFTs->isEmpty())
+                            <p class="text-center text-gray-500 mt-4">No recent NFTs created.</p>
+                        @endif
+                    </div>
+                </div>
+
             </div>
+
             <!-- container-fluid -->
         </div>
         <!-- End Page-content -->

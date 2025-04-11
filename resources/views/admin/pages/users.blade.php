@@ -100,7 +100,7 @@
                                                         <td class="phone">{{ $user->phone ? $user->phone : 'null' }}
                                                         <td class="address">{{ $user->address ? $user->address : 'null' }}
                                                         </td>
-                                                        <td class="date">{{ $user->created_at }}</td>
+                                                        <td class="date">{{ $user->created_at->format('d M Y, h:i A') }}</td>
                                                         <td class="status"><span
                                                                 class="badge bg-success-subtle text-success text-uppercase">Active</span>
                                                         </td>

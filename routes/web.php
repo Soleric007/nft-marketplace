@@ -3,7 +3,11 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
+use App\Models\User;
+use App\Models\NFT;
 use App\Models\Wallet;
+use App\Models\Deposit;
+use App\Models\Withdrawal;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NFTController;
 use App\Http\Controllers\UserController;
@@ -28,6 +32,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/profile', [HomeController::class, 'showProfile'])->name('profile');
     Route::post('/profile/update', [UserController::class, 'updateProfile'])->name('profile.update');
     Route::get('/create', [HomeController::class, 'showCreate'])->name('create');
+    Route::get('/nfts/mint/{id}', [NFTController::class, 'showMintDetails'])->name('nfts.mint.details');
+    Route::get('/nfts/mint/{id}/payment', [NFTController::class, 'showPaymentForm'])->name('nfts.mint.payment');
+    Route::post('/nfts/mint/{id}/process', [NFTController::class, 'processPayment'])->name('nfts.mint.process');
     Route::get('/wallet', [HomeController::class, 'showWallet'])->name('wallet');
     Route::get('/fund-wallet', [HomeController::class, 'showFundWallet'])->name('wallet.fund');
     Route::post('/fund-wallet/store', [WalletController::class, 'fundWallet'])->name('wallet.fund.store');
@@ -48,7 +55,12 @@ Route::get('/dashboard', function () {
     if (!$wallet) {
         return redirect()->route('dashboard')->with('error', 'Wallet not found. Please contact support.');
     }
-    return view('home.pages.dashboard', compact('user', 'nfts', 'wallet'));
+
+    return view('home.pages.dashboard', compact(
+        'user',
+        'nfts',
+        'wallet',
+    ));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 // Route::middleware('auth')->group(function () {
@@ -66,6 +78,7 @@ Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
     Route::put('/admin/wallets/{id}', [WalletController::class, 'update'])->name('admin.wallets.update');
     Route::get('/admin/deposits', [AdminController::class, 'deposits'])->name('admin.deposits');
     Route::get('/admin/withdrawals', [AdminController::class, 'withdrawals'])->name('admin.withdrawals');
+    Route::post('/admin/withdrawals/{withdrawal}/confirm', [AdminController::class, 'confirmWithdrawal'])->name('admin.withdrawals.confirm');
     Route::get('/admin/users', [AdminController::class, 'users'])->name('admin.users');
     Route::get('/admin/edituser/{user}', [AdminController::class, 'showEditUser'])->name('admin.showEditUser');
     Route::post('/admin/users/update/{id}', [AdminController::class, 'updateUser'])->name('admin.users.update');

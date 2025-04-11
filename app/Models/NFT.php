@@ -19,7 +19,8 @@ class NFT extends Model
         'file_type',
         'collection_name',
         'royalties',
-        'status'
+        'status',
+        'mint_proof_of_payment',
     ];
 
     public function user()
