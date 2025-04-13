@@ -8,13 +8,13 @@
         <!-- section begin -->
         <section id="subheader" class="text-light"
             data-bgimage="url(/template/assets/images/background/subheader.jpg) top">
-            <div class="center-y relative text-center">
+            <div class="relative text-center center-y">
                 <div class="container">
                     <div class="row">
 
-                        <div class="col-md-12 text-center">
+                        <div class="text-center col-md-12">
                             <h1 class='text-[2.5rem] md:text-[4rem] font-bold'>Contact Us</h1>
-                            <p>Anim pariatur cliche reprehenderit</p>
+                            <p>Reach Out. We’re Always Listening.</p>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -62,34 +62,7 @@
                         </form>
                     </div>
 
-                    <div class="col-lg-4">
-
-                        <div class="padding40 box-rounded mb30" data-bgcolor="#F2F6FE">
-                            <h3>US Office</h3>
-                            <address class="s1">
-                                <span><i class="id-color fa fa-map-marker fa-lg"></i>08 W 36th St, New York, NY
-                                    10001</span>
-                                <span><i class="id-color fa fa-phone fa-lg"></i>+1 333 9296</span>
-                                <span><i class="id-color fa fa-envelope-o fa-lg"></i><a
-                                        href="mailto:contact@example.com">contact@example.com</a></span>
-                                <span><i class="id-color fa fa-file-pdf-o fa-lg"></i><a href="#">Download
-                                        Brochure</a></span>
-                            </address>
-                        </div>
-
-
-                        <div class="padding40 bg-color text-light box-rounded">
-                            <h3>AU Office</h3>
-                            <address class="s1">
-                                <span><i class="fa fa-map-marker fa-lg"></i>100 Mainstreet Center, Sydney</span>
-                                <span><i class="fa fa-phone fa-lg"></i>+61 333 9296</span>
-                                <span><i class="fa fa-envelope-o fa-lg"></i><a
-                                        href="mailto:contact@example.com">contact@example.com</a></span>
-                                <span><i class="fa fa-file-pdf-o fa-lg"></i><a href="#">Download Brochure</a></span>
-                            </address>
-                        </div>
-
-                    </div>
+                    
 
                 </div>
             </div>

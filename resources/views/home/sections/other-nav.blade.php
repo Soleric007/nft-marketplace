@@ -8,15 +8,15 @@
                             <!-- logo begin -->
                             <div id="logo">
                                 <a href="{{ route('index') }}">
-                                    <img alt="" class="logo" src="/template/assets/images/logo-light.png" />
-                                    <img alt="" class="logo-2" src="/template/assets/images/logo.png" />
+                                    <img alt="" class="logo" src="/template/assets/images/logo-8-light.png" />
+                                    <img alt="" class="logo-2" src="/template/assets/images/logo-8.png" />
                                 </a>
                             </div>
                             <!-- logo close -->
                         </div>
                         <div class="de-flex-col">
                             <input id="quick_search" class="xs-hide" name="quick_search"
-                                placeholder="search item here..." type="text" />
+                                placeholder="Search item here..." type="text" />
                         </div>
                     </div>
                     <div class="de-flex-col header-col-mid">
@@ -26,13 +26,7 @@
                                 <a href="{{ route('index') }}">Home<span></span></a>
                             </li>
                             <li>
-                                <a href="#">Market Place<span></span></a>
-                                <ul>
-                                    <li><a href="{{ route('explore') }}">Explore</a></li>
-                                    <li><a href="{{ route('author') }}">Authors</a></li>
-                                    <li><a href="{{ route('activity') }}">Activity</a></li>
-                                    <li><a href="{{ route('rankings') }}">Rankings</a></li>
-                                </ul>
+                                <a href="{{ route('explore') }}">Explore<span></span></a>
                             </li>
 
 

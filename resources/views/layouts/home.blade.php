@@ -44,8 +44,8 @@
                                 <li><a href="{{ route('explore') }}">All NFTs</a></li>
                                 <li><a href="{{ route('explore') }}">Art</a></li>
                                 <li><a href="{{ route('explore') }}">Music</a></li>
-                                <li><a href="{{ route('explore') }}">Domain Names</a></li>
-                                <li><a href="{{ route('explore') }}">Virtual World</a></li>
+
+
                                 <li><a href="{{ route('explore') }}">Collectibles</a></li>
                             </ul>
                         </div>
@@ -72,7 +72,7 @@
                                 id="form_subscribe" method="post" name="form_subscribe">
                                 <div class="text-center col">
                                     <input class="form-control" id="txt_subscribe" name="txt_subscribe"
-                                        placeholder="enter your email" type="text" /> <a href="#" id="btn-subscribe"><i
+                                        placeholder="Enter your email" type="text" /> <a href="#" id="btn-subscribe"><i
                                             class="arrow_right bg-color-secondary"></i></a>
                                     <div class="clearfix"></div>
                                 </div>
@@ -90,19 +90,11 @@
                             <div class="de-flex">
                                 <div class="de-flex-col">
                                     <a href="{{ route('index') }}">
-                                        <img alt="" class="f-logo" src="/template/assets/images/logo.png" /><span
+                                        <img alt="" class="f-logo" src="/template/assets/images/logo-8.png" /><span
                                             class="copy">&copy; Copyright 2025 - DigitalVault </span>
                                     </a>
                                 </div>
-                                <div class="de-flex-col">
-                                    <div class="social-icons">
-                                        <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-                                        <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
-                                        <a href="#"><i class="fa fa-linkedin fa-lg"></i></a>
-                                        <a href="#"><i class="fa fa-pinterest fa-lg"></i></a>
-                                        <a href="#"><i class="fa fa-rss fa-lg"></i></a>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>

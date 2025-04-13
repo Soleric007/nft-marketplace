@@ -111,7 +111,7 @@
     <div class="d-line"></div>
 
     <ul class="de-submenu-profile">
-        <li><a href="{{ route('author') }}"><i class="fa fa-user"></i> My profile</a>
+        <li><a href="{{ route('item-details') }}"><i class="fa fa-user"></i> My profile</a>
         <li><a href="{{ route('profile') }}"><i class="fa fa-pencil"></i> Edit profile</a>
         <li><a href="#"><i class="fa fa-sign-out"></i> Sign out</a>
     </ul>

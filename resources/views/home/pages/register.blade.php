@@ -10,11 +10,11 @@
         <!-- section begin -->
         <section id="subheader" class="text-light"
             data-bgimage="url(/template/assets/images/background/subheader.jpg) top">
-            <div class="center-y relative text-center">
+            <div class="relative text-center center-y">
                 <div class="container">
                     <div class="row">
 
-                        <div class="col-md-12 text-center">
+                        <div class="text-center col-md-12">
                             <h1 class='text-[2.5rem] md:text-[4rem] font-bold'>Register</h1>
                             <p>Register by providing an Email and Password</p>
                         </div>
@@ -31,9 +31,7 @@
                 <div class="row">
                     <div class="col-md-8 offset-md-2">
                         <h3 class='text-xl md:text-[2rem] font-bold'>Don't have an account? Register now.</h3>
-                        <p class='mt-4'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                            architecto beatae vitae dicta sunt explicabo.</p>
+                        <p class='mt-4'>Create your account and unlock a new digital frontier. Secure your wallet, collect rare NFTs, and join a global network of creators, collectors, and innovators. The future is yours—claim it on the blockchain.</p>
 
                         <div class="spacer-10"></div>
 
@@ -108,7 +106,7 @@
                                 <div class="col-md-12">
 
                                     <div id='submit' class="pull-left">
-                                        <a class="underline text-sm text-indigo-600 hover:text-indigo-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                        <a class="text-sm text-indigo-600 underline rounded-md hover:text-indigo-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                                             href="{{ route('login') }}">
                                             {{ __('Already registered?') }}
                                         </a>

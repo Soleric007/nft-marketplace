@@ -8,11 +8,11 @@
         <!-- section begin -->
         <section id="subheader" class="jarallax text-light">
             <img class="jarallax-img" src="/template/assets/images/background/subheader.jpg" alt="" />
-            <div class="center-y relative text-center">
+            <div class="relative text-center center-y">
                 <div class="container">
                     <div class="row">
 
-                        <div class="col-md-12 text-center">
+                        <div class="text-center col-md-12">
                             <h1 class='text-[2.5rem] md:text-[4rem] font-bold'>Explore</h1>
                         </div>
                         <div class="clearfix"></div>
@@ -32,9 +32,9 @@
                         <div class="items_filter">
                             <form action="https://madebydesignesia.com/themes/DigitalVault/blank.php" class="row form-dark"
                                 id="form_quick_search" method="post" name="form_quick_search">
-                                <div class="col text-center">
+                                <div class="text-center col">
                                     <input class="form-control" id="name_1" name="name_1"
-                                        placeholder="search item here..." type="text" /> <a href="#" id="btn-submit"><i
+                                        placeholder="Search item here..." type="text" /> <a href="#" id="btn-submit"><i
                                             class="fa fa-search bg-color-secondary"></i></a>
                                     <div class="clearfix"></div>
                                 </div>
@@ -46,32 +46,15 @@
                                     <li class="active"><span>All categories</span></li>
                                     <li><span>Art</span></li>
                                     <li><span>Music</span></li>
-                                    <li><span>Domain Names</span></li>
-                                    <li><span>Virtual World</span></li>
-                                    <li><span>Trading Cards</span></li>
+
+
+
                                     <li><span>Collectibles</span></li>
-                                    <li><span>Sports</span></li>
-                                    <li><span>Utility</span></li>
+
+
                                 </ul>
                             </div>
 
-                            <div id="buy_category" class="dropdown">
-                                <a href="#" class="btn-selector">Buy Now</a>
-                                <ul>
-                                    <li class="active"><span>Buy Now</span></li>
-                                    <li><span>On Auction</span></li>
-                                    <li><span>Has Offers</span></li>
-                                </ul>
-                            </div>
-
-                            <div id="items_type" class="dropdown">
-                                <a href="#" class="btn-selector">All Items</a>
-                                <ul>
-                                    <li class="active"><span>All Items</span></li>
-                                    <li><span>Single Items</span></li>
-                                    <li><span>Bundles</span></li>
-                                </ul>
-                            </div>
 
                         </div>
                     </div>
@@ -80,7 +63,7 @@
                         <div class="nft__item">
                             <div class="de_countdown" data-year="2025" data-month="5" data-day="16" data-hour="8"></div>
                             <div class="author_list_pp">
-                                <a href="{{ route('author') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Monica Lucas">
                                     <img class="lazy" src="/template/assets/images/author/author-1.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -131,7 +114,7 @@
                     <div class="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="nft__item">
                             <div class="author_list_pp">
-                                <a href="{{ route('author') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Stacy Long">
                                     <img class="lazy" src="/template/assets/images/author/author-10.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -183,7 +166,7 @@
                         <div class="nft__item">
                             <div class="de_countdown" data-year="2025" data-month="5" data-day="14" data-hour="8"></div>
                             <div class="author_list_pp">
-                                <a href="{{ route('author') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Ida Chapman">
                                     <img class="lazy" src="/template/assets/images/author/author-11.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -234,7 +217,7 @@
                     <div class="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="nft__item">
                             <div class="author_list_pp">
-                                <a href="{{ route('author') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Fred Ryan">
                                     <img class="lazy" src="/template/assets/images/author/author-12.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -285,7 +268,7 @@
                     <div class="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="nft__item">
                             <div class="author_list_pp">
-                                <a href="{{ route('author') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Franklin Greer">
                                     <img class="lazy" src="/template/assets/images/author/author-9.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -337,7 +320,7 @@
                         <div class="nft__item">
                             <div class="de_countdown" data-year="2025" data-month="5" data-day="6" data-hour="8"></div>
                             <div class="author_list_pp">
-                                <a href="{{ route('author') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Mamie Barnett">
                                     <img class="lazy" src="/template/assets/images/author/author-2.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -388,7 +371,7 @@
                     <div class="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="nft__item">
                             <div class="author_list_pp">
-                                <a href="{{ route('author') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Nicholas Daniels">
                                     <img class="lazy" src="/template/assets/images/author/author-3.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -440,7 +423,7 @@
                         <div class="nft__item">
                             <div class="de_countdown" data-year="2025" data-month="5" data-day="8" data-hour="8"></div>
                             <div class="author_list_pp">
-                                <a href="{{ route('author') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Lori Hart">
                                     <img class="lazy" src="/template/assets/images/author/author-4.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -492,7 +475,7 @@
                         <div class="nft__item">
                             <div class="de_countdown" data-year="2025" data-month="5" data-day="16" data-hour="8"></div>
                             <div class="author_list_pp">
-                                <a href="{{ route('author') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Jimmy Wright">
                                     <img class="lazy" src="/template/assets/images/author/author-5.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -543,7 +526,7 @@
                     <div class="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="nft__item">
                             <div class="author_list_pp">
-                                <a href="{{ route('author') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Gayle Hicks">
                                     <img class="lazy" src="/template/assets/images/author/author-7.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -595,7 +578,7 @@
                         <div class="nft__item">
                             <div class="de_countdown" data-year="2025" data-month="5" data-day="16" data-hour="8"></div>
                             <div class="author_list_pp">
-                                <a href="{{ route('author') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Karla Sharp">
                                     <img class="lazy" src="/template/assets/images/author/author-6.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -646,7 +629,7 @@
                     <div class="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="nft__item">
                             <div class="author_list_pp">
-                                <a href="{{ route('author') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Claude Banks">
                                     <img class="lazy" src="/template/assets/images/author/author-8.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -697,7 +680,7 @@
                     <div class="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="nft__item">
                             <div class="author_list_pp">
-                                <a href="{{ route('author') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Franklin Greer">
                                     <img class="lazy" src="/template/assets/images/author/author-9.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -748,7 +731,7 @@
                     <div class="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="nft__item">
                             <div class="author_list_pp">
-                                <a href="{{ route('author') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Fred Ryan">
                                     <img class="lazy" src="/template/assets/images/author/author-12.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -799,7 +782,7 @@
                     <div class="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="nft__item">
                             <div class="author_list_pp">
-                                <a href="{{ route('author') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Lori Hart">
                                     <img class="lazy" src="/template/assets/images/author/author-4.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -850,7 +833,7 @@
                     <div class="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="nft__item">
                             <div class="author_list_pp">
-                                <a href="{{ route('author') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Monica Lucas">
                                     <img class="lazy" src="/template/assets/images/author/author-1.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -898,7 +881,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-12 text-center">
+                    <div class="text-center col-md-12">
                         <a href="#" id="loadmore" class="btn-main wow fadeInUp lead">Load more</a>
                     </div>
                 </div>

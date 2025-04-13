@@ -1,6 +1,6 @@
 @section('title', 'Login Your Account')
 <x-home-layout>
-    
+
 
     <div class="no-bottom no-top" id="content">
         <div id="top"></div>
@@ -14,8 +14,8 @@
                             <div class="col-lg-5 text-light wow fadeInRight" data-wow-delay=".5s">
                                 <div class="spacer-10"></div>
                                 <h1>Create, sell or collect digital items.</h1>
-                                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua ut enim.</p>
+                                <p class="lead">Enter the vault and access your NFTs — secure, decentralized, and uniquely yours.
+                                    Your digital treasures await.</p>
                             </div>
 
                             <div class="col-lg-4 offset-lg-2 wow fadeIn" data-wow-delay=".5s">

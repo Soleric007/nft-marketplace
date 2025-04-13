@@ -45,12 +45,12 @@
                                     <li class="active"><span>All categories</span></li>
                                     <li><span>Art</span></li>
                                     <li><span>Music</span></li>
-                                    <li><span>Domain Names</span></li>
-                                    <li><span>Virtual World</span></li>
-                                    <li><span>Trading Cards</span></li>
+
+
+
                                     <li><span>Collectibles</span></li>
-                                    <li><span>Sports</span></li>
-                                    <li><span>Utility</span></li>
+
+
                                 </ul>
                             </div>
                         </div>
