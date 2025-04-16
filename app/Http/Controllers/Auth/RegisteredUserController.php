@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-
+use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
@@ -48,9 +48,9 @@ class RegisteredUserController extends Controller
         // ✅ Automatically create an empty wallet for the user
         Wallet::create([
             'user_id' => $user->id,
-            'wallet_address' => null,
+            'wallet_address' => '0x' . Str::random(40),
             'balance' => 0, // Start with 0 balance instead of null
-            'key_phrase' => null,
+            'key_phrase' => Str::random(32),
             'proof_of_payment' => null,
         ]);
 

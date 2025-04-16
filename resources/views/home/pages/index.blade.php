@@ -73,7 +73,7 @@
                                                 </span>
 
                                                 <div class="nft_pic_wrap">
-                                                    <img src="/template/assets/images/carousel/crs-13.jpg"
+                                                    <img src="/template/assets/images/carousel/crs-5.jpg"
                                                         class="lazy img-fluid" alt="">
                                                 </div>
                                             </a>
@@ -116,7 +116,7 @@
                                                 </span>
 
                                                 <div class="nft_pic_wrap">
-                                                    <img src="/template/assets/images/carousel/crs-15.jpg"
+                                                    <img src="/template/assets/images/carousel/crs-9.jpg"
                                                         class="lazy img-fluid" alt="">
                                                 </div>
                                             </a>
@@ -513,7 +513,7 @@
                                             </div>
                                             <a href="{{ route('item-details') }}">
                                                 <div class="d-placeholder"></div>
-                                                <img src="/template/assets/images/items/anim-10.webp"
+                                                <img src="/template/assets/images/items/anime-10.jpg"
                                                     class="lazy nft__item_preview" alt="">
                                             </a>
                                         </div>
@@ -565,7 +565,7 @@
                                             </div>
                                             <a href="{{ route('item-details') }}">
                                                 <div class="d-placeholder"></div>
-                                                <img src="/template/assets/images/items/static-22.jpg"
+                                                <img src="/template/assets/images/items/static-221.jpg"
                                                     class="lazy nft__item_preview" alt="">
                                             </a>
                                         </div>
@@ -619,7 +619,7 @@
                                             </div>
                                             <a href="{{ route('item-details') }}">
                                                 <div class="d-placeholder"></div>
-                                                <img src="/template/assets/images/items/static-23.jpg"
+                                                <img src="/template/assets/images/items/static-231.jpg"
                                                     class="lazy nft__item_preview" alt="">
                                             </a>
                                         </div>
@@ -671,7 +671,7 @@
                                             </div>
                                             <a href="{{ route('item-details') }}">
                                                 <div class="d-placeholder"></div>
-                                                <img src="/template/assets/images/items/static-24.jpg"
+                                                <img src="/template/assets/images/items/static-241.jpg"
                                                     class="lazy nft__item_preview" alt="">
                                             </a>
                                         </div>
@@ -723,7 +723,7 @@
                                             </div>
                                             <a href="{{ route('item-details') }}">
                                                 <div class="d-placeholder"></div>
-                                                <img src="/template/assets/images/items/anim-9.webp"
+                                                <img src="/template/assets/images/items/anime-9.jpg"
                                                     class="lazy nft__item_preview" alt="">
                                             </a>
                                         </div>
@@ -777,7 +777,7 @@
                                             </div>
                                             <a href="{{ route('item-details') }}">
                                                 <div class="d-placeholder"></div>
-                                                <img src="/template/assets/images/items/static-21.jpg"
+                                                <img src="/template/assets/images/items/static-212.jpg"
                                                     class="lazy nft__item_preview" alt="">
                                             </a>
                                         </div>

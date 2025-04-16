@@ -395,7 +395,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/anim-1.webp" class="nft__item_preview"
+                                    <img src="/template/assets/images/items/anime-11.jpg" class="nft__item_preview"
                                         alt="">
                                 </a>
                             </div>
