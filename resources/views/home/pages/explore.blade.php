@@ -30,8 +30,8 @@
                     <div class="col-lg-12">
 
                         <div class="items_filter">
-                            <form action="https://madebydesignesia.com/themes/DigitalVault/blank.php" class="row form-dark"
-                                id="form_quick_search" method="post" name="form_quick_search">
+                            <form action="https://madebydesignesia.com/themes/DigitalVault/blank.php"
+                                class="row form-dark" id="form_quick_search" method="post" name="form_quick_search">
                                 <div class="text-center col">
                                     <input class="form-control" id="name_1" name="name_1"
                                         placeholder="Search item here..." type="text" /> <a href="#" id="btn-submit"><i
@@ -87,8 +87,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/max2.jpg" class="nft__item_preview"
-                                        alt="">
+                                    <img src="/template/assets/images/items/max2.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
@@ -138,8 +137,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/max4.jpg" class="nft__item_preview"
-                                        alt="">
+                                    <img src="/template/assets/images/items/max4.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
@@ -190,8 +188,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/max16.jpg" class="nft__item_preview"
-                                        alt="">
+                                    <img src="/template/assets/images/items/max16.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
@@ -292,8 +289,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/max12.jpg" class="nft__item_preview"
-                                        alt="">
+                                    <img src="/template/assets/images/items/max12.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
@@ -344,8 +340,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/max14.jpg" class="nft__item_preview"
-                                        alt="">
+                                    <img src="/template/assets/images/items/max14.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
@@ -395,8 +390,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/max26.jpg" class="nft__item_preview"
-                                        alt="">
+                                    <img src="/template/assets/images/items/max26.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
@@ -447,8 +441,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/max19.jpg" class="nft__item_preview"
-                                        alt="">
+                                    <img src="/template/assets/images/items/max19.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
@@ -499,8 +492,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/max20.jpg" class="nft__item_preview"
-                                        alt="">
+                                    <img src="/template/assets/images/items/max20.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
@@ -550,8 +542,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/max10.jpg" class="nft__item_preview"
-                                        alt="">
+                                    <img src="/template/assets/images/items/max10.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
@@ -602,8 +593,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/max8.jpg" class="nft__item_preview"
-                                        alt="">
+                                    <img src="/template/assets/images/items/max8.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
@@ -653,8 +643,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/max9.jpg" class="nft__item_preview"
-                                        alt="">
+                                    <img src="/template/assets/images/items/max9.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
@@ -704,8 +693,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/max15.jpg" class="nft__item_preview"
-                                        alt="">
+                                    <img src="/template/assets/images/items/max15.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
@@ -755,8 +743,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/max3.jpg" class="nft__item_preview"
-                                        alt="">
+                                    <img src="/template/assets/images/items/max3.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
@@ -806,8 +793,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/max21.jpg" class="nft__item_preview"
-                                        alt="">
+                                    <img src="/template/assets/images/items/max21.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
@@ -857,8 +843,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/max11.jpg" class="nft__item_preview"
-                                        alt="">
+                                    <img src="/template/assets/images/items/max11.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
@@ -884,9 +869,155 @@
                     <div class="text-center col-md-12">
                         <a href="#" id="loadmore" class="btn-main wow fadeInUp lead">Load more</a>
                     </div>
+
+
+
                 </div>
             </div>
         </section>
 
+        <section aria-label="section" class="minted-nft-section">
+            <div class="container">
+                <div class="row wow fadeIn">
+                    <div class="col-lg-12">
+                        <h2 class="minted-title">Minted NFTs</h2>
+
+                        <div class="nft-grid">
+                            @forelse($mintedNfts as $nft)
+                                <div class="nft-card">
+                                    <img src="{{ asset('storage/' . $nft->file_path) }}" alt="{{ $nft->title }}"
+                                        class="nft-image">
+
+                                    <div class="nft-creator">
+                                        <img src="{{ $nft->user->profile_image ? asset('storage/' . $nft->user->profile_image) : 'template/assets/images/default.jpeg' }}"
+                                            alt="{{ $nft->user->name }}" class="creator-image">
+                                        <span class="creator-name">{{ $nft->user->name }}</span>
+                                    </div>
+
+                                    <div class="nft-content">
+                                        <h3 class="nft-title">{{ $nft->title }}</h3>
+                                        <p class="nft-description">{{ Str::limit($nft->description, 60) }}</p>
+                                        <div class="nft-footer">
+                                            <span class="nft-price">{{ $nft->price }} ETH</span>
+                                            <a href="#" class="nft-view-link">View</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            @empty
+                                <p class="no-nfts">No minted NFTs found.</p>
+                            @endforelse
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
     </div>
 </x-home-layout>
+<style>
+    .minted-nft-section {
+        padding: 60px 0;
+    }
+
+    .minted-title {
+        font-size: 32px;
+        font-weight: bold;
+        color: #4f46e5;
+        /* indigo-600 */
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .nft-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 24px;
+    }
+
+    .nft-card {
+        background-color: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: box-shadow 0.3s ease;
+    }
+
+    .nft-card:hover {
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .nft-image {
+        width: 100%;
+        height: 210px;
+        object-fit: cover;
+    }
+
+    .nft-content {
+        padding: 16px;
+    }
+
+    .nft-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 8px;
+    }
+
+    .nft-description {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 12px;
+    }
+
+    .nft-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nft-price {
+        font-weight: bold;
+        color: #4f46e5;
+    }
+
+    .nft-view-link {
+        font-size: 14px;
+        color: #4f46e5;
+        text-decoration: none;
+    }
+
+    .nft-view-link:hover {
+        text-decoration: underline;
+    }
+
+    .no-nfts {
+        text-align: center;
+        color: #999;
+        font-size: 16px;
+        grid-column: 1 / -1;
+    }
+
+    .nft-creator {
+        display: flex;
+        align-items: center;
+        padding: 12px 16px 0;
+        gap: 10px;
+    }
+
+    .creator-image {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #e5e7eb;
+    }
+
+    .creator-name {
+        font-size: 14px;
+        color: #444;
+        font-weight: 500;
+    }
+</style>

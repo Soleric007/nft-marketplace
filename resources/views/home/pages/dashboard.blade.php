@@ -87,7 +87,7 @@
                                 <p class="nft-price">Price: {{ $nft->price }} ETH</p>
                                 <div class="nft-status">
                                     <span class="status-badge {{ $nft->status === 'minted' ? 'minted' : 'not-minted' }}">
-                                        {{ $nft->status === 'minted' ? 'Minted' : 'Pending' }}
+                                        {{ $nft->status === 'minted' ? 'Minted' : 'Not minted' }}
                                     </span>
                                 </div>
                                 @if($nft->status === 'not_minted')

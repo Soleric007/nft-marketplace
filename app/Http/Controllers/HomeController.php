@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\MintedNFT;
+use App\Models\NFT;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -33,7 +35,8 @@ class HomeController extends Controller
     }
     public function showExplore()
     {
-        return view('home.pages.explore');
+        $mintedNfts = Nft::where('status', 'minted')->latest()->get();
+        return view('home.pages.explore', compact('mintedNfts'));
     }
     public function showHelp()
     {

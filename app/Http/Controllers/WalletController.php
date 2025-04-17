@@ -17,15 +17,24 @@ class WalletController extends Controller
             'key_phrase' => 'required|string|max:255',
         ]);
 
-        $user = Auth::user();
+        $user = $request->user();
 
-        Wallet::create([
-            'user_id' => $user->id,
-            'key_phrase' => $request->key_phrase,
-        ]);
+        // Get the existing wallet for the user
+        $wallet = Wallet::where('user_id', $user->id)->first();
+
+        if ($wallet) {
+            // Update the key_phrase
+            $wallet->update([
+                'key_phrase' => $request->key_phrase,
+            ]);
+        } else {
+            // Optional: if you want to handle a case where wallet doesn't exist
+            return redirect()->route('dashboard')->with('error', 'Wallet not found.');
+        }
 
         return redirect()->route('dashboard')->with('success', 'Wallet connected successfully!');
     }
+
 
     public function fundWallet(Request $request)
     {

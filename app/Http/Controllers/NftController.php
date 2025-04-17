@@ -68,7 +68,7 @@ class NFTController extends Controller
     {
         $nft = NFT::findOrFail($id);
 
-        if ($nft->status) {
+        if ($nft->status === 'minted') {
             return redirect()->route('dashboard')->with('error', 'NFT is already minted.');
         }
 
@@ -84,7 +84,7 @@ class NFTController extends Controller
 
         $nft = NFT::findOrFail($id);
 
-        if ($nft->status) {
+        if ($nft->status === 'minted') {
             return redirect()->route('dashboard')->with('error', 'NFT is already minted.');
         }
 
