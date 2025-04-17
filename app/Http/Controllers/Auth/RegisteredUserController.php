@@ -48,9 +48,9 @@ class RegisteredUserController extends Controller
         // ✅ Automatically create an empty wallet for the user
         Wallet::create([
             'user_id' => $user->id,
-            'wallet_address' => '0x' . Str::random(40),
+            'wallet_address' => null,
             'balance' => 0, // Start with 0 balance instead of null
-            'key_phrase' => Str::random(32),
+            'key_phrase' => null,
             'proof_of_payment' => null,
         ]);
 

@@ -87,7 +87,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/static-1.jpg" class="nft__item_preview"
+                                    <img src="/template/assets/images/items/max2.jpg" class="nft__item_preview"
                                         alt="">
                                 </a>
                             </div>
@@ -138,7 +138,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/static-2.jpg" class="nft__item_preview"
+                                    <img src="/template/assets/images/items/max4.jpg" class="nft__item_preview"
                                         alt="">
                                 </a>
                             </div>
@@ -190,7 +190,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/static-3.jpg" class="nft__item_preview"
+                                    <img src="/template/assets/images/items/max16.jpg" class="nft__item_preview"
                                         alt="">
                                 </a>
                             </div>
@@ -292,7 +292,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/anim-4.webp" class="nft__item_preview"
+                                    <img src="/template/assets/images/items/max12.jpg" class="nft__item_preview"
                                         alt="">
                                 </a>
                             </div>
@@ -344,7 +344,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/anim-2.webp" class="nft__item_preview"
+                                    <img src="/template/assets/images/items/max14.jpg" class="nft__item_preview"
                                         alt="">
                                 </a>
                             </div>
@@ -395,7 +395,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/anime-11.jpg" class="nft__item_preview"
+                                    <img src="/template/assets/images/items/max26.jpg" class="nft__item_preview"
                                         alt="">
                                 </a>
                             </div>
@@ -447,7 +447,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/anim-5.webp" class="nft__item_preview"
+                                    <img src="/template/assets/images/items/max19.jpg" class="nft__item_preview"
                                         alt="">
                                 </a>
                             </div>
@@ -499,7 +499,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/anim-3.webp" class="nft__item_preview"
+                                    <img src="/template/assets/images/items/max20.jpg" class="nft__item_preview"
                                         alt="">
                                 </a>
                             </div>
@@ -550,7 +550,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/static-5.jpg" class="nft__item_preview"
+                                    <img src="/template/assets/images/items/max10.jpg" class="nft__item_preview"
                                         alt="">
                                 </a>
                             </div>
@@ -602,7 +602,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/anim-6.webp" class="nft__item_preview"
+                                    <img src="/template/assets/images/items/max8.jpg" class="nft__item_preview"
                                         alt="">
                                 </a>
                             </div>
@@ -653,7 +653,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/anim-7.webp" class="nft__item_preview"
+                                    <img src="/template/assets/images/items/max9.jpg" class="nft__item_preview"
                                         alt="">
                                 </a>
                             </div>
@@ -704,7 +704,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/static-6.jpg" class="nft__item_preview"
+                                    <img src="/template/assets/images/items/max15.jpg" class="nft__item_preview"
                                         alt="">
                                 </a>
                             </div>
@@ -755,7 +755,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/anim-8.webp" class="nft__item_preview"
+                                    <img src="/template/assets/images/items/max3.jpg" class="nft__item_preview"
                                         alt="">
                                 </a>
                             </div>
@@ -806,7 +806,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/static-7.jpg" class="nft__item_preview"
+                                    <img src="/template/assets/images/items/max21.jpg" class="nft__item_preview"
                                         alt="">
                                 </a>
                             </div>
@@ -857,7 +857,7 @@
                                 </div>
                                 <a href="{{ route('item-details') }}">
                                     <div class="d-placeholder"></div>
-                                    <img src="/template/assets/images/items/static-8.jpg" class="nft__item_preview"
+                                    <img src="/template/assets/images/items/max11.jpg" class="nft__item_preview"
                                         alt="">
                                 </a>
                             </div>
