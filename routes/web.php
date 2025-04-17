@@ -13,6 +13,7 @@ use App\Http\Controllers\NFTController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\WalletController;
+use App\Http\Controllers\ContactController;
 
 
 Route::post('/nfts', [NFTController::class, 'store'])->name('nfts.store')->middleware('auth');
@@ -23,6 +24,7 @@ Route::get('/activity', [HomeController::class, 'showActivity'])->name('activity
 Route::get('/author', [HomeController::class, 'showAuthor'])->name('author');
 Route::get('/collection', [HomeController::class, 'showCollection'])->name('collection');
 Route::get('/contact', [HomeController::class, 'showContact'])->name('contact');
+Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
 Route::get('/explore', [HomeController::class, 'showExplore'])->name('explore');
 Route::get('/help-center', [HomeController::class, 'showHelp'])->name('help-center');
 Route::get('/item-details', [HomeController::class, 'showItemDetails'])->name('item-details');

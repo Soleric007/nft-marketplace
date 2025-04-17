@@ -31,25 +31,44 @@
                     <div class="col-lg-8 mb-sm-30">
                         <h3>Do you have any question?</h3>
 
-                        <form name="contactForm" id="contact_form" class="form-border" method="post"
-                            action="email.php.html">
+                        @if(session('success'))
+                            <div class="alert alert-success">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+
+                        <form name="contactForm" id="contact_form" class="form-border" method="POST"
+                            action="{{ route('contact.send') }}">
+                            @csrf
                             <div class="field-set">
                                 <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" />
+                                @error('name')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
                             </div>
 
                             <div class="field-set">
                                 <input type="text" name="email" id="email" class="form-control"
                                     placeholder="Your Email" />
+                                @error('email')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
                             </div>
 
                             <div class="field-set">
                                 <input type="text" name="phone" id="phone" class="form-control"
                                     placeholder="Your Phone" />
+                                @error('phone')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
                             </div>
 
                             <div class="field-set">
                                 <textarea name="message" id="message" class="form-control"
                                     placeholder="Your Message"></textarea>
+                                @error('message')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
                             </div>
 
                             <div class="spacer-half"></div>
@@ -57,12 +76,10 @@
                             <div id="submit">
                                 <input type="submit" id="send_message" value="Submit Form" class="btn btn-main" />
                             </div>
-                            <div id="mail_success" class="success">Your message has been sent successfully.</div>
-                            <div id="mail_fail" class="error">Sorry, error occured this time sending your message.</div>
                         </form>
                     </div>
 
-                    
+
 
                 </div>
             </div>
