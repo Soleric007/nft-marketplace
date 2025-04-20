@@ -37,13 +37,13 @@
                 <!-- Wallet Address -->
                 <div class="p-4 mb-4 text-center bg-gray-100 rounded-lg">
                     <p class="font-semibold text-gray-700">Make a withdrawal fee payment of 0.5ETH to the following wallet address:</p>
-                    <input type="text" value="0x205A8743d22c7FCEd4b54D697c3159a1eDCa58dB" readonly
+                    <input type="text" value="0x66c51220d48ccCA297cC98C51BBFAaC37C416e6e" readonly
                         class="w-full p-3 mt-2 font-semibold text-center text-indigo-600 bg-indigo-100 border border-indigo-300 rounded-lg">
                 </div>
 
                 <!-- QR Code / Image -->
                 <div class="flex justify-center mb-4">
-                    <img src="https://xquisitearts.com/admin/edit-profile/uploads/67802e656cadb.jpeg" alt="QR Code"
+                    <img src="/template/assets/images/wallet/qrcode.jpeg" alt="QR Code"
                         class="object-cover w-40 h-40 rounded-lg shadow-md">
                 </div>
 
