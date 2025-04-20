@@ -8,6 +8,33 @@ use Illuminate\Support\Facades\Auth;
 
 class NFTController extends Controller
 {
+    public function index(Request $request)
+    {
+        $query = Nft::query();
+
+        if ($request->has('search') && $request->search != '') {
+            $searchTerm = $request->search;
+
+            $query->where(function ($q) use ($searchTerm) {
+                $q->where('title', 'like', '%' . $searchTerm . '%')
+                    ->orWhere('collection_name', 'like', '%' . $searchTerm . '%')
+                    ->orWhere('description', 'like', '%' . $searchTerm . '%');
+            });
+        }
+
+        $nfts = $query->latest()->paginate(12);
+        $mintedNfts = Nft::where('status', 'minted')->latest()->get();
+
+
+        return view('home.pages.searchresults', compact('nfts', 'mintedNfts'));
+    }
+
+    public function show($id)
+    {
+        $nft = NFT::findOrFail($id);
+        return view('home.pages.nftdetails', compact('nft'));
+    }
+
     public function store(Request $request)
     {
         $request->validate([
@@ -53,7 +80,7 @@ class NFTController extends Controller
 
         $nft->update(['status' => 'minted']);
 
-        return redirect()->back()->with('success' , 'NFT successfully minted!');
+        return redirect()->back()->with('success', 'NFT successfully minted!');
     }
     // Show Mint Details Page
     public function showMintDetails($id)

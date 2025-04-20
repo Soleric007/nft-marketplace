@@ -84,7 +84,12 @@
                             <div class="nft-card">
                                 <img src="{{ asset('storage/' . $nft->file_path) }}" alt="NFT Image" class="nft-image">
                                 <h3 class="nft-title">{{ $nft->title }}</h3>
-                                <p class="nft-price">Price: {{ $nft->price }} ETH</p>
+                                <div class="flex items-center justify-between">
+                                    <p class="nft-price">Price: {{ $nft->price }} ETH</p>
+                                    <div>
+                                        <a class="text-indigo-600" href="{{route('nft.details', $nft->id)}}">View</a>
+                                    </div>
+                                </div>
                                 <div class="nft-status">
                                     <span class="status-badge {{ $nft->status === 'minted' ? 'minted' : 'not-minted' }}">
                                         {{ $nft->status === 'minted' ? 'Minted' : 'Not minted' }}

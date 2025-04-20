@@ -15,8 +15,10 @@
                             <!-- logo close -->
                         </div>
                         <div class="de-flex-col">
-                            <input id="quick_search" class="xs-hide" name="quick_search"
-                                placeholder="Search item here..." type="text" />
+                            <form action="{{ route('nfts.index') }}" method="GET">
+                                <input id="quick_search" class="xs-hide" name="search" placeholder="Search item here..."
+                                    type="text" value="{{ request('search') }}" />
+                            </form>
                         </div>
                     </div>
                     <div class="de-flex-col header-col-mid">

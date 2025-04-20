@@ -13,7 +13,7 @@
                     <div class="row">
 
                         <div class="text-center col-md-12">
-                            <h1 class='text-[2.5rem] md:text-[4rem] font-bold'>Explore</h1>
+                            <h1 class='text-[2.5rem] md:text-[4rem] font-bold'>Search Results</h1>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -22,7 +22,47 @@
         </section>
         <!-- section close -->
 
+        @if($nfts->count())
+            <section aria-label="section" class="minted-nft-section">
+                <div class="container">
+                    <div class="row wow fadeIn">
+                        <div class="col-lg-12">
+                            <h2 class="minted-title">Search Results</h2>
 
+                            <div class="nft-grid">
+                                @forelse($mintedNfts as $nft)
+                                    <div class="nft-card">
+                                        <img src="{{ asset('storage/' . $nft->file_path) }}" alt="{{ $nft->title }}"
+                                            class="nft-image">
+
+                                        <div class="nft-creator">
+                                            <img src="{{ $nft->user->profile_image ? asset('storage/' . $nft->user->profile_image) : 'template/assets/images/default.jpeg' }}"
+                                                alt="{{ $nft->user->name }}" class="creator-image">
+                                            <span class="creator-name">{{ $nft->user->name }}</span>
+                                        </div>
+
+                                        <div class="nft-content">
+                                            <h3 class="nft-title">{{ $nft->title }}</h3>
+                                            <p class="nft-description">{{ Str::limit($nft->description, 60) }}</p>
+                                            <div class="nft-footer">
+                                                <span class="nft-price">{{ $nft->price }} ETH</span>
+                                                <a href="{{route('nft.details', $nft->id)}}" class="nft-view-link">View</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @empty
+                                    <p class="no-nfts">No minted NFTs found.</p>
+                                @endforelse
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {{ $nfts->appends(request()->query())->links() }}
+        @else
+            <p class="mt-5 text-center">No results found.</p>
+        @endif
         <!-- section begin -->
         <section aria-label="section">
             <div class="container">
@@ -876,6 +916,9 @@
             </div>
         </section>
 
+
+
+
         <section aria-label="section" class="minted-nft-section">
             <div class="container">
                 <div class="row wow fadeIn">
@@ -912,7 +955,7 @@
             </div>
         </section>
 
-        
+
 
 
 

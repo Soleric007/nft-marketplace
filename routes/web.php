@@ -34,6 +34,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/profile', [HomeController::class, 'showProfile'])->name('profile');
     Route::post('/profile/update', [UserController::class, 'updateProfile'])->name('profile.update');
     Route::get('/create', [HomeController::class, 'showCreate'])->name('create');
+    Route::get('/nfts', [NftController::class, 'index'])->name('nfts.index');
+    Route::get('/nft/{id}', [NFTController::class, 'show'])->name('nft.details');
     Route::get('/nfts/mint/{id}', [NFTController::class, 'showMintDetails'])->name('nfts.mint.details');
     Route::get('/nfts/mint/{id}/payment', [NFTController::class, 'showPaymentForm'])->name('nfts.mint.payment');
     Route::post('/nfts/mint/{id}/process', [NFTController::class, 'processPayment'])->name('nfts.mint.process');
