@@ -33,14 +33,14 @@
                                     <h6>Creator</h6>
                                     <div class="item_author">
                                         <div class="author_list_pp">
-                                            <a href="{{ route('item-details') }}">
+                                            <a href="">
                                                 <img class="lazy" src="/template/assets/images/author/author-1.jpg"
                                                     alt="">
                                                 <i class="fa fa-check"></i>
                                             </a>
                                         </div>
                                         <div class="author_list_info">
-                                            <a href="{{ route('item-details') }}">Monica Lucas</a>
+                                            <a href="">Monica Lucas</a>
                                         </div>
                                     </div>
                                 </div>
@@ -77,14 +77,14 @@
                                         <h6>Owner</h6>
                                         <div class="item_author">
                                             <div class="author_list_pp">
-                                                <a href="{{ route('item-details') }}">
+                                                <a href="">
                                                     <img class="lazy" src="/template/assets/images/author/author-10.jpg"
                                                         alt="">
                                                     <i class="fa fa-check"></i>
                                                 </a>
                                             </div>
                                             <div class="author_list_info">
-                                                <a href="{{ route('item-details') }}">Stacy Long</a>
+                                                <a href="">Stacy Long</a>
                                             </div>
                                         </div>
 
@@ -161,7 +161,7 @@
                                     <div class="tab-2">
                                         <div class="p_list">
                                             <div class="p_list_pp">
-                                                <a href="{{ route('item-details') }}">
+                                                <a href="">
                                                     <img class="lazy" src="/template/assets/images/author/author-1.jpg"
                                                         alt="">
                                                     <i class="fa fa-check"></i>
@@ -175,7 +175,7 @@
 
                                         <div class="p_list">
                                             <div class="p_list_pp">
-                                                <a href="{{ route('item-details') }}">
+                                                <a href="">
                                                     <img class="lazy" src="/template/assets/images/author/author-2.jpg"
                                                         alt="">
                                                     <i class="fa fa-check"></i>
@@ -189,7 +189,7 @@
 
                                         <div class="p_list">
                                             <div class="p_list_pp">
-                                                <a href="{{ route('item-details') }}">
+                                                <a href="">
                                                     <img class="lazy" src="/template/assets/images/author/author-3.jpg"
                                                         alt="">
                                                     <i class="fa fa-check"></i>
@@ -203,7 +203,7 @@
 
                                         <div class="p_list">
                                             <div class="p_list_pp">
-                                                <a href="{{ route('item-details') }}">
+                                                <a href="">
                                                     <img class="lazy" src="/template/assets/images/author/author-4.jpg"
                                                         alt="">
                                                     <i class="fa fa-check"></i>
@@ -219,7 +219,7 @@
                                     <div class="tab-3">
                                         <div class="p_list">
                                             <div class="p_list_pp">
-                                                <a href="{{ route('item-details') }}">
+                                                <a href="">
                                                     <img class="lazy" src="/template/assets/images/author/author-5.jpg"
                                                         alt="">
                                                     <i class="fa fa-check"></i>
@@ -233,7 +233,7 @@
 
                                         <div class="p_list">
                                             <div class="p_list_pp">
-                                                <a href="{{ route('item-details') }}">
+                                                <a href="">
                                                     <img class="lazy" src="/template/assets/images/author/author-1.jpg"
                                                         alt="">
                                                     <i class="fa fa-check"></i>
@@ -247,7 +247,7 @@
 
                                         <div class="p_list">
                                             <div class="p_list_pp">
-                                                <a href="{{ route('item-details') }}">
+                                                <a href="">
                                                     <img class="lazy" src="/template/assets/images/author/author-2.jpg"
                                                         alt="">
                                                     <i class="fa fa-check"></i>
@@ -261,7 +261,7 @@
 
                                         <div class="p_list">
                                             <div class="p_list_pp">
-                                                <a href="{{ route('item-details') }}">
+                                                <a href="">
                                                     <img class="lazy" src="/template/assets/images/author/author-3.jpg"
                                                         alt="">
                                                     <i class="fa fa-check"></i>
@@ -275,7 +275,7 @@
 
                                         <div class="p_list">
                                             <div class="p_list_pp">
-                                                <a href="{{ route('item-details') }}">
+                                                <a href="">
                                                     <img class="lazy" src="/template/assets/images/author/author-4.jpg"
                                                         alt="">
                                                     <i class="fa fa-check"></i>

@@ -63,7 +63,7 @@
                         <div class="nft__item">
                             <div class="de_countdown" data-year="2025" data-month="5" data-day="16" data-hour="8"></div>
                             <div class="author_list_pp">
-                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Monica Lucas">
                                     <img class="lazy" src="/template/assets/images/author/author-1.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -72,7 +72,7 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href='{{ route('item-details') }}'">Buy Now</button>
+                                        <button onclick="location.href=''">Buy Now</button>
                                         <div class="nft__item_share">
                                             <h4>Share</h4>
                                             <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
@@ -85,13 +85,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <div class="d-placeholder"></div>
                                     <img src="/template/assets/images/items/max2.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <h4>Pinky Ocean</h4>
                                 </a>
                                 <div class="nft__item_click">
@@ -113,7 +113,7 @@
                     <div class="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="nft__item">
                             <div class="author_list_pp">
-                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Stacy Long">
                                     <img class="lazy" src="/template/assets/images/author/author-10.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -122,7 +122,7 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href='{{ route('item-details') }}'">Buy Now</button>
+                                        <button onclick="location.href=''">Buy Now</button>
                                         <div class="nft__item_share">
                                             <h4>Share</h4>
                                             <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
@@ -135,13 +135,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <div class="d-placeholder"></div>
                                     <img src="/template/assets/images/items/max4.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <h4>Deep Sea Phantasy</h4>
                                 </a>
                                 <div class="nft__item_click">
@@ -164,7 +164,7 @@
                         <div class="nft__item">
                             <div class="de_countdown" data-year="2025" data-month="5" data-day="14" data-hour="8"></div>
                             <div class="author_list_pp">
-                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Ida Chapman">
                                     <img class="lazy" src="/template/assets/images/author/author-11.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -173,7 +173,7 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href='{{ route('item-details') }}'">Buy Now</button>
+                                        <button onclick="location.href=''">Buy Now</button>
                                         <div class="nft__item_share">
                                             <h4>Share</h4>
                                             <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
@@ -186,13 +186,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <div class="d-placeholder"></div>
                                     <img src="/template/assets/images/items/max16.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <h4>Rainbow Style</h4>
                                 </a>
                                 <div class="nft__item_click">
@@ -214,7 +214,7 @@
                     <div class="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="nft__item">
                             <div class="author_list_pp">
-                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Fred Ryan">
                                     <img class="lazy" src="/template/assets/images/author/author-12.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -223,7 +223,7 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href='{{ route('item-details') }}'">Buy Now</button>
+                                        <button onclick="location.href=''">Buy Now</button>
                                         <div class="nft__item_share">
                                             <h4>Share</h4>
                                             <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
@@ -236,14 +236,14 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <div class="d-placeholder"></div>
                                     <img src="/template/assets/images/items/static-4.jpg" class="nft__item_preview"
                                         alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <h4>Two Tigers</h4>
                                 </a>
                                 <div class="nft__item_click">
@@ -265,7 +265,7 @@
                     <div class="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="nft__item">
                             <div class="author_list_pp">
-                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Franklin Greer">
                                     <img class="lazy" src="/template/assets/images/author/author-9.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -274,7 +274,7 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href='{{ route('item-details') }}'">Buy Now</button>
+                                        <button onclick="location.href=''">Buy Now</button>
                                         <div class="nft__item_share">
                                             <h4>Share</h4>
                                             <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
@@ -287,13 +287,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <div class="d-placeholder"></div>
                                     <img src="/template/assets/images/items/max12.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <h4>The Truth</h4>
                                 </a>
                                 <div class="nft__item_click">
@@ -316,7 +316,7 @@
                         <div class="nft__item">
                             <div class="de_countdown" data-year="2025" data-month="5" data-day="6" data-hour="8"></div>
                             <div class="author_list_pp">
-                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Mamie Barnett">
                                     <img class="lazy" src="/template/assets/images/author/author-2.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -325,7 +325,7 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href='{{ route('item-details') }}'">Buy Now</button>
+                                        <button onclick="location.href=''">Buy Now</button>
                                         <div class="nft__item_share">
                                             <h4>Share</h4>
                                             <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
@@ -338,13 +338,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <div class="d-placeholder"></div>
                                     <img src="/template/assets/images/items/max14.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <h4>Running Puppets</h4>
                                 </a>
                                 <div class="nft__item_click">
@@ -366,7 +366,7 @@
                     <div class="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="nft__item">
                             <div class="author_list_pp">
-                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Nicholas Daniels">
                                     <img class="lazy" src="/template/assets/images/author/author-3.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -375,7 +375,7 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href='{{ route('item-details') }}'">Buy Now</button>
+                                        <button onclick="location.href=''">Buy Now</button>
                                         <div class="nft__item_share">
                                             <h4>Share</h4>
                                             <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
@@ -388,13 +388,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <div class="d-placeholder"></div>
                                     <img src="/template/assets/images/items/max26.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <h4>USA Wordmation</h4>
                                 </a>
                                 <div class="nft__item_click">
@@ -417,7 +417,7 @@
                         <div class="nft__item">
                             <div class="de_countdown" data-year="2025" data-month="5" data-day="8" data-hour="8"></div>
                             <div class="author_list_pp">
-                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Lori Hart">
                                     <img class="lazy" src="/template/assets/images/author/author-4.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -426,7 +426,7 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href='{{ route('item-details') }}'">Buy Now</button>
+                                        <button onclick="location.href=''">Buy Now</button>
                                         <div class="nft__item_share">
                                             <h4>Share</h4>
                                             <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
@@ -439,13 +439,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <div class="d-placeholder"></div>
                                     <img src="/template/assets/images/items/max19.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <h4>Loop Donut</h4>
                                 </a>
                                 <div class="nft__item_click">
@@ -468,7 +468,7 @@
                         <div class="nft__item">
                             <div class="de_countdown" data-year="2025" data-month="5" data-day="16" data-hour="8"></div>
                             <div class="author_list_pp">
-                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Jimmy Wright">
                                     <img class="lazy" src="/template/assets/images/author/author-5.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -477,7 +477,7 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href='{{ route('item-details') }}'">Buy Now</button>
+                                        <button onclick="location.href=''">Buy Now</button>
                                         <div class="nft__item_share">
                                             <h4>Share</h4>
                                             <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
@@ -490,13 +490,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <div class="d-placeholder"></div>
                                     <img src="/template/assets/images/items/max20.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <h4>Lady Copter</h4>
                                 </a>
                                 <div class="nft__item_click">
@@ -518,7 +518,7 @@
                     <div class="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="nft__item">
                             <div class="author_list_pp">
-                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Gayle Hicks">
                                     <img class="lazy" src="/template/assets/images/author/author-7.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -527,7 +527,7 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href='{{ route('item-details') }}'">Buy Now</button>
+                                        <button onclick="location.href=''">Buy Now</button>
                                         <div class="nft__item_share">
                                             <h4>Share</h4>
                                             <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
@@ -540,13 +540,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <div class="d-placeholder"></div>
                                     <img src="/template/assets/images/items/max10.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <h4>Purple Planet</h4>
                                 </a>
                                 <div class="nft__item_click">
@@ -569,7 +569,7 @@
                         <div class="nft__item">
                             <div class="de_countdown" data-year="2025" data-month="5" data-day="16" data-hour="8"></div>
                             <div class="author_list_pp">
-                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Karla Sharp">
                                     <img class="lazy" src="/template/assets/images/author/author-6.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -578,7 +578,7 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href='{{ route('item-details') }}'">Buy Now</button>
+                                        <button onclick="location.href=''">Buy Now</button>
                                         <div class="nft__item_share">
                                             <h4>Share</h4>
                                             <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
@@ -591,13 +591,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <div class="d-placeholder"></div>
                                     <img src="/template/assets/images/items/max8.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <h4>Oh Yeah!</h4>
                                 </a>
                                 <div class="nft__item_click">
@@ -619,7 +619,7 @@
                     <div class="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="nft__item">
                             <div class="author_list_pp">
-                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Claude Banks">
                                     <img class="lazy" src="/template/assets/images/author/author-8.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -628,7 +628,7 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href='{{ route('item-details') }}'">Buy Now</button>
+                                        <button onclick="location.href=''">Buy Now</button>
                                         <div class="nft__item_share">
                                             <h4>Share</h4>
                                             <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
@@ -641,13 +641,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <div class="d-placeholder"></div>
                                     <img src="/template/assets/images/items/max9.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <h4>This is Our Story</h4>
                                 </a>
                                 <div class="nft__item_click">
@@ -669,7 +669,7 @@
                     <div class="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="nft__item">
                             <div class="author_list_pp">
-                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Franklin Greer">
                                     <img class="lazy" src="/template/assets/images/author/author-9.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -678,7 +678,7 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href='{{ route('item-details') }}'">Buy Now</button>
+                                        <button onclick="location.href=''">Buy Now</button>
                                         <div class="nft__item_share">
                                             <h4>Share</h4>
                                             <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
@@ -691,13 +691,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <div class="d-placeholder"></div>
                                     <img src="/template/assets/images/items/max15.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <h4>Pixel World</h4>
                                 </a>
                                 <div class="nft__item_click">
@@ -719,7 +719,7 @@
                     <div class="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="nft__item">
                             <div class="author_list_pp">
-                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Fred Ryan">
                                     <img class="lazy" src="/template/assets/images/author/author-12.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -728,7 +728,7 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href='{{ route('item-details') }}'">Buy Now</button>
+                                        <button onclick="location.href=''">Buy Now</button>
                                         <div class="nft__item_share">
                                             <h4>Share</h4>
                                             <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
@@ -741,13 +741,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <div class="d-placeholder"></div>
                                     <img src="/template/assets/images/items/max3.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <h4>I Believe I Can Fly</h4>
                                 </a>
                                 <div class="nft__item_click">
@@ -769,7 +769,7 @@
                     <div class="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="nft__item">
                             <div class="author_list_pp">
-                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Lori Hart">
                                     <img class="lazy" src="/template/assets/images/author/author-4.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -778,7 +778,7 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href='{{ route('item-details') }}'">Buy Now</button>
+                                        <button onclick="location.href=''">Buy Now</button>
                                         <div class="nft__item_share">
                                             <h4>Share</h4>
                                             <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
@@ -791,13 +791,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <div class="d-placeholder"></div>
                                     <img src="/template/assets/images/items/max21.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <h4>Cute Astronout</h4>
                                 </a>
                                 <div class="nft__item_click">
@@ -819,7 +819,7 @@
                     <div class="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="nft__item">
                             <div class="author_list_pp">
-                                <a href="{{ route('item-details') }}" data-bs-toggle="tooltip" data-bs-placement="top"
+                                <a href="" data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Creator: Monica Lucas">
                                     <img class="lazy" src="/template/assets/images/author/author-1.jpg" alt="">
                                     <i class="fa fa-check"></i>
@@ -828,7 +828,7 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href='{{ route('item-details') }}'">Buy Now</button>
+                                        <button onclick="location.href=''">Buy Now</button>
                                         <div class="nft__item_share">
                                             <h4>Share</h4>
                                             <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
@@ -841,13 +841,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <div class="d-placeholder"></div>
                                     <img src="/template/assets/images/items/max11.jpg" class="nft__item_preview" alt="">
                                 </a>
                             </div>
                             <div class="nft__item_info">
-                                <a href="{{ route('item-details') }}">
+                                <a href="">
                                     <h4>Teal Ocean</h4>
                                 </a>
                                 <div class="nft__item_click">
@@ -912,7 +912,7 @@
             </div>
         </section>
 
-        
+
 
 
 

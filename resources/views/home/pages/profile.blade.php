@@ -8,10 +8,10 @@
         <!-- section begin -->
         <section id="subheader" class="text-light"
             data-bgimage="url(/template/assets/images/background/subheader.jpg) top">
-            <div class="center-y relative text-center">
+            <div class="relative text-center center-y">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12 text-center">
+                        <div class="text-center col-md-12">
                             <h1 class='text-[2.5rem] md:text-[4rem] font-bold'>Edit Profile</h1>
                         </div>
                         <div class="clearfix"></div>
@@ -89,30 +89,4 @@
     </div>
 </x-home-layout>
 
-{{--
-<div id="de-submenu-profile" class="de-submenu">
-    <div class="d-name">
-        <h4>Monica Lucas</h4>
-        <a href="{{ route('profile') }}">Set display name</a>
-    </div>
-    <div class="spacer-10"></div>
-    <div class="d-balance">
-        <h4>Balance</h4>
-        12.858 ETH
-    </div>
-    <div class="spacer-10"></div>
-    <div class="d-wallet">
-        <h4>My Wallet</h4>
-        <span id="wallet"
-            class="d-wallet-address">DdzFFzCqrhshMSxb9oW3mRo4MJrQkusV3fGFSTwaiu4wPBqMryA9DYVJCkW9n7twCffG5f5wX2sSkoDXGiZB1HPa7K7f865Kk4LqnrME</span>
-        <button id="btn_copy" title="Copy Text">Copy</button>
-    </div>
 
-    <div class="d-line"></div>
-
-    <ul class="de-submenu-profile">
-        <li><a href="{{ route('item-details') }}"><i class="fa fa-user"></i> My profile</a>
-        <li><a href="{{ route('profile') }}"><i class="fa fa-pencil"></i> Edit profile</a>
-        <li><a href="#"><i class="fa fa-sign-out"></i> Sign out</a>
-    </ul>
-</div> --}}

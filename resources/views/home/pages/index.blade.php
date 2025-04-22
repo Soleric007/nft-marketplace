@@ -214,14 +214,14 @@
                                 <ol class="author_list alt-2 d-col-3">
                                     <li>
                                         <div class="author_list_pp">
-                                            <a href="{{ route('item-details') }}">
+                                            <a href="">
                                                 <img class="lazy" src="/template/assets/images/author/author-1.jpg"
                                                     alt="">
                                                 <i class="fa fa-check"></i>
                                             </a>
                                         </div>
                                         <div class="author_list_info">
-                                            <a href="{{ route('item-details') }}">Monica Lucas</a>
+                                            <a href="">Monica Lucas</a>
                                             <span>@monica</span>
                                         </div>
                                         <div class="author_list_info_e">
@@ -231,14 +231,14 @@
                                     </li>
                                     <li>
                                         <div class="author_list_pp">
-                                            <a href="{{ route('item-details') }}">
+                                            <a href="">
                                                 <img class="lazy" src="/template/assets/images/author/author-2.jpg"
                                                     alt="">
                                                 <i class="fa fa-check"></i>
                                             </a>
                                         </div>
                                         <div class="author_list_info">
-                                            <a href="{{ route('item-details') }}">Mamie Barnett</a>
+                                            <a href="">Mamie Barnett</a>
                                             <span>@mamieb</span>
                                         </div>
                                         <div class="author_list_info_e">
@@ -248,14 +248,14 @@
                                     </li>
                                     <li>
                                         <div class="author_list_pp">
-                                            <a href="{{ route('item-details') }}">
+                                            <a href="">
                                                 <img class="lazy" src="/template/assets/images/author/author-3.jpg"
                                                     alt="">
                                                 <i class="fa fa-check"></i>
                                             </a>
                                         </div>
                                         <div class="author_list_info">
-                                            <a href="{{ route('item-details') }}">Nicholas Daniels</a>
+                                            <a href="">Nicholas Daniels</a>
                                             <span>@nicdaniels</span>
                                         </div>
                                         <div class="author_list_info_e">
@@ -265,14 +265,14 @@
                                     </li>
                                     <li>
                                         <div class="author_list_pp">
-                                            <a href="{{ route('item-details') }}">
+                                            <a href="">
                                                 <img class="lazy" src="/template/assets/images/author/author-4.jpg"
                                                     alt="">
                                                 <i class="fa fa-check"></i>
                                             </a>
                                         </div>
                                         <div class="author_list_info">
-                                            <a href="{{ route('item-details') }}">Lori Hart</a>
+                                            <a href="">Lori Hart</a>
                                             <span>@lorihart</span>
                                         </div>
                                         <div class="author_list_info_e">
@@ -282,14 +282,14 @@
                                     </li>
                                     <li>
                                         <div class="author_list_pp">
-                                            <a href="{{ route('item-details') }}">
+                                            <a href="">
                                                 <img class="lazy" src="/template/assets/images/author/author-5.jpg"
                                                     alt="">
                                                 <i class="fa fa-check"></i>
                                             </a>
                                         </div>
                                         <div class="author_list_info">
-                                            <a href="{{ route('item-details') }}">Jimmy Wright</a>
+                                            <a href="">Jimmy Wright</a>
                                             <span>@thejimmy</span>
                                         </div>
                                         <div class="author_list_info_e">
@@ -299,14 +299,14 @@
                                     </li>
                                     <li>
                                         <div class="author_list_pp">
-                                            <a href="{{ route('item-details') }}">
+                                            <a href="">
                                                 <img class="lazy" src="/template/assets/images/author/author-6.jpg"
                                                     alt="">
                                                 <i class="fa fa-check"></i>
                                             </a>
                                         </div>
                                         <div class="author_list_info">
-                                            <a href="{{ route('item-details') }}">Karla Sharp</a>
+                                            <a href="">Karla Sharp</a>
                                             <span>@karlasharp</span>
                                         </div>
                                         <div class="author_list_info_e">
@@ -316,14 +316,14 @@
                                     </li>
                                     <li>
                                         <div class="author_list_pp">
-                                            <a href="{{ route('item-details') }}">
+                                            <a href="">
                                                 <img class="lazy" src="/template/assets/images/author/author-7.jpg"
                                                     alt="">
                                                 <i class="fa fa-check"></i>
                                             </a>
                                         </div>
                                         <div class="author_list_info">
-                                            <a href="{{ route('item-details') }}">Gayle Hicks</a>
+                                            <a href="">Gayle Hicks</a>
                                             <span>@gayleee</span>
                                         </div>
                                         <div class="author_list_info_e">
@@ -333,14 +333,14 @@
                                     </li>
                                     <li>
                                         <div class="author_list_pp">
-                                            <a href="{{ route('item-details') }}">
+                                            <a href="">
                                                 <img class="lazy" src="/template/assets/images/author/author-8.jpg"
                                                     alt="">
                                                 <i class="fa fa-check"></i>
                                             </a>
                                         </div>
                                         <div class="author_list_info">
-                                            <a href="{{ route('item-details') }}">Claude Banks</a>
+                                            <a href="">Claude Banks</a>
                                             <span>@claudebanks</span>
                                         </div>
                                         <div class="author_list_info_e">
@@ -350,14 +350,14 @@
                                     </li>
                                     <li>
                                         <div class="author_list_pp">
-                                            <a href="{{ route('item-details') }}">
+                                            <a href="">
                                                 <img class="lazy" src="/template/assets/images/author/author-9.jpg"
                                                     alt="">
                                                 <i class="fa fa-check"></i>
                                             </a>
                                         </div>
                                         <div class="author_list_info">
-                                            <a href="{{ route('item-details') }}">Franklin Greer</a>
+                                            <a href="">Franklin Greer</a>
                                             <span>@franklin</span>
                                         </div>
                                         <div class="author_list_info_e">
@@ -367,14 +367,14 @@
                                     </li>
                                     <li>
                                         <div class="author_list_pp">
-                                            <a href="{{ route('item-details') }}">
+                                            <a href="">
                                                 <img class="lazy" src="/template/assets/images/author/author-10.jpg"
                                                     alt="">
                                                 <i class="fa fa-check"></i>
                                             </a>
                                         </div>
                                         <div class="author_list_info">
-                                            <a href="{{ route('item-details') }}">Stacy Long</a>
+                                            <a href="">Stacy Long</a>
                                             <span>@stacylong</span>
                                         </div>
                                         <div class="author_list_info_e">
@@ -384,14 +384,14 @@
                                     </li>
                                     <li>
                                         <div class="author_list_pp">
-                                            <a href="{{ route('item-details') }}">
+                                            <a href="">
                                                 <img class="lazy" src="/template/assets/images/author/author-11.jpg"
                                                     alt="">
                                                 <i class="fa fa-check"></i>
                                             </a>
                                         </div>
                                         <div class="author_list_info">
-                                            <a href="{{ route('item-details') }}">Ida Chapman</a>
+                                            <a href="">Ida Chapman</a>
                                             <span>@chapman</span>
                                         </div>
                                         <div class="author_list_info_e">
@@ -401,14 +401,14 @@
                                     </li>
                                     <li>
                                         <div class="author_list_pp">
-                                            <a href="{{ route('item-details') }}">
+                                            <a href="">
                                                 <img class="lazy" src="/template/assets/images/author/author-12.jpg"
                                                     alt="">
                                                 <i class="fa fa-check"></i>
                                             </a>
                                         </div>
                                         <div class="author_list_info">
-                                            <a href="{{ route('item-details') }}">Fred Ryan</a>
+                                            <a href="">Fred Ryan</a>
                                             <span>@fredryan</span>
                                         </div>
                                         <div class="author_list_info_e">
@@ -418,14 +418,14 @@
                                     </li>
                                     <li>
                                         <div class="author_list_pp">
-                                            <a href="{{ route('item-details') }}">
+                                            <a href="">
                                                 <img class="lazy" src="/template/assets/images/author/author-13.jpg"
                                                     alt="">
                                                 <i class="fa fa-check"></i>
                                             </a>
                                         </div>
                                         <div class="author_list_info">
-                                            <a href="{{ route('item-details') }}">Ramon Tipps</a>
+                                            <a href="">Ramon Tipps</a>
                                             <span>@ramontipps</span>
                                         </div>
                                         <div class="author_list_info_e">
@@ -435,14 +435,14 @@
                                     </li>
                                     <li>
                                         <div class="author_list_pp">
-                                            <a href="{{ route('item-details') }}">
+                                            <a href="">
                                                 <img class="lazy" src="/template/assets/images/author/author-14.jpg"
                                                     alt="">
                                                 <i class="fa fa-check"></i>
                                             </a>
                                         </div>
                                         <div class="author_list_info">
-                                            <a href="{{ route('item-details') }}">Norene Jette</a>
+                                            <a href="">Norene Jette</a>
                                             <span>@jette</span>
                                         </div>
                                         <div class="author_list_info_e">
@@ -452,14 +452,14 @@
                                     </li>
                                     <li>
                                         <div class="author_list_pp">
-                                            <a href="{{ route('item-details') }}">
+                                            <a href="">
                                                 <img class="lazy" src="/template/assets/images/author/author-15.jpg"
                                                     alt="">
                                                 <i class="fa fa-check"></i>
                                             </a>
                                         </div>
                                         <div class="author_list_info">
-                                            <a href="{{ route('item-details') }}">Chin Haward</a>
+                                            <a href="">Chin Haward</a>
                                             <span>@chinhaward</span>
                                         </div>
                                         <div class="author_list_info_e">
@@ -485,7 +485,7 @@
                                         <div class="de_countdown" data-year="2025" data-month="5" data-day="8"
                                             data-hour="8"></div>
                                         <div class="author_list_pp">
-                                            <a href="{{ route('item-details') }}" data-bs-toggle="tooltip"
+                                            <a href="" data-bs-toggle="tooltip"
                                                 data-bs-placement="top" title="Creator: DigitalVault">
                                                 <img class="lazy" src="/template/assets/images/author/author-4.jpg"
                                                     alt="">
@@ -511,14 +511,14 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <a href="{{ route('item-details') }}">
+                                            <a href="">
                                                 <div class="d-placeholder"></div>
                                                 <img src="/template/assets/images/items/max13.jpg"
                                                     class="lazy nft__item_preview" alt="">
                                             </a>
                                         </div>
                                         <div class="nft__item_info">
-                                            <a href="{{ route('item-details') }}">
+                                            <a href="">
                                                 <h4>Defraudment</h4>
                                             </a>
                                             <div class="nft__item_click">
@@ -537,7 +537,7 @@
                                 <div class="d-item">
                                     <div class="nft__item s2">
                                         <div class="author_list_pp">
-                                            <a href="{{ route('item-details') }}" data-bs-toggle="tooltip"
+                                            <a href="" data-bs-toggle="tooltip"
                                                 data-bs-placement="top" title="Creator: Stacy Long">
                                                 <img class="lazy" src="/template/assets/images/author/author-10.jpg"
                                                     alt="">
@@ -563,14 +563,14 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <a href="{{ route('item-details') }}">
+                                            <a href="">
                                                 <div class="d-placeholder"></div>
                                                 <img src="/template/assets/images/items/max25.jpg"
                                                     class="lazy nft__item_preview" alt="">
                                             </a>
                                         </div>
                                         <div class="nft__item_info">
-                                            <a href="{{ route('item-details') }}">
+                                            <a href="">
                                                 <h4>Dendroclastic</h4>
                                             </a>
                                             <div class="nft__item_click">
@@ -591,7 +591,7 @@
                                         <div class="de_countdown" data-year="2025" data-month="5" data-day="12"
                                             data-hour="8"></div>
                                         <div class="author_list_pp">
-                                            <a href="{{ route('item-details') }}" data-bs-toggle="tooltip"
+                                            <a href="" data-bs-toggle="tooltip"
                                                 data-bs-placement="top" title="Creator: Ida Chapman">
                                                 <img class="lazy" src="/template/assets/images/author/author-11.jpg"
                                                     alt="">
@@ -617,14 +617,14 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <a href="{{ route('item-details') }}">
+                                            <a href="">
                                                 <div class="d-placeholder"></div>
                                                 <img src="/template/assets/images/items/max24.jpg"
                                                     class="lazy nft__item_preview" alt="">
                                             </a>
                                         </div>
                                         <div class="nft__item_info">
-                                            <a href="{{ route('item-details') }}">
+                                            <a href="">
                                                 <h4>Masterling</h4>
                                             </a>
                                             <div class="nft__item_click">
@@ -643,7 +643,7 @@
                                 <div class="d-item">
                                     <div class="nft__item s2">
                                         <div class="author_list_pp">
-                                            <a href="{{ route('item-details') }}" data-bs-toggle="tooltip"
+                                            <a href="" data-bs-toggle="tooltip"
                                                 data-bs-placement="top" title="Creator: Fred Ryan">
                                                 <img class="lazy" src="/template/assets/images/author/author-12.jpg"
                                                     alt="">
@@ -669,14 +669,14 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <a href="{{ route('item-details') }}">
+                                            <a href="">
                                                 <div class="d-placeholder"></div>
                                                 <img src="/template/assets/images/items/max18.jpg"
                                                     class="lazy nft__item_preview" alt="">
                                             </a>
                                         </div>
                                         <div class="nft__item_info">
-                                            <a href="{{ route('item-details') }}">
+                                            <a href="">
                                                 <h4>Blue Planet</h4>
                                             </a>
                                             <div class="nft__item_click">
@@ -695,7 +695,7 @@
                                 <div class="d-item">
                                     <div class="nft__item s2">
                                         <div class="author_list_pp">
-                                            <a href="{{ route('item-details') }}" data-bs-toggle="tooltip"
+                                            <a href="" data-bs-toggle="tooltip"
                                                 data-bs-placement="top" title="Creator: Franklin Greer">
                                                 <img class="lazy" src="/template/assets/images/author/author-9.jpg"
                                                     alt="">
@@ -721,14 +721,14 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <a href="{{ route('item-details') }}">
+                                            <a href="">
                                                 <div class="d-placeholder"></div>
                                                 <img src="/template/assets/images/items/max29.jpg"
                                                     class="lazy nft__item_preview" alt="">
                                             </a>
                                         </div>
                                         <div class="nft__item_info">
-                                            <a href="{{ route('item-details') }}">
+                                            <a href="">
                                                 <h4>Superpious</h4>
                                             </a>
                                             <div class="nft__item_click">
@@ -749,7 +749,7 @@
                                         <div class="de_countdown" data-year="2025" data-month="5" data-day="6"
                                             data-hour="8"></div>
                                         <div class="author_list_pp">
-                                            <a href="{{ route('item-details') }}" data-bs-toggle="tooltip"
+                                            <a href="" data-bs-toggle="tooltip"
                                                 data-bs-placement="top" title="Creator: Monica Lucas">
                                                 <img class="lazy" src="/template/assets/images/author/author-1.jpg"
                                                     alt="">
@@ -775,14 +775,14 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <a href="{{ route('item-details') }}">
+                                            <a href="">
                                                 <div class="d-placeholder"></div>
                                                 <img src="/template/assets/images/items/max17.jpg"
                                                     class="lazy nft__item_preview" alt="">
                                             </a>
                                         </div>
                                         <div class="nft__item_info">
-                                            <a href="{{ route('item-details') }}">
+                                            <a href="">
                                                 <h4>Delectus Antiendotoxin</h4>
                                             </a>
                                             <div class="nft__item_click">
