@@ -1275,7 +1275,7 @@ section.no-bg,
 
 .text-gradient,
 .de_countdown.s2,
-.dark-scheme .de_countdown.s2{  
+.dark-scheme .de_countdown.s2{
     background: linear-gradient(45deg, var(--secondary-color-2), var(--secondary-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1321,9 +1321,145 @@ section.no-bg,
 
 /* footer */
 
+/* Base styling improvements */
+.author_list_info, .author_list_info_e {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 
+  /* Media queries for different screen sizes */
+  @media only screen and (max-width: 1200px) {
+    .author_list.d-col-3 li {
+      width: calc(33.33% - 20px);
+      margin: 10px;
+    }
+  }
+
+  @media only screen and (max-width: 992px) {
+    .author_list.d-col-3 li {
+      width: calc(50% - 20px);
+    }
+
+    h2, #top_sellers_filter {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    #top_sellers_filter {
+      margin-left: 10px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .author_list.d-col-3 li {
+      width: 100%;
+      margin: 8px 0;
+    }
+
+    .author_list li {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .author_list_pp {
+      flex: 0 0 40px;
+      margin-right: 10px;
+    }
+
+    .author_list_info {
+      flex: 1;
+    }
+
+    .author_list_info_e {
+      flex: 0 0 80px;
+      text-align: right;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media only screen and (max-width: 576px) {
+    .container {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    h2, #top_sellers_filter {
+      display: block;
+      width: 100%;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+    }
+
+    #top_sellers_filter {
+      margin-left: 0;
+      margin-bottom: 15px;
+    }
+
+    .author_list_info a {
+      font-size: 0.9rem;
+    }
+
+    .author_list_info span, .author_list_info_e span {
+      font-size: 0.8rem;
+    }
+
+    .author_list_info_e {
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  /* Fix specifically for the mobile view shown in your screenshot */
+  @media only screen and (max-width: 480px) {
+    .m-5 {
+      margin: 0 !important;
+    }
+
+    .padding30 {
+      padding: 15px !important;
+    }
+
+    .author_list li {
+      position: relative;
+      padding: 10px 5px;
+    }
+
+    .author_list_pp {
+      flex: 0 0 35px;
+    }
+
+    /* Fix for "Top Sellers in 30 days" title */
+    h2, #top_sellers_filter {
+      display: inline-block;
+      width: auto;
+    }
+
+    h2 {
+      margin-right: 5px;
+    }
+
+    /* Ensure the dropdown stays on the same line */
+    .btn-selector {
+      padding: 5px 10px;
+      font-size: 0.9rem;
+    }
+  }
 /* ================================================== */
-
+@media (max-width: 640px) {
+    .wallet-address-container {
+      word-break: break-all;
+      font-size: 0.875rem; /* 14px */
+    }
+  }
 footer {
     /*background:url('https://madebydesignesia.com/themes/gigaland/images/logo-big.png') -50% center no-repeat var(--primary-color) !important;*/
     color: var(--dark-scheme-font-color);
@@ -2027,7 +2163,7 @@ header.header-light .logo-2 {
     margin-bottom: 20px;
 }
 
-.post-content img{    
+.post-content img{
     border-radius: 8px;
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
@@ -16092,7 +16228,7 @@ img {
     }
 }
 
-/* -------------------------------------------------- 
+/* --------------------------------------------------
     design for 768px
     /* ================================================== */
 
@@ -16135,7 +16271,7 @@ img {
     #nft-item-details{
         padding-top: 0;
     }
-    
+
     .de-submenu {
         position: fixed;
     }
@@ -16985,8 +17121,8 @@ img {
     }
 }
 
-/* -------------------------------------------------- 
-    custom for 320px & 480px 
+/* --------------------------------------------------
+    custom for 320px & 480px
     /* -------------------------------------------------- */
 
 @media only screen and (max-width: 767px) {
@@ -17230,7 +17366,7 @@ img {
     }
 }
 
-/* -------------------------------------------------- 
+/* --------------------------------------------------
     design for 480px
     /* -------------------------------------------------- */
 
@@ -17260,7 +17396,7 @@ img {
 
 }
 
-/* -------------------------------------------------- 
+/* --------------------------------------------------
     design for 320px
     /* -------------------------------------------------- */
 

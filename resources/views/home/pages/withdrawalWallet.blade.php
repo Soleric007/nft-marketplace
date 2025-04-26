@@ -41,7 +41,7 @@
                         <p class="text-sm text-gray-700">
                             Here are your wallet address: <br>
                             <b
-                                class="text-indigo-600">{{Auth::user()->wallet->wallet_address ? Auth::user()->wallet->wallet_address : 'Not set. Please provide your withdrawal wallet address' }}</b>
+                                class="text-indigo-600 wallet-address-container">{{Auth::user()->wallet->wallet_address ? Auth::user()->wallet->wallet_address : 'Not set. Please provide your withdrawal wallet address' }}</b>
                         </p>
                     </div>
 

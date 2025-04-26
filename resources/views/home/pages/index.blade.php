@@ -15,6 +15,7 @@
     <link id="bootstrap" href="/template/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="/template/assets/css/plugins.css" rel="stylesheet" type="text/css" />
     <link href="/template/assets/css/style.css" rel="stylesheet" type="text/css" />
+
     <!-- color scheme -->
     <link id="colors" href="/template/assets/css/colors/scheme-12.css" rel="stylesheet" type="text/css" />
     <link href="/template/assets/css/de-modern.css" rel="stylesheet" type="text/css" />
@@ -211,15 +212,15 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
-                                <h2>Top Sellers in</h2>
-                                <div id="top_sellers_filter" class="dropdown alt-2">
+                                <h2>Top Sellers in 30 days</h2>
+                                {{-- <div id="top_sellers_filter" class="dropdown alt-2">
                                     <a href="#" class="btn-selector">30 days</a>
                                     <ul>
                                         <li class="active"><span>30 days</span></li>
                                         <li><span>1 day</span></li>
                                         <li><span>7 days</span></li>
                                     </ul>
-                                </div>
+                                </div> --}}
                             </div>
                             <div class="col-md-12 wow fadeIn">
                                 <ol class="author_list alt-2 d-col-3">

@@ -125,148 +125,243 @@
         margin: 0 auto;
     }
 
-    /* User Details Section */
-    .user-details {
-        background-color: white;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        padding: 24px;
-        margin-bottom: 24px;
-    }
+/* Base styling for user details */
+.user-details {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
 
-    .profile {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
 
-    .profile-image {
-        width: 64px;
-        height: 64px;
-        border-radius: 50%;
-        border: 4px solid #4C51BF;
-        margin-right: 24px;
-    }
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 
-    .user-info h2 {
-        font-size: 1.25rem;
-        font-weight: 600;
-        color: #2D3748;
-    }
+.user-info {
+  flex: 1;
+  min-width: 200px;
+}
 
-    .user-info p {
-        color: #718096;
-    }
+.user-name {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
 
-    /* Ethereum Balance & Actions */
-    .balance-actions {
-        background-color: white;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        padding: 24px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 24px;
-    }
+.user-email, .user-wallet, .user-phone {
+  margin: 5px 0;
+  word-break: break-word;
+}
 
-    .balance-info {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
+/* Balance and actions section */
+.balance-actions {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .balance-heading {
-        font-size: 1rem;
-        font-weight: 600;
-        color: #2D3748;
-    }
+.balance-info {
+  flex: 0 0 auto;
+}
 
-    .balance-amount {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: #4C51BF;
-    }
+.balance-heading {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
 
-    .action-buttons {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-        align-items: center;
-    }
+.balance-amount {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #5557be;
+  margin-bottom: 10px;
+}
 
-    /* Primary Action Buttons */
-    .action-button {
-        background-color: #4C51BF;
-        /* Indigo-600 */
-        color: white;
-        padding: 12px 24px;
-        border-radius: 8px;
-        text-align: center;
-        text-decoration: none;
-        transition: background 0.3s ease-in-out;
-    }
+.action-buttons {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 15px;
+  align-items: center;
+}
 
-    .action-button:hover {
-        background-color: #434190;
-        /* Darker shade */
-    }
+.action-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #5557be;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  text-align: center;
+  transition: background-color 0.3s;
+  min-width: 150px;
+}
 
-    /* More Options Dropdown */
-    .dropdown-pill {
-        position: relative;
-        background-color: #4C51BF;
-        /* Indigo-600 */
-        color: white;
-        padding: 12px 24px;
-        border-radius: 8px;
-        text-align: center;
-        cursor: pointer;
-        transition: background 0.3s ease-in-out;
-    }
+.action-button:hover {
+  background-color: #4646a0;
+}
 
-    .dropdown-pill:hover {
-        background-color: #434190;
-    }
+/* Dropdown styling */
+.dropdown-pill {
+  position: relative;
+  background-color: #5557be;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 10px 20px;
+  text-align: center;
+  min-width: 150px;
+}
 
-    /* Dropdown Content */
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: white;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        width: 220px;
-        z-index: 100;
-        padding: 8px 0;
-        overflow: hidden;
-    }
+.dropdown-pill:hover {
+  background-color: #4646a0;
+}
 
-    /* Dropdown Links */
-    .dropdown-content a {
-        display: block;
-        padding: 12px 16px;
-        color: #333;
-        text-decoration: none;
-        transition: background 0.3s ease-in-out;
-    }
+.dropdown-pill p {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .dropdown-content a:hover {
-        background-color: #f1f1f1;
-    }
+.dropdown-pill i {
+  margin-left: 5px;
+}
 
-    /* Show dropdown on hover */
-    .dropdown-pill:hover .dropdown-content {
-        display: block;
-    }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 5px;
+  background-color: #fff;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  border-radius: 8px;
+}
 
-    /* Show dropdown on click using JavaScript */
-    .dropdown-pill.active .dropdown-content {
-        display: block;
-    }
+.dropdown-pill:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f9f9f9;
+}
+
+/* For JavaScript toggle functionality */
+.dropdown-content.show {
+  display: block;
+}
+
+/* Responsive layouts */
+@media screen and (max-width: 991px) {
+  .balance-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .balance-info {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .action-button, .dropdown-pill {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .profile {
+    flex-direction: column;
+  }
+
+  .flex.items-center.space-x-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .profile .action-button {
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  .user-wallet {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .user-name {
+    font-size: 1.3rem;
+  }
+
+  .user-email, .user-wallet, .user-phone {
+    font-size: 0.9rem;
+  }
+
+  .balance-heading {
+    font-size: 1.1rem;
+  }
+
+  .balance-amount {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .user-details, .balance-actions {
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .profile-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .action-button, .dropdown-pill {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
 
 
     /* NFTs Section */
