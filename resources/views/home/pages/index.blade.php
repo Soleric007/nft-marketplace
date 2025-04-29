@@ -2,12 +2,12 @@
 <html lang="zxx">
 
 <head>
-    <title>LightWoven - NFT Marketplace | Home</title>
+    <title>ArtureWoven - NFT Marketplace | Home</title>
 
     <link rel="icon" href="/template/assets/images/icon.png" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="LightWoven - NFT Marketplace " name="description" />
+    <meta content="ArtureWoven - NFT Marketplace " name="description" />
     <meta content="" name="keywords" />
     <meta content="" name="author" />
     <!-- CSS Files
@@ -498,7 +498,7 @@
                                             data-hour="8"></div>
                                         <div class="author_list_pp">
                                             <a href="" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" title="Creator: LightWoven">
+                                                data-bs-placement="top" title="Creator: ArtureWoven">
                                                 <img class="lazy" src="/template/assets/images/author/author-4.jpg"
                                                     alt="">
                                                 <i class="fa fa-check"></i>
@@ -957,7 +957,7 @@
                     <div class="row">
                         <div class="text-center col-md-12">
                             <a href="{{ route('index') }}">
-                                <span class="copy">&copy; Copyright 2025 - LightWoven </span>
+                                <span class="copy">&copy; Copyright 2025 - ArtureWoven </span>
                             </a>
                         </div>
                     </div>

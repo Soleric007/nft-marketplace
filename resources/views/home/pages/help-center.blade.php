@@ -16,7 +16,7 @@
                                 <div class="spacer-single"></div>
                                 <h1>Help Center</h1>
 
-                                <form action='https://madebydesignesia.com/themes/LightWoven/blank.php' class="row"
+                                <form action='https://madebydesignesia.com/themes/ArtureWoven/blank.php' class="row"
                                     id='form_sb' method="post" name="myForm">
                                     <div class="col text-center">
                                         <div class="spacer-10"></div>
