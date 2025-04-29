@@ -531,7 +531,7 @@
                                         </div>
                                         <div class="nft__item_info">
                                             <a href="">
-                                                <h4>Defraudment</h4>
+                                                <h4>Pink fragrant</h4>
                                             </a>
                                             <div class="nft__item_click">
                                                 <span></span>
