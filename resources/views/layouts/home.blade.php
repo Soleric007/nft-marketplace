@@ -2,11 +2,11 @@
 <html lang="zxx">
 
 <head>
-    <title>@yield('title', 'DigitalVault - NFT Marketplace')</title>
+    <title>@yield('title', 'LightWoven - NFT Marketplace')</title>
     <link rel="icon" href="/template/assets/images/icon.png" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="DigitalVault - NFT Marketplace Website Template" name="description" />
+    <meta content="LightWoven - NFT Marketplace Website Template" name="description" />
     <meta content="" name="keywords" />
     <meta content="" name="author" />
     <!-- CSS Files
@@ -80,7 +80,7 @@
                         <div class="widget">
                             <h5>Newsletter</h5>
                             <p>Signup for our newsletter to get the latest news in your inbox.</p>
-                            <form action="https://madebydesignesia.com/themes/DigitalVault/blank.php" class="row form-dark"
+                            <form action="https://madebydesignesia.com/themes/LightWoven/blank.php" class="row form-dark"
                                 id="form_subscribe" method="post" name="form_subscribe">
                                 <div class="text-center col">
                                     <input class="form-control" id="txt_subscribe" name="txt_subscribe"
@@ -102,8 +102,8 @@
                             <div class="de-flex">
                                 <div class="de-flex-col">
                                     <a href="{{ route('index') }}">
-                                        <img alt="" class="f-logo" src="/template/assets/images/logo-8.png" /><span
-                                            class="copy">&copy; Copyright 2025 - DigitalVault </span>
+                                        <img alt="" class="f-logo" src="/template/assets/images/lightwoven.png" /><span
+                                            class="copy">&copy; Copyright 2025 - LightWoven </span>
                                     </a>
                                 </div>
 

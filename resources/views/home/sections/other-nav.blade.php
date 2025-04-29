@@ -8,8 +8,8 @@
                             <!-- logo begin -->
                             <div id="logo">
                                 <a href="{{ route('index') }}">
-                                    <img alt="" class="logo" src="/template/assets/images/logo-8-light.png" />
-                                    <img alt="" class="logo-2" src="/template/assets/images/logo-8.png" />
+                                    <img alt="" class="logo" src="/template/assets/images/lightwovenlight.png" />
+                                    <img alt="" class="logo-2" src="/template/assets/images/lightwoven.png" />
                                 </a>
                             </div>
                             <!-- logo close -->

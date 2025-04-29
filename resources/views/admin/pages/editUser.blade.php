@@ -9,7 +9,7 @@
                             <h4 class="mb-sm-0">Edit User</h4>
                             <div class="page-title-right">
                                 <ol class="m-0 breadcrumb">
-                                    <li class="breadcrumb-item"><a href="javascript: void(0);">DigitalVault</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">LightWoven</a></li>
                                     <li class="breadcrumb-item active">Edit User</li>
                                 </ol>
                             </div>
@@ -74,7 +74,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-6">
-                        <script>document.write(new Date().getFullYear())</script> © DigitalVault.
+                        <script>document.write(new Date().getFullYear())</script> © LightWoven.
                     </div>
                     <div class="col-sm-6">
                         <div class="text-sm-end d-none d-sm-block">Design & Develop by Soleric</div>

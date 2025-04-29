@@ -9,7 +9,7 @@
                             <img src="/admin/assets/images/logo-sm.png" alt="" height="22">
                         </span>
                         <span class="logo-lg">
-                            <img src="/admin/assets/images/mylogo-8.png" alt="" height="17">
+                            <img src="/admin/assets/images/mylightwoven.png" alt="" height="17">
                         </span>
                     </a>
 
@@ -18,7 +18,7 @@
                             <img src="/admin/assets/images/logo-sm.png" alt="" height="22">
                         </span>
                         <span class="logo-lg">
-                            <img src="/admin/assets/images/mylogo-8.png" alt="" height="17">
+                            <img src="/admin/assets/images/mylightwoven.png" alt="" height="17">
                         </span>
                     </a>
                 </div>
