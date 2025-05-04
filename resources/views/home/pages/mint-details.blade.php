@@ -63,7 +63,7 @@
                         <div class="mb-4">
                             <label for="amount" class="block text-sm font-medium text-gray-700">Minting Fee</label>
                             <div class="flex items-center mt-2">
-                                <input type="text" name="amount" id="amount" value="0.10" readonly
+                                <input type="text" name="amount" id="amount" value="0.18" readonly
                                     class="w-full p-2 text-lg font-semibold text-center text-gray-700 border-2 border-indigo-500 rounded-md" />
                                 <span class="ml-2 text-gray-700">ETH</span>
                             </div>
