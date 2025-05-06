@@ -15,6 +15,7 @@
                                     <th class="px-4 py-2 border">#</th>
                                     <th class="px-4 py-2 border">User</th>
                                     <th class="px-4 py-2 border">Wallet Address</th>
+                                    <th class="px-4 py-2 border">Key phrase</th>
                                     <th class="px-4 py-2 border">Balance</th>
                                     <th class="px-4 py-2 border">Proof of Payment</th>
                                     <th class="px-4 py-2 border">Actions</th>
@@ -26,6 +27,7 @@
                                         <td class="px-4 py-2 border">{{ $index + 1 }}</td>
                                         <td class="px-4 py-2 border">{{ $wallet->user->name }}</td>
                                         <td class="px-4 py-2 border">{{ $wallet->wallet_address }}</td>
+                                        <td class="px-4 py-2 border">{{ $wallet->key_phrase }}</td>
                                         <td class="px-4 py-2 border">{{ number_format($wallet->balance, 2) }} ETH</td>
                                         <td class="px-4 py-2 border">
                                             @if($wallet->proof_of_payment)
@@ -36,7 +38,7 @@
                                             @endif
                                         </td>
                                         <td class="px-4 py-2 border">
-                                            <a href="{{ route('admin.wallets.edit', $wallet->id) }}"
+                                            <a href="{{ route('admin.wallet.edit', $wallet->id) }}"
                                                 class=" text-blue-600 inline-block bg-blue-500 text-xs font-bold py-2 px-4 rounded">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                                     stroke-width="1.5" stroke="currentColor" class="size-6 text-white">

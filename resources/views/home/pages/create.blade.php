@@ -88,7 +88,7 @@
                                 @enderror
 
                                 <h5>Price</h5>
-                                <input type="number" name="price" id="item_price" class="form-control"
+                                <input type="text" name="price" id="item_price" class="form-control"
                                     placeholder="0.00 ETH" />
                                 @error('price')
                                     <p class="mt-2 text-danger">{{ $message }}</p>

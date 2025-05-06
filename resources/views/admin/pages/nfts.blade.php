@@ -22,38 +22,56 @@
                             </thead>
                             <tbody>
                                 @forelse($nfts as $index => $nft)
-                                    <tr class="text-center border">
-                                        <td class="px-4 py-2 border">{{ $index + 1 }}</td>
-                                        <td class="px-4 py-2 border">
-                                            <img src="{{ asset('storage/' . $nft->file_path) }}" alt="NFT Image"
-                                                class="w-16 h-16 object-cover rounded-md">
-                                        </td>
-                                        <td class="px-4 py-2 border">{{ $nft->title }}</td>
-                                        <td class="px-4 py-2 border">{{ number_format($nft->price, 2) }} ETH</td>
-                                        <td class="px-4 py-2 border">{{ $nft->user->name }}</td>
-                                        <td class="px-4 py-2 border">
-                                            <span class="px-3 py-1 rounded-full text-white text-xs
-                                                {{ $nft->status === 'minted' ? 'bg-green-500' : 'bg-red-500' }}">
-                                                {{ $nft->status === 'minted' ? 'Minted' : 'Pending' }}
-                                            </span>
-                                        </td>
-                                        <td class="px-4 py-2 border">
-                                            <a href="{{ asset('storage/' . $nft->mint_proof_of_payment) }}" target="_blank"
-                                                class="text-blue-500 underline">View Proof</a>
-                                        </td>
-                                        <td class="px-4 py-2 border">
-                                            @if($nft->status === 'not_minted' || $nft->status === 'pending')
-                                                <form action="{{route('admin.nfts.mint', $nft->id)}}" method="post">
-                                                    @csrf
-                                                    <button type="submit" class="mint-nft-btn block bg-blue-500 hover:bg-blue-700 text-white text-xs font-bold py-2 px-4 rounded">
-                                                        Mint NFT
-                                                    </button>
-                                                </form>
-                                            @else
-                                                <span class="text-gray-500 text-xs">Already Minted</span>
-                                            @endif
-                                        </td>
-                                    </tr>
+                                                                <tr class="text-center border">
+                                                                    <td class="px-4 py-2 border">{{ $index + 1 }}</td>
+                                                                    <td class="px-4 py-2 border">
+                                                                        <img src="{{ asset('storage/' . $nft->file_path) }}" alt="NFT Image"
+                                                                            class="w-16 h-16 object-cover rounded-md">
+                                                                    </td>
+                                                                    <td class="px-4 py-2 border">{{ $nft->title }}</td>
+                                                                    <td class="px-4 py-2 border">{{ number_format($nft->price, 2) }} ETH</td>
+                                                                    <td class="px-4 py-2 border">{{ $nft->user->name }}</td>
+                                                                    <td class="px-4 py-2 border">
+                                                                        <span class="px-3 py-1 rounded-full text-white text-xs
+                                    {{ $nft->status === 'minted' ? 'bg-green-500' : ($nft->status === 'pending' ? 'bg-yellow-500' : 'bg-red-500') }}">
+                                                                            @if($nft->status === 'minted')
+                                                                                Minted
+                                                                            @elseif($nft->status === 'pending')
+                                                                                Pending
+                                                                            @else
+                                                                                Not Minted
+                                                                            @endif
+                                                                        </span>
+
+                                                                    </td>
+                                                                    <td class="px-4 py-2 border">
+                                                                        <a href="{{ asset('storage/' . $nft->mint_proof_of_payment) }}" target="_blank"
+                                                                            class="text-blue-500 underline">View Proof</a>
+                                                                    </td>
+                                                                    <td class="px-4 py-2 border">
+                                                                        {{-- <span>
+                                                                            @if($nft->status === 'not_minted' || $nft->status === 'pending')
+                                                                            <form action="{{route('admin.nfts.mint', $nft->id)}}" method="post">
+                                                                                @csrf
+                                                                                <button type="submit"
+                                                                                    class="mint-nft-btn block bg-blue-500 hover:bg-blue-700 text-white text-xs font-bold py-2 px-4 rounded">
+                                                                                    Mint NFT
+                                                                                </button>
+                                                                            </form>
+                                                                            @else
+                                                                            <span class="text-gray-500 text-xs">Already Minted</span>
+                                                                            @endif
+                                                                        </span> --}}
+                                                                        <a href="{{ route('admin.nfts.edit', $nft->id) }}"
+                                                                            class=" text-blue-600 inline-block bg-blue-500 text-xs font-bold py-2 px-4 rounded">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                                                stroke-width="1.5" stroke="currentColor" class="size-6 text-white">
+                                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                                                    d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                                                                            </svg>
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
                                 @empty
                                     <tr>
                                         <td colspan="7" class="text-center py-4 text-gray-500">No NFTs found</td>
@@ -111,14 +129,14 @@
                         'Content-Type': 'application/json'
                     }
                 })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        location.reload();
-                    } else {
-                        alert('Something went wrong!');
-                    }
-                });
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            location.reload();
+                        } else {
+                            alert('Something went wrong!');
+                        }
+                    });
             });
         });
     });

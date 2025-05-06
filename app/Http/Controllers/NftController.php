@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\NFT;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class NFTController extends Controller
 {
@@ -27,6 +28,39 @@ class NFTController extends Controller
 
 
         return view('home.pages.searchresults', compact('nfts', 'mintedNfts'));
+    }
+
+    public function editNFT($id)
+    {
+        $nft = NFT::findOrFail($id);
+        return view('admin.pages.editNFT', compact('nft'));
+    }
+
+    public function update(Request $request, NFT $nft)
+    {
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'price' => 'required|numeric',
+            'status' => 'required|in:minted,pending,not_minted',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        $nft->title = $request->title;
+        $nft->price = $request->price;
+        $nft->status = $request->status;
+
+        if ($request->hasFile('image')) {
+            // Delete old image
+            if ($nft->file_path && Storage::disk('public')->exists($nft->file_path)) {
+                Storage::disk('public')->delete($nft->file_path);
+            }
+
+            $nft->file_path = $request->file('image')->store('nfts', 'public');
+        }
+
+        $nft->save();
+
+        return redirect()->route('admin.nfts')->with('success', 'NFT updated successfully.');
     }
 
     public function show($id)

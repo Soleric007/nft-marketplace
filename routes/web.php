@@ -78,7 +78,9 @@ Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
     Route::get('/admin/nfts', [AdminController::class, 'nfts'])->name('admin.nfts');
     Route::post('/admin/nfts/mint/{id}', [NFTController::class, 'mintNFT'])->name('admin.nfts.mint');
     Route::get('/admin/wallets', [AdminController::class, 'wallets'])->name('admin.wallets');
-    Route::get('/admin/wallets/{id}/edit', [WalletController::class, 'edit'])->name('admin.wallets.edit');
+    Route::get('/admin/wallets/{id}/edit', [NFTController::class, 'editNFT'])->name('admin.nfts.edit');
+    Route::put('/admin/nft/{nft}', [NFTController::class, 'update'])->name('admin.nft.update');
+    Route::get('/admin/wallets/{id}/edit', [WalletController::class, 'edit'])->name('admin.wallet.edit');
     Route::put('/admin/wallets/{id}', [WalletController::class, 'update'])->name('admin.wallets.update');
     Route::get('/admin/deposits', [AdminController::class, 'deposits'])->name('admin.deposits');
     Route::get('/admin/withdrawals', [AdminController::class, 'withdrawals'])->name('admin.withdrawals');
