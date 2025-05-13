@@ -14,6 +14,7 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\WalletController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ArtNFTController;
 
 
 Route::post('/nfts', [NFTController::class, 'store'])->name('nfts.store')->middleware('auth');
@@ -31,6 +32,14 @@ Route::get('/item-details', [HomeController::class, 'showItemDetails'])->name('i
 Route::get('/login', [HomeController::class, 'showLogin'])->name('login');
 Route::get('/rankings', [HomeController::class, 'showRankings'])->name('rankings');
 Route::middleware(['auth', 'verified'])->group(function () {
+
+    Route::get('/artnft/{id}', [ArtNFTController::class, 'show'])->name('artnft.show');
+    Route::get('/buy/artnft/{id}', [ArtNFTController::class, 'buy'])->name('artnft.buy');
+    Route::post('/buy/artnft/{id}/purchase', [ArtNFTController::class, 'purchaseProcess'])->name('artNfts.purchase.process');
+
+
+
+
     Route::get('/profile', [HomeController::class, 'showProfile'])->name('profile');
     Route::post('/profile/update', [UserController::class, 'updateProfile'])->name('profile.update');
     Route::get('/create', [HomeController::class, 'showCreate'])->name('create');
@@ -89,6 +98,15 @@ Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
     Route::get('/admin/edituser/{user}', [AdminController::class, 'showEditUser'])->name('admin.showEditUser');
     Route::post('/admin/users/update/{id}', [AdminController::class, 'updateUser'])->name('admin.users.update');
     Route::get('/admin/deleteuser/{user}', [AdminController::class, 'deleteUser'])->name('admin.deleteUser');
+
+
+    Route::get('/admin/explore-nfts', [AdminController::class, 'exploreNfts'])->name('admin.artNfts');
+    Route::get('/admin/explore-nfts/edit/{id}', [AdminController::class, 'editExploreNfts'])->name('admin.artNfts.edit');
+    Route::put('/admin/explore-nfts/{id}', [AdminController::class, 'updateExploreNft'])->name('admin.artNfts.update');
+
+    Route::get('/admin/purchases', [ArtNftController::class, 'viewPurchases'])->name('admin.artNfts.purchases');
+
+
 });
 
 require __DIR__ . '/auth.php';

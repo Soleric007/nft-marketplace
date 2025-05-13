@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ArtNft;
 use App\Models\NFT;
 use App\Models\User;
 use App\Models\Wallet;
@@ -46,6 +47,12 @@ class AdminController extends Controller
         $nfts = NFT::with('user')->latest()->paginate(10);
         return view('admin.pages.nfts', compact('nfts'));
     }
+    public function exploreNfts()
+    {
+        // Retrieve all NFTs along with user details
+        $nfts = ArtNft::latest()->paginate(10);
+        return view('admin.pages.exploreNfts', compact('nfts'));
+    }
     public function wallets()
     {
         $wallets = Wallet::with('user')->latest()->paginate(10);
@@ -81,6 +88,34 @@ class AdminController extends Controller
         $user = User::find($user);
 
         return view('admin.pages.editUser', compact('user'));
+    }
+    public function editExploreNfts($id)
+    {
+        $nft = ArtNft::find($id);
+
+        return view('admin.pages.editExploreNfts', compact('nft'));
+    }
+
+    public function updateExploreNft(Request $request, $id)
+    {
+        $nft = ArtNft::find($id);
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'category' => 'required|string|max:50',
+            'description' => 'required|string|max:255',
+            'price' => 'required|numeric',
+            // 'status' => 'required|in:minted,pending,not_minted',
+            // 'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        $nft->name = $request->name;
+        $nft->category = $request->category;
+        $nft->description = $request->description;
+        $nft->price = $request->price;
+        // $nft->status = $request->status;
+        $nft->save();
+
+        return redirect()->route('admin.artNfts')->with('success', 'NFT updated successfully.');
     }
     public function updateUser(Request $request, $id)
     {
