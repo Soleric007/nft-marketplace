@@ -29,7 +29,7 @@
                 <div class="max-w-lg p-6 mx-auto mt-10 bg-white rounded-lg shadow-lg">
                     <h2 class="mb-4 text-2xl font-bold text-indigo-500">Upload Payment Proof</h2>
                     <p class="text-lg text-gray-700">You're minting: <span class="font-semibold">{{ $nft->title }}</span></p>
-                    <p class="mt-2 text-gray-600">Minting Price: <span class="font-semibold">0.10 ETH</span></p>
+                    <p class="mt-2 text-gray-600">Minting Price: <span class="font-semibold">0.18 ETH</span></p>
                     <div class="p-4 my-4 text-center bg-gray-100 rounded-lg">
                         <p class="font-semibold text-gray-700">Make a payment to the following wallet address:</p>
                         <input type="text" value="0x66c51220d48ccCA297cC98C51BBFAaC37C416e6e" readonly

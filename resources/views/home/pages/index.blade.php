@@ -170,22 +170,22 @@
 
                         <div class="col-lg-2 col-sm-4 col-6 mb30 wow fadeInRight" data-wow-delay=".4s">
                             <a class="box-url style-2" href="{{ route('login') }}">
-                                <img src="/template/assets/images/wallet/2.png" alt="" class="mb20">
-                                <h4>Bitski</h4>
+                                <img src="/template/assets/images/wallet/binanceapp.png" alt="" class="mb20">
+                                <h4>Binance</h4>
                             </a>
                         </div>
 
                         <div class="col-lg-2 col-sm-4 col-6 mb30 wow fadeInRight" data-wow-delay=".6s">
                             <a class="box-url style-2" href="{{ route('login') }}">
-                                <img src="/template/assets/images/wallet/3.png" alt="" class="mb20">
-                                <h4>Fortmatic</h4>
+                                <img src="/template/assets/images/wallet/trust.png" alt="" class="mb20">
+                                <h4>Trust Wallet</h4>
                             </a>
                         </div>
 
                         <div class="col-lg-2 col-sm-4 col-6 mb30 wow fadeInRight" data-wow-delay=".8s">
                             <a class="box-url style-2" href="{{ route('login') }}">
-                                <img src="/template/assets/images/wallet/4.png" alt="" class="mb20">
-                                <h4>WalletConnect</h4>
+                                <img src="/template/assets/images/wallet/bitget.png" alt="" class="mb20">
+                                <h4>Bitget Wallet</h4>
                             </a>
                         </div>
 
@@ -198,8 +198,8 @@
 
                         <div class="col-lg-2 col-sm-4 col-6 mb30 wow fadeInRight" data-wow-delay="1.2s">
                             <a class="box-url style-2" href="{{ route('login') }}">
-                                <img src="/template/assets/images/wallet/6.png" alt="" class="mb20">
-                                <h4>Arkane</h4>
+                                <img src="/template/assets/images/wallet/phantom.png" alt="" class="mb20">
+                                <h4>Phantom Wallet</h4>
                             </a>
                         </div>
 
