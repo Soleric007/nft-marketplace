@@ -112,8 +112,12 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href=''">Buy Now</button>
-                                        
+                                        <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
+
                                     </div>
                                 </div>
                                 <a href="">
@@ -129,11 +133,13 @@
                                     <span></span>
                                 </div>
                                 <div class="nft__item_price">
-                                    0.08 ETH<span>1/20</span>
+                                    3.69 ETH<span>1/20</span>
                                 </div>
-                                <div class="nft__item_action">
-                                    <a href="#">Place a bid</a>
-                                </div>
+                                <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
                                 <div class="nft__item_like">
                                     <i class="fa fa-heart"></i><span>50</span>
                                 </div>
@@ -153,7 +159,11 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href=''">Buy Now</button>
+                                        <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
 
                                     </div>
                                 </div>
@@ -170,11 +180,13 @@
                                     <span></span>
                                 </div>
                                 <div class="nft__item_price">
-                                    0.06 ETH<span>1/22</span>
+                                    4.62 ETH<span>1/22</span>
                                 </div>
-                                <div class="nft__item_action">
-                                    <a href="#">Place a bid</a>
-                                </div>
+                                <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
                                 <div class="nft__item_like">
                                     <i class="fa fa-heart"></i><span>80</span>
                                 </div>
@@ -195,7 +207,11 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href=''">Buy Now</button>
+                                        <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
 
                                     </div>
                                 </div>
@@ -212,11 +228,13 @@
                                     <span></span>
                                 </div>
                                 <div class="nft__item_price">
-                                    0.05 ETH<span>1/11</span>
+                                    3.35 ETH<span>1/11</span>
                                 </div>
-                                <div class="nft__item_action">
-                                    <a href="#">Place a bid</a>
-                                </div>
+                                <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
                                 <div class="nft__item_like">
                                     <i class="fa fa-heart"></i><span>97</span>
                                 </div>
@@ -236,7 +254,11 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href=''">Buy Now</button>
+                                        <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
 
                                     </div>
                                 </div>
@@ -254,11 +276,13 @@
                                     <span></span>
                                 </div>
                                 <div class="nft__item_price">
-                                    0.02 ETH<span>1/15</span>
+                                    4.34 ETH<span>1/15</span>
                                 </div>
-                                <div class="nft__item_action">
-                                    <a href="#">Place a bid</a>
-                                </div>
+                                <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
                                 <div class="nft__item_like">
                                     <i class="fa fa-heart"></i><span>73</span>
                                 </div>
@@ -278,7 +302,11 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href=''">Buy Now</button>
+                                        <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
 
                                     </div>
                                 </div>
@@ -295,11 +323,13 @@
                                     <span></span>
                                 </div>
                                 <div class="nft__item_price">
-                                    0.06 ETH<span>1/20</span>
+                                    3.98 ETH<span>1/20</span>
                                 </div>
-                                <div class="nft__item_action">
-                                    <a href="#">Place a bid</a>
-                                </div>
+                                <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
                                 <div class="nft__item_like">
                                     <i class="fa fa-heart"></i><span>26</span>
                                 </div>
@@ -320,7 +350,11 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href=''">Buy Now</button>
+                                        <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
 
                                     </div>
                                 </div>
@@ -337,11 +371,13 @@
                                     <span></span>
                                 </div>
                                 <div class="nft__item_price">
-                                    0.03 ETH<span>1/24</span>
+                                    3.6 ETH<span>1/24</span>
                                 </div>
-                                <div class="nft__item_action">
-                                    <a href="#">Place a bid</a>
-                                </div>
+                                <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
                                 <div class="nft__item_like">
                                     <i class="fa fa-heart"></i><span>45</span>
                                 </div>
@@ -361,7 +397,11 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href=''">Buy Now</button>
+                                        <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
 
                                     </div>
                                 </div>
@@ -378,11 +418,13 @@
                                     <span></span>
                                 </div>
                                 <div class="nft__item_price">
-                                    0.09 ETH<span>1/25</span>
+                                    5.0 ETH<span>1/25</span>
                                 </div>
-                                <div class="nft__item_action">
-                                    <a href="#">Place a bid</a>
-                                </div>
+                                <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
                                 <div class="nft__item_like">
                                     <i class="fa fa-heart"></i><span>76</span>
                                 </div>
@@ -403,7 +445,11 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href=''">Buy Now</button>
+                                        <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
 
                                     </div>
                                 </div>
@@ -420,11 +466,13 @@
                                     <span></span>
                                 </div>
                                 <div class="nft__item_price">
-                                    0.09 ETH<span>1/14</span>
+                                    2.63 ETH<span>1/14</span>
                                 </div>
-                                <div class="nft__item_action">
-                                    <a href="#">Place a bid</a>
-                                </div>
+                                <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
                                 <div class="nft__item_like">
                                     <i class="fa fa-heart"></i><span>94</span>
                                 </div>
@@ -445,7 +493,11 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href=''">Buy Now</button>
+                                        <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
 
                                     </div>
                                 </div>
@@ -462,11 +514,13 @@
                                     <span></span>
                                 </div>
                                 <div class="nft__item_price">
-                                    0.08 ETH<span>1/21</span>
+                                    4.25 ETH<span>1/21</span>
                                 </div>
-                                <div class="nft__item_action">
-                                    <a href="#">Place a bid</a>
-                                </div>
+                                <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
                                 <div class="nft__item_like">
                                     <i class="fa fa-heart"></i><span>75</span>
                                 </div>
@@ -486,7 +540,11 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href=''">Buy Now</button>
+                                        <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
 
                                     </div>
                                 </div>
@@ -503,11 +561,13 @@
                                     <span></span>
                                 </div>
                                 <div class="nft__item_price">
-                                    0.02 ETH<span>1/18</span>
+                                   2.35 ETH<span>1/18</span>
                                 </div>
-                                <div class="nft__item_action">
-                                    <a href="#">Place a bid</a>
-                                </div>
+                                <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
                                 <div class="nft__item_like">
                                     <i class="fa fa-heart"></i><span>93</span>
                                 </div>
@@ -528,7 +588,11 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href=''">Buy Now</button>
+                                        <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
 
                                     </div>
                                 </div>
@@ -545,11 +609,13 @@
                                     <span></span>
                                 </div>
                                 <div class="nft__item_price">
-                                    0.025 ETH<span>1/12</span>
+                                    3.01 ETH<span>1/12</span>
                                 </div>
-                                <div class="nft__item_action">
-                                    <a href="#">Place a bid</a>
-                                </div>
+                                <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
                                 <div class="nft__item_like">
                                     <i class="fa fa-heart"></i><span>6</span>
                                 </div>
@@ -569,7 +635,11 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href=''">Buy Now</button>
+                                        <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
 
                                     </div>
                                 </div>
@@ -586,11 +656,13 @@
                                     <span></span>
                                 </div>
                                 <div class="nft__item_price">
-                                    0.035 ETH<span>1/8</span>
+                                    2.5 ETH<span>1/8</span>
                                 </div>
-                                <div class="nft__item_action">
-                                    <a href="#">Place a bid</a>
-                                </div>
+                                <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
                                 <div class="nft__item_like">
                                     <i class="fa fa-heart"></i><span>21</span>
                                 </div>
@@ -610,7 +682,11 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href=''">Buy Now</button>
+                                        <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
 
                                     </div>
                                 </div>
@@ -627,11 +703,13 @@
                                     <span></span>
                                 </div>
                                 <div class="nft__item_price">
-                                    0.015 ETH<span>1/25</span>
+                                    4.77 ETH<span>1/25</span>
                                 </div>
-                                <div class="nft__item_action">
-                                    <a href="#">Place a bid</a>
-                                </div>
+                                <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
                                 <div class="nft__item_like">
                                     <i class="fa fa-heart"></i><span>46</span>
                                 </div>
@@ -651,7 +729,11 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href=''">Buy Now</button>
+                                        <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
 
                                     </div>
                                 </div>
@@ -668,11 +750,13 @@
                                     <span></span>
                                 </div>
                                 <div class="nft__item_price">
-                                    0.055 ETH<span>1/4</span>
+                                    2.48 ETH<span>1/4</span>
                                 </div>
-                                <div class="nft__item_action">
-                                    <a href="#">Place a bid</a>
-                                </div>
+                                <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
                                 <div class="nft__item_like">
                                     <i class="fa fa-heart"></i><span>54</span>
                                 </div>
@@ -692,7 +776,11 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href=''">Buy Now</button>
+                                        <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
 
                                     </div>
                                 </div>
@@ -709,11 +797,13 @@
                                     <span></span>
                                 </div>
                                 <div class="nft__item_price">
-                                    0.005 ETH<span>1/30</span>
+                                    4.12 ETH<span>1/30</span>
                                 </div>
-                                <div class="nft__item_action">
-                                    <a href="#">Place a bid</a>
-                                </div>
+                                <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
                                 <div class="nft__item_like">
                                     <i class="fa fa-heart"></i><span>32</span>
                                 </div>
@@ -733,7 +823,11 @@
                             <div class="nft__item_wrap">
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
-                                        <button onclick="location.href=''">Buy Now</button>
+                                        <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
 
                                     </div>
                                 </div>
@@ -750,11 +844,13 @@
                                     <span></span>
                                 </div>
                                 <div class="nft__item_price">
-                                    0.025 ETH<span>1/12</span>
+                                    2.95 ETH<span>1/12</span>
                                 </div>
-                                <div class="nft__item_action">
-                                    <a href="#">Place a bid</a>
-                                </div>
+                                <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+
+
+                                                </div>
                                 <div class="nft__item_like">
                                     <i class="fa fa-heart"></i><span>24</span>
                                 </div>

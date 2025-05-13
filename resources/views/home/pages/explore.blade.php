@@ -75,9 +75,12 @@
                                     <div class="nft__item_wrap">
                                         <div class="nft__item_extra">
                                             <div class="nft__item_buttons">
-                                                <button onclick="location.href=''">Buy Now</button>
-                                                
+
+
                                             </div>
+                                            <div class="nft__item_buttons">
+                                                    <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
+                                                </div>
                                         </div>
                                         <a href="{{route('artnft.show', $nft->id)}}">
                                             <div class="d-placeholder"></div>

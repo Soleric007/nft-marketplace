@@ -87,22 +87,24 @@
         }
 
         .qr-code img {
-            width: 160px;
-            height: 160px;
             border-radius: 0.5rem;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .wallet-address {
-            font-weight: bold;
-            text-align: center;
-            margin-top: 1rem;
-            background-color: #f9fafb;
-            padding: 1rem;
-            border: 1px dashed #9ca3af;
-            border-radius: 0.5rem;
-            font-family: monospace;
-        }
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+    background-color: #f9fafb;
+    padding: 1rem;
+    border: 1px dashed #9ca3af;
+    border-radius: 0.5rem;
+    font-family: monospace;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
     </style>
 
     <div class="no-bottom no-top" id="content">
@@ -144,7 +146,7 @@
 
                         <div class="input-group">
                             <label>Wallet Address to Transfer To</label>
-                            <div class="wallet-address">0x5e27...a2D3f</div>
+                            <div class="wallet-address">0x66c51220d48ccCA297cC98C51BBFAaC37C416e6e</div>
                         </div>
 
                         <div class="qr-code">
@@ -168,11 +170,11 @@
                     <div class="mb-4">
                         <img src="{{ asset($nft->image) }}" alt="{{ $nft->name }}" class="nft-image">
                     </div>
-                    <p class="text-lg font-bold mb-1">{{ $nft->name }}</p>
-                    <p class="text-sm text-gray-500 mb-3">Created by: <b>{{ $nft->creator_name }}</b></p>
-                    <p class="text-gray-700 mb-3">{{ $nft->description }}</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-indigo-600 text-lg font-semibold">{{ $nft->price }} ETH</span>
+                    <p class="mb-1 text-lg font-bold">{{ $nft->name }}</p>
+                    <p class="mb-3 text-sm text-gray-500">Created by: <b>{{ $nft->creator_name }}</b></p>
+                    <p class="mb-3 text-gray-700">{{ $nft->description }}</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-lg font-semibold text-indigo-600">{{ $nft->price }} ETH</span>
                         <span class="text-sm text-gray-500">Qty: {{ $nft->quantity ?? 1 }}/{{ $nft->stock ?? 1 }}</span>
                     </div>
                 </div>

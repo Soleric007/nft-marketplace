@@ -17,7 +17,7 @@ class ExploreNFTSeeder extends Seeder
                 'creator_name' => 'Monica Lucas',
                 'creator_image' => '/template/assets/images/author/author-1.jp',
                 'likes' => 94,
-                'price' => '2.5'
+                'price' => '3.69'
             ],
             [
                 'name' => 'Deep Sea Phantasy',
@@ -25,7 +25,7 @@ class ExploreNFTSeeder extends Seeder
                 'creator_name' => 'Stacy Long',
                 'creator_image' => '/template/assets/images/author/author-10.jpg',
                 'likes' => 80,
-                'price' => '2.5'
+                'price' => '4.62'
             ],
             [
                 'name' => 'Rainbow Styles',
@@ -33,7 +33,7 @@ class ExploreNFTSeeder extends Seeder
                 'creator_name' => 'Ida Chapman',
                 'creator_image' => '/template/assets/images/author/author-11.jpg',
                 'likes' => 97,
-                'price' => '2.5'
+                'price' => '3.45'
             ],
             [
                 'name' => 'Two Tigers',
@@ -41,7 +41,7 @@ class ExploreNFTSeeder extends Seeder
                 'creator_name' => 'Fred Ryan',
                 'creator_image' => '/template/assets/images/author/author-12.jpg',
                 'likes' => 70,
-                'price' => '2.5'
+                'price' => '4.34'
             ],
             [
                 'name' => 'The Truth',
@@ -49,7 +49,7 @@ class ExploreNFTSeeder extends Seeder
                 'creator_name' => 'Franklin Gear',
                 'creator_image' => '/template/assets/images/author/author-9.jpg',
                 'likes' => 70,
-                'price' => '2.5'
+                'price' => '3.98'
             ],
             [
                 'name' => 'Loop Donut',
@@ -57,7 +57,7 @@ class ExploreNFTSeeder extends Seeder
                 'creator_name' => 'Fred Ryan',
                 'creator_image' => '/template/assets/images/author/author-4.jpg',
                 'likes' => 78,
-                'price' => '2.5'
+                'price' => '2.63'
             ],
             [
                 'name' => 'Lady Copter',
@@ -65,7 +65,7 @@ class ExploreNFTSeeder extends Seeder
                 'creator_name' => 'Fred Ryan',
                 'creator_image' => '/template/assets/images/author/author-5.jpg',
                 'likes' => 78,
-                'price' => '2.5'
+                'price' => '4.25'
             ],
             [
                 'name' => 'Purple Planet',
@@ -73,7 +73,7 @@ class ExploreNFTSeeder extends Seeder
                 'creator_name' => 'Fred Ryan',
                 'creator_image' => '/template/assets/images/author/author-8.jpg',
                 'likes' => 78,
-                'price' => '2.5'
+                'price' => '2.35'
             ],
             [
                 'name' => 'Oh Yeah!',
@@ -81,7 +81,7 @@ class ExploreNFTSeeder extends Seeder
                 'creator_name' => 'Fred Ryan',
                 'creator_image' => '/template/assets/images/author/author-6.jpg',
                 'likes' => 78,
-                'price' => '2.5'
+                'price' => '3.01'
             ],
             [
                 'name' => 'This is Our Story',
@@ -97,7 +97,7 @@ class ExploreNFTSeeder extends Seeder
                 'creator_name' => 'Fred Ryan',
                 'creator_image' => '/template/assets/images/author/author-9.jpg',
                 'likes' => 78,
-                'price' => '2.5'
+                'price' => '4.77'
             ],
             [
                 'name' => 'I Believe I Can Fly',
@@ -105,7 +105,7 @@ class ExploreNFTSeeder extends Seeder
                 'creator_name' => 'Fred Ryan',
                 'creator_image' => '/template/assets/images/author/author-12.jpg',
                 'likes' => 78,
-                'price' => '2.5'
+                'price' => '2.48'
             ],
             [
                 'name' => 'Cute Astronout',
@@ -113,7 +113,7 @@ class ExploreNFTSeeder extends Seeder
                 'creator_name' => 'Fred Ryan',
                 'creator_image' => '/template/assets/images/author/author-4.jpg',
                 'likes' => 78,
-                'price' => '2.5'
+                'price' => '4.12'
             ],
             [
                 'name' => 'Teal Ocean',
@@ -121,7 +121,7 @@ class ExploreNFTSeeder extends Seeder
                 'creator_name' => 'Fred Ryan',
                 'creator_image' => '/template/assets/images/author/author-1.jpg',
                 'likes' => 78,
-                'price' => '2.5'
+                'price' => '2.95'
             ],
             [
                 'name' => 'Teal Ocean',
@@ -129,7 +129,7 @@ class ExploreNFTSeeder extends Seeder
                 'creator_name' => 'Fred Ryan',
                 'creator_image' => '/template/assets/images/author/author-1.jpg',
                 'likes' => 78,
-                'price' => '2.5'
+                'price' => '3.70'
             ],
         ];
 

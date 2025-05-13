@@ -91,6 +91,8 @@
                             </form>
                             <div class="spacer-10"></div>
                             <small>Your email is safe with us. We don't spam.</small>
+                           <span><a href="mailto:arturewoven@gmail.com?subject=Inquiry&body=Hello%20Arture,%0DI'd%20like%20to%20discuss...">Email arturewoven@gmail.com</a></span>
+
                         </div>
                     </div>
                 </div>
