@@ -514,13 +514,8 @@
                                                 <div class="nft__item_buttons">
                                                     {{-- <a href="{{route('artnft.buy', $nft->id)}}" data-bs-toggle="modal" data-bs-target="#buy_now">Buy Now</a> --}}
                                                     <a href="{{route('artnft.buy', $nft->id)}}">Buy Now</a>
-                                                    {{-- <button data-bs-toggle="modal" data-bs-target="#place_a_bid">Place a Bid</button>
-                                                    <div class="nft__item_share">
-                                                        <h4>Share</h4>
-                                                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ url()->current() }}" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
-                                                        <a href="https://twitter.com/intent/tweet?url={{ url()->current() }}" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-                                                        <a href="mailto:?subject=Check out this NFT&body={{ url()->current() }}"><i class="fa fa-envelope fa-lg"></i></a>
-                                                    </div> --}}
+                                                  
+
                                                 </div>
                                             </div>
                                             <a href="{{route('artnft.show', $nft->id)}}">

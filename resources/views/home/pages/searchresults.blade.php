@@ -113,16 +113,7 @@
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
                                         <button onclick="location.href=''">Buy Now</button>
-                                        <div class="nft__item_share">
-                                            <h4>Share</h4>
-                                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
-                                            <a href="https://twitter.com/intent/tweet?url=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-                                            <a
-                                                href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://madebydesignesia.com/themes"><i
-                                                    class="fa fa-envelope fa-lg"></i></a>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                                 <a href="">
@@ -163,16 +154,7 @@
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
                                         <button onclick="location.href=''">Buy Now</button>
-                                        <div class="nft__item_share">
-                                            <h4>Share</h4>
-                                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
-                                            <a href="https://twitter.com/intent/tweet?url=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-                                            <a
-                                                href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://madebydesignesia.com/themes"><i
-                                                    class="fa fa-envelope fa-lg"></i></a>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <a href="">
@@ -214,16 +196,7 @@
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
                                         <button onclick="location.href=''">Buy Now</button>
-                                        <div class="nft__item_share">
-                                            <h4>Share</h4>
-                                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
-                                            <a href="https://twitter.com/intent/tweet?url=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-                                            <a
-                                                href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://madebydesignesia.com/themes"><i
-                                                    class="fa fa-envelope fa-lg"></i></a>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <a href="">
@@ -264,16 +237,7 @@
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
                                         <button onclick="location.href=''">Buy Now</button>
-                                        <div class="nft__item_share">
-                                            <h4>Share</h4>
-                                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
-                                            <a href="https://twitter.com/intent/tweet?url=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-                                            <a
-                                                href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://madebydesignesia.com/themes"><i
-                                                    class="fa fa-envelope fa-lg"></i></a>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <a href="">
@@ -315,16 +279,7 @@
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
                                         <button onclick="location.href=''">Buy Now</button>
-                                        <div class="nft__item_share">
-                                            <h4>Share</h4>
-                                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
-                                            <a href="https://twitter.com/intent/tweet?url=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-                                            <a
-                                                href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://madebydesignesia.com/themes"><i
-                                                    class="fa fa-envelope fa-lg"></i></a>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <a href="">
@@ -366,16 +321,7 @@
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
                                         <button onclick="location.href=''">Buy Now</button>
-                                        <div class="nft__item_share">
-                                            <h4>Share</h4>
-                                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
-                                            <a href="https://twitter.com/intent/tweet?url=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-                                            <a
-                                                href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://madebydesignesia.com/themes"><i
-                                                    class="fa fa-envelope fa-lg"></i></a>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <a href="">
@@ -416,16 +362,7 @@
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
                                         <button onclick="location.href=''">Buy Now</button>
-                                        <div class="nft__item_share">
-                                            <h4>Share</h4>
-                                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
-                                            <a href="https://twitter.com/intent/tweet?url=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-                                            <a
-                                                href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://madebydesignesia.com/themes"><i
-                                                    class="fa fa-envelope fa-lg"></i></a>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <a href="">
@@ -467,16 +404,7 @@
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
                                         <button onclick="location.href=''">Buy Now</button>
-                                        <div class="nft__item_share">
-                                            <h4>Share</h4>
-                                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
-                                            <a href="https://twitter.com/intent/tweet?url=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-                                            <a
-                                                href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://madebydesignesia.com/themes"><i
-                                                    class="fa fa-envelope fa-lg"></i></a>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <a href="">
@@ -518,16 +446,7 @@
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
                                         <button onclick="location.href=''">Buy Now</button>
-                                        <div class="nft__item_share">
-                                            <h4>Share</h4>
-                                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
-                                            <a href="https://twitter.com/intent/tweet?url=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-                                            <a
-                                                href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://madebydesignesia.com/themes"><i
-                                                    class="fa fa-envelope fa-lg"></i></a>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <a href="">
@@ -568,16 +487,7 @@
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
                                         <button onclick="location.href=''">Buy Now</button>
-                                        <div class="nft__item_share">
-                                            <h4>Share</h4>
-                                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
-                                            <a href="https://twitter.com/intent/tweet?url=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-                                            <a
-                                                href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://madebydesignesia.com/themes"><i
-                                                    class="fa fa-envelope fa-lg"></i></a>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <a href="">
@@ -619,16 +529,7 @@
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
                                         <button onclick="location.href=''">Buy Now</button>
-                                        <div class="nft__item_share">
-                                            <h4>Share</h4>
-                                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
-                                            <a href="https://twitter.com/intent/tweet?url=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-                                            <a
-                                                href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://madebydesignesia.com/themes"><i
-                                                    class="fa fa-envelope fa-lg"></i></a>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <a href="">
@@ -669,16 +570,7 @@
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
                                         <button onclick="location.href=''">Buy Now</button>
-                                        <div class="nft__item_share">
-                                            <h4>Share</h4>
-                                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
-                                            <a href="https://twitter.com/intent/tweet?url=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-                                            <a
-                                                href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://madebydesignesia.com/themes"><i
-                                                    class="fa fa-envelope fa-lg"></i></a>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <a href="">
@@ -719,16 +611,7 @@
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
                                         <button onclick="location.href=''">Buy Now</button>
-                                        <div class="nft__item_share">
-                                            <h4>Share</h4>
-                                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
-                                            <a href="https://twitter.com/intent/tweet?url=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-                                            <a
-                                                href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://madebydesignesia.com/themes"><i
-                                                    class="fa fa-envelope fa-lg"></i></a>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <a href="">
@@ -769,16 +652,7 @@
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
                                         <button onclick="location.href=''">Buy Now</button>
-                                        <div class="nft__item_share">
-                                            <h4>Share</h4>
-                                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
-                                            <a href="https://twitter.com/intent/tweet?url=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-                                            <a
-                                                href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://madebydesignesia.com/themes"><i
-                                                    class="fa fa-envelope fa-lg"></i></a>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <a href="">
@@ -819,16 +693,7 @@
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
                                         <button onclick="location.href=''">Buy Now</button>
-                                        <div class="nft__item_share">
-                                            <h4>Share</h4>
-                                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
-                                            <a href="https://twitter.com/intent/tweet?url=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-                                            <a
-                                                href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://madebydesignesia.com/themes"><i
-                                                    class="fa fa-envelope fa-lg"></i></a>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <a href="">
@@ -869,16 +734,7 @@
                                 <div class="nft__item_extra">
                                     <div class="nft__item_buttons">
                                         <button onclick="location.href=''">Buy Now</button>
-                                        <div class="nft__item_share">
-                                            <h4>Share</h4>
-                                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
-                                            <a href="https://twitter.com/intent/tweet?url=https://madebydesignesia.com/themes"
-                                                target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-                                            <a
-                                                href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://madebydesignesia.com/themes"><i
-                                                    class="fa fa-envelope fa-lg"></i></a>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <a href="">
