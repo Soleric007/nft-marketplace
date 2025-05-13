@@ -50,6 +50,10 @@
                         aria-controls="sidebarDashboards">
                         <i class="ri-dashboard-2-line"></i> <span data-key="t-dashboards">NFTs</span>
                     </a>
+                    <a class="nav-link menu-link" href="{{ route('admin.artNfts') }}"
+                        aria-controls="sidebarDashboards">
+                        <i class="ri-dashboard-2-line"></i> <span data-key="t-dashboards">Explore NFTs</span>
+                    </a>
                     <a class="nav-link menu-link" href="{{ route('admin.wallets') }}"
                         aria-controls="sidebarDashboards">
                         <i class="ri-dashboard-2-line"></i> <span data-key="t-dashboards">Wallets</span>
@@ -66,6 +70,10 @@
                     <a class="nav-link menu-link" href="{{ route('admin.withdrawals') }}"
                         aria-controls="sidebarDashboards">
                         <i class="ri-dashboard-2-line"></i> <span data-key="t-dashboards">Withdrawals</span>
+                    </a>
+                    <a class="nav-link menu-link" href="{{ route('admin.artNfts.purchases') }}"
+                        aria-controls="sidebarDashboards">
+                        <i class="ri-dashboard-2-line"></i> <span data-key="t-dashboards">Purchases</span>
                     </a>
                     <a class="nav-link menu-link" href="{{ route('admin.users') }}"
                         aria-controls="sidebarDashboards">

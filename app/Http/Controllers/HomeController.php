@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\MintedNFT;
 use App\Models\NFT;
+use App\Models\ArtNft;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -11,7 +13,10 @@ class HomeController extends Controller
     //
     public function index()
     {
-        return view('home.pages.index');
+        // Example: fetch NFTs marked as trending
+        $trendingNfts = ArtNft::where('category', 'trending')->latest()->get();
+
+        return view('home.pages.index', compact('trendingNfts'));
     }
     public function showActivity()
     {
@@ -33,10 +38,25 @@ class HomeController extends Controller
     {
         return view('home.pages.create');
     }
-    public function showExplore()
+    public function showExplore(Request $request)
     {
+        $query = ArtNft::query();
+
+        // Filter by category if selected
+        if ($request->filled('category') && $request->category !== 'explore') {
+            $query->where('category', $request->category);
+        }
+
+        // Search by name/title
+        if ($request->filled('search')) {
+            $query->where('name', 'like', '%' . $request->search . '%');
+        }
+
+        $exploreNfts = $query->latest()->paginate(8)->withQueryString(); // preserve query params in links
+
         $mintedNfts = Nft::where('status', 'minted')->latest()->get();
-        return view('home.pages.explore', compact('mintedNfts'));
+
+        return view('home.pages.explore', compact('mintedNfts', 'exploreNfts'));
     }
     public function showHelp()
     {
