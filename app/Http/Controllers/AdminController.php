@@ -147,5 +147,10 @@ class AdminController extends Controller
         $user->delete();
         return redirect()->route('admin.users')->with('message', 'User Removed Successfully');
     }
+    public function editNFT($id)
+{
+    $nft = NFT::findOrFail($id);
+    return view('admin.pages.editNFT', compact('nft'));
+}
 
 }

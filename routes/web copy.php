@@ -99,12 +99,7 @@ Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
     Route::post('/admin/users/update/{id}', [AdminController::class, 'updateUser'])->name('admin.users.update');
     Route::get('/admin/deleteuser/{user}', [AdminController::class, 'deleteUser'])->name('admin.deleteUser');
     Route::get('/admin/nfts/{id}/edit', [AdminController::class, 'editNFT'])->name('admin.nfts.edit');
-    Route::get('/admin/art-nfts', [AdminController::class, 'exploreNfts'])->name('admin.artNfts');
-    Route::get('/admin/art-nfts/{id}/edit', [AdminController::class, 'editExploreNfts'])->name('admin.artNfts.edit');
-    Route::put('/admin/art-nfts/{id}', [AdminController::class, 'updateExploreNft'])->name('admin.artNfts.update');
-    Route::get('/admin/users/{user}/edit', [AdminController::class, 'showEditUser'])->name('admin.users.edit');
-    Route::put('/admin/users/{id}', [AdminController::class, 'updateUser'])->name('admin.users.update');
-    Route::delete('/admin/users/{id}', [AdminController::class, 'deleteUser'])->name('admin.users.delete');
+
 
     Route::get('/admin/explore-nfts', [AdminController::class, 'exploreNfts'])->name('admin.artNfts');
     Route::get('/admin/explore-nfts/edit/{id}', [AdminController::class, 'editExploreNfts'])->name('admin.artNfts.edit');
