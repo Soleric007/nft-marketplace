@@ -36,13 +36,13 @@
                     <!-- Wallet Address -->
                     <div class="p-4 mb-4 text-center bg-gray-100 rounded-lg">
                         <p class="font-semibold text-gray-700">Make a payment to the following wallet address:</p>
-                        <input type="text" value="0x66c51220d48ccCA297cC98C51BBFAaC37C416e6e" readonly
+                        <input type="text" value="{{ config('marketplace.funding_wallet_address') }}" readonly
                             class="w-full p-3 mt-2 font-semibold text-center text-indigo-600 bg-indigo-100 border border-indigo-300 rounded-lg">
                     </div>
 
                     <!-- QR Code / Image -->
                     <div class="flex justify-center mb-4">
-                        <img src="/template/assets/images/wallet/qrcode.jpeg" alt="QR Code"
+                        <img src="{{ config('marketplace.funding_wallet_qr') }}" alt="QR Code"
                             class="object-cover w-40 h-40 rounded-lg shadow-md">
                     </div>
 

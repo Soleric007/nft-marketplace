@@ -34,8 +34,8 @@ class UserController extends Controller
         // Handle profile image upload if a new image is provided
         if ($request->hasFile('profile_image')) {
             // Delete old profile image if exists
-            if ($user->profile_image && Storage::exists($user->profile_image)) {
-                Storage::delete($user->profile_image);
+            if ($user->profile_image && Storage::disk('public')->exists($user->profile_image)) {
+                Storage::disk('public')->delete($user->profile_image);
             }
 
             // Store the new image

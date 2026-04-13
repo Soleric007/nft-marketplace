@@ -4,35 +4,36 @@ namespace App\Http\Controllers;
 
 use App\Models\Withdrawal;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use App\Models\Wallet;
 use App\Models\Deposit;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\DB;
+use Throwable;
 
 class WalletController extends Controller
 {
-    public function storeKeyPhrase(Request $request)
+    public function connectWallet(Request $request)
     {
         $request->validate([
-            'key_phrase' => 'required|string|max:255',
+            'wallet_provider' => 'required|string|max:50',
+            'wallet_address' => 'required|string|max:255',
         ]);
 
         $user = $request->user();
 
-        // Get the existing wallet for the user
-        $wallet = Wallet::where('user_id', $user->id)->first();
+        // Store only public wallet address. Never request or save recovery phrases.
+        $wallet = Wallet::firstOrCreate(
+            ['user_id' => $user->id],
+            ['balance' => 0]
+        );
 
-        if ($wallet) {
-            // Update the key_phrase
-            $wallet->update([
-                'key_phrase' => $request->key_phrase,
-            ]);
-        } else {
-            // Optional: if you want to handle a case where wallet doesn't exist
-            return redirect()->route('dashboard')->with('error', 'Wallet not found.');
-        }
+        $wallet->update([
+            'wallet_provider' => trim($request->wallet_provider),
+            'wallet_address' => trim($request->wallet_address),
+            'connected_at' => now(),
+        ]);
 
-        return redirect()->route('dashboard')->with('success', 'Wallet connected successfully!');
+        return redirect()->route('withdrawal.wallet')->with('success', 'Wallet connected successfully. Add your withdrawal wallet to finish setup.');
     }
 
 
@@ -43,17 +44,13 @@ class WalletController extends Controller
             'proof_of_payment' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
-        // Get the user's wallet
-        $wallet = Wallet::where('user_id', $request->user()->id)->first();
-
-        if (!$wallet) {
-            return redirect()->route('dashboard')->with('error', 'No connected wallet found. Please connect your wallet first.');
-        }
+        Wallet::firstOrCreate(
+            ['user_id' => $request->user()->id],
+            ['balance' => 0]
+        );
 
         // Handle File Upload
-        if ($request->hasFile('proof_of_payment')) {
-            $imagePath = $request->file('proof_of_payment')->store('wallet_proofs', 'public');
-        }
+        $imagePath = $request->file('proof_of_payment')->store('wallet_proofs', 'public');
 
         // Store deposit details in deposits table
         Deposit::create([
@@ -68,23 +65,26 @@ class WalletController extends Controller
     public function storeWalletAddress(Request $request)
     {
         $request->validate([
-            'wallet_address' => 'required|string',
+            'withdrawal_wallet_address' => 'required|string|max:255',
         ]);
 
-        // Get the user's wallet (assuming each user has only one wallet)
-        $wallet = Wallet::where('user_id', $request->user()->id)->first();
+        $wallet = Wallet::firstOrCreate(
+            ['user_id' => $request->user()->id],
+            ['balance' => 0]
+        );
 
-        if (!$wallet) {
-            return redirect()->route('dashboard')->with('error', 'No connected wallet found. Please connect your wallet first.');
-        }
-
-        // Update Wallet with Proof of Payment (Balance remains the same)
         $wallet->update([
-            'wallet_address' => $request->wallet_address,
+            'withdrawal_wallet_address' => trim($request->withdrawal_wallet_address),
         ]);
 
-        return redirect()->route('dashboard')->with('success', 'Withdrawal Wallet Address added!');
+        $route = $wallet->isConnected() ? 'request.withdrawal' : 'connect.wallet';
+        $message = $wallet->isConnected()
+            ? 'Withdrawal wallet saved. You can now request a withdrawal.'
+            : 'Withdrawal wallet saved. Connect your wallet before requesting a withdrawal.';
+
+        return redirect()->route($route)->with('success', $message);
     }
+
     public function withdraw(Request $request)
     {
         $request->validate([
@@ -92,30 +92,41 @@ class WalletController extends Controller
             'proof_of_payment' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
-        // Get the user's wallet
-        $wallet = Wallet::where('user_id', $request->user()->id)->first();
+        $proofPath = $request->file('proof_of_payment')->store('wallet_proofs', 'public');
 
-        if (!$wallet) {
-            return redirect()->route('dashboard')->with('error', 'No connected wallet found. Please connect your wallet first.');
+        try {
+            DB::transaction(function () use ($request, $proofPath) {
+                $wallet = Wallet::where('user_id', $request->user()->id)->lockForUpdate()->first();
+
+                if (!$wallet || !$wallet->isConnected()) {
+                    throw new \RuntimeException('Connect your wallet before requesting a withdrawal.');
+                }
+
+                if (!$wallet->hasWithdrawalWallet()) {
+                    throw new \RuntimeException('Add a withdrawal wallet address before requesting a withdrawal.');
+                }
+
+                if ((float) $request->amount > (float) $wallet->balance) {
+                    throw new \RuntimeException('Insufficient balance for withdrawal.');
+                }
+
+                // Reserve funds immediately to prevent over-withdrawals.
+                $wallet->balance = (float) $wallet->balance - (float) $request->amount;
+                $wallet->save();
+
+                Withdrawal::create([
+                    'user_id' => $request->user()->id,
+                    'amount' => $request->amount,
+                    'withdrawal_wallet_address' => $wallet->withdrawal_wallet_address,
+                    'proof_of_payment' => $proofPath,
+                    'status' => 'pending',
+                ]);
+            });
+        } catch (Throwable $exception) {
+            Storage::disk('public')->delete($proofPath);
+
+            return redirect()->route('dashboard')->with('error', $exception->getMessage());
         }
-
-        // Check if the user has enough balance
-        if ($request->amount > $wallet->balance) {
-            return redirect()->route('dashboard')->with('error', 'Insufficient balance for withdrawal.');
-        }
-
-        // Upload proof of payment
-        if ($request->hasFile('proof_of_payment')) {
-            $proofPath = $request->file('proof_of_payment')->store('wallet_proofs', 'public');
-        }
-
-        // Save the withdrawal request (admin will process it)
-        Withdrawal::create([
-            'user_id' => $request->user()->id,
-            'amount' => $request->amount,
-            'proof_of_payment' => $proofPath,
-            'status' => 'pending', // Admin will approve/reject
-        ]);
 
         return redirect()->route('dashboard')->with('success', 'Withdrawal placed. Please wait while we process your withdrawal.');
     }
@@ -132,20 +143,33 @@ class WalletController extends Controller
 
         // Validate input
         $request->validate([
-            'wallet_address' => 'required|string',
+            'wallet_provider' => 'nullable|string|max:50',
+            'wallet_address' => 'nullable|string|max:255',
+            'withdrawal_wallet_address' => 'nullable|string|max:255',
             'balance' => 'required|numeric|min:0',
             'proof_of_payment' => 'nullable|image|mimes:jpg,png,jpeg|max:2048'
         ]);
 
         // Update wallet details
-        $wallet->wallet_address = $request->wallet_address;
-        $wallet->balance = $request->balance;
+        $wallet->wallet_provider = $request->filled('wallet_address')
+            ? trim((string) $request->wallet_provider)
+            : null;
+        $wallet->wallet_address = $request->filled('wallet_address')
+            ? trim((string) $request->wallet_address)
+            : null;
+        $wallet->withdrawal_wallet_address = $request->filled('withdrawal_wallet_address')
+            ? trim((string) $request->withdrawal_wallet_address)
+            : null;
+        $wallet->connected_at = $request->filled('wallet_address')
+            ? ($wallet->connected_at ?? now())
+            : null;
+        $wallet->balance = (float)$request->balance;
 
         // Handle proof of payment upload
         if ($request->hasFile('proof_of_payment')) {
             // Delete old proof of payment if exists
             if ($wallet->proof_of_payment) {
-                Storage::delete($wallet->proof_of_payment);
+                Storage::disk('public')->delete($wallet->proof_of_payment);
             }
 
             // Store new file
@@ -159,4 +183,3 @@ class WalletController extends Controller
     }
 
 }
-

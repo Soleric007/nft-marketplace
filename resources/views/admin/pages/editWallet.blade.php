@@ -12,8 +12,20 @@
                         @method('PUT')
 
                         <div class="mb-4">
-                            <label class="block text-gray-700 font-bold mb-2">Wallet Address</label>
+                            <label class="block text-gray-700 font-bold mb-2">Wallet Provider</label>
+                            <input type="text" name="wallet_provider" value="{{ old('wallet_provider', $wallet->wallet_provider) }}"
+                                class="w-full p-2 border rounded-lg">
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="block text-gray-700 font-bold mb-2">Connected Wallet Address</label>
                             <input type="text" name="wallet_address" value="{{ $wallet->wallet_address }}"
+                                class="w-full p-2 border rounded-lg">
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="block text-gray-700 font-bold mb-2">Withdrawal Wallet Address</label>
+                            <input type="text" name="withdrawal_wallet_address" value="{{ old('withdrawal_wallet_address', $wallet->withdrawal_wallet_address) }}"
                                 class="w-full p-2 border rounded-lg">
                         </div>
 

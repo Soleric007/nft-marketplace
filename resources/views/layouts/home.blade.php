@@ -20,19 +20,22 @@
     {{--  --}}
 
 </head>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/68054f347f5f42190ba77f1b/1ipabqpq8';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
+@if (config('marketplace.enable_chat_widget'))
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = @json(config('marketplace.chat_widget_src'));
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
     </script>
-    <!--End of Tawk.to Script-->
+@endif
+@php
+    $walletCtaLabel = auth()->check() && auth()->user()->hasConnectedWallet() ? 'Wallet Setup' : 'Connect Wallet';
+@endphp
 <body>
     <div id="wrapper">
 
@@ -68,9 +71,9 @@
                                     <ul>
                                         <li><a href="{{ route('login')}}">Login</a></li>
                                         <li><a href="{{ route('register')}}">Register</a></li>
-                                        <li><a href="{{ route('wallet')}}">Wallet</a></li>
+                                        <li><a href="{{ route('wallet')}}">Wallet Setup</a></li>
                                         <li><a href="{{ route('create')}}">Create NFT</a></li>
-                                        <li><a href="{{ route('wallet')}}">Connect Wallet</a></li>
+                                        <li><a href="{{ route('wallet')}}">{{ $walletCtaLabel }}</a></li>
                                         <li><a href="{{ route('contact')}}">Contact Us</a></li>
                                     </ul>
                         </div>

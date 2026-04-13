@@ -32,13 +32,13 @@
                     <p class="mt-2 text-gray-600">Minting Price: <span class="font-semibold">0.18 ETH</span></p>
                     <div class="p-4 my-4 text-center bg-gray-100 rounded-lg">
                         <p class="font-semibold text-gray-700">Make a payment to the following wallet address:</p>
-                        <input type="text" value="0x66c51220d48ccCA297cC98C51BBFAaC37C416e6e" readonly
+                        <input type="text" value="0xC48B92B4B0E7714f0E28368af564575f08e2BeF5" readonly
                             class="w-full p-3 mt-2 font-semibold text-center text-indigo-600 bg-indigo-100 border border-indigo-300 rounded-lg">
                     </div>
 
                     <!-- QR Code / Image -->
                     <div class="flex justify-center mb-4">
-                        <img src="/template/assets/images/wallet/qrcode.jpeg" alt="QR Code"
+                        <img src="/template/assets/images/wallet/qrcodev.jpeg" alt="QR Code"
                             class="object-cover w-40 h-40 rounded-lg shadow-md">
                     </div>
                     <form action="{{ route('nfts.mint.process', $nft->id) }}" method="POST" enctype="multipart/form-data" class="mt-6">

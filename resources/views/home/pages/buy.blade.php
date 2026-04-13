@@ -146,11 +146,11 @@
 
                         <div class="input-group">
                             <label>Wallet Address to Transfer To</label>
-                            <div class="wallet-address">0x66c51220d48ccCA297cC98C51BBFAaC37C416e6e</div>
+                            <div class="wallet-address">{{ config('marketplace.funding_wallet_address') }}</div>
                         </div>
 
                         <div class="qr-code">
-                            <img src="/template/assets/images/wallet/qrcode.jpeg" alt="QR Code">
+                            <img src="{{ config('marketplace.funding_wallet_qr') }}" alt="QR Code">
                         </div>
 
                         <div class="input-group">

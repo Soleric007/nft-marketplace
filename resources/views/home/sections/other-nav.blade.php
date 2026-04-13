@@ -1,4 +1,7 @@
 <header class="transparent">
+    @php
+        $walletCtaLabel = auth()->check() && auth()->user()->hasConnectedWallet() ? 'Wallet Setup' : 'Connect Wallet';
+    @endphp
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -73,7 +76,7 @@
 
                         <div class="menu_side_area">
                             <a href="{{ route('wallet') }}" class="btn-main btn-wallet"><i class="icon_wallet_alt"></i>
-                                <span>Connect Wallet</span>
+                                <span>{{ $walletCtaLabel }}</span>
                             </a>
                             <span id="menu-btn"></span>
                         </div>

@@ -32,15 +32,24 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'username' => ['required', 'string', 'max:255', 'unique:users'],
+            'username' => ['nullable', 'string', 'max:255', 'unique:users'],
             'phone' => ['nullable', 'string', 'max:20'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
+        $username = $request->username;
+        if (!$username) {
+            $username = Str::before($request->email, '@');
+        }
+
+        while (User::where('username', $username)->exists()) {
+            $username = Str::before($request->email, '@') . '_' . Str::lower(Str::random(4));
+        }
+
         $user = User::create([
             'name' => $request->name,
-            'username' => $request->username,
+            'username' => $username,
             'phone' => $request->phone,
             'email' => $request->email,
             'password' => Hash::make($request->password),
@@ -48,9 +57,11 @@ class RegisteredUserController extends Controller
         // ✅ Automatically create an empty wallet for the user
         Wallet::create([
             'user_id' => $user->id,
+            'wallet_provider' => null,
             'wallet_address' => null,
+            'withdrawal_wallet_address' => null,
+            'connected_at' => null,
             'balance' => 0, // Start with 0 balance instead of null
-            'key_phrase' => null,
             'proof_of_payment' => null,
         ]);
 

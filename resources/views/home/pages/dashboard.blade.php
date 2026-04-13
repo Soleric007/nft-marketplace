@@ -35,8 +35,14 @@
                             <div class="user-info">
                                 <h2 class="user-name">{{ Auth::user()->name }}</h2>
                                 <p class="user-email">Email: {{ Auth::user()->email }}</p>
-                                <p class="user-wallet">Wallet:
-                                    {{ Auth::user()->wallet->wallet_address ? Auth::user()->wallet->wallet_address : 'Not Set' }}
+                                <p class="user-wallet">Connected Wallet:
+                                    {{ $wallet->wallet_address ?: 'Not connected yet' }}
+                                </p>
+                                <p class="user-wallet">Wallet Provider:
+                                    {{ $wallet->wallet_provider ?: 'Not selected yet' }}
+                                </p>
+                                <p class="user-wallet">Withdrawal Wallet:
+                                    {{ $wallet->withdrawal_wallet_address ?: 'Not added yet' }}
                                 </p>
                                 <p class="user-phone">Phone: {{ Auth::user()->phone }}</p>
                                 <p class="user-phone">Address: {{ Auth::user()->address }}</p>
@@ -54,11 +60,13 @@
                     <div class="balance-info">
                         <h2 class="balance-heading">Ethereum Balance</h2>
                         <p class="balance-amount">
-                            {{ $wallet->balance ? $wallet->balance : '0.05' }} ETH
+                            {{ $wallet->balance ? $wallet->balance : '0.00' }} ETH
                         </p>
                     </div>
                     <div class="action-buttons">
-                        <a href="{{ route('wallet') }}" class="action-button">Connect Wallet</a>
+                        <a href="{{ route('wallet') }}" class="action-button">
+                            {{ $wallet->isConnected() ? 'Manage Wallet' : 'Connect Wallet' }}
+                        </a>
                         <a href="{{ route('create') }}" class="action-button">Create NFT</a>
                         <div class="dropdown-pill" id="moreOptions">
                             <p class="p-1 pl-3 pr-3">
@@ -68,8 +76,12 @@
                             <div class="dropdown-content">
                                 <!-- Add your dropdown content here -->
                                 <a href="{{route('wallet.fund')}}">Fund Account</a>
-                                <a href="{{route('withdrawal.wallet')}}">Withdrawal Wallet</a>
-                                <a href="{{route('request.withdrawal')}}">Request Withdrawal</a>
+                                <a href="{{route('withdrawal.wallet')}}">
+                                    {{ $wallet->hasWithdrawalWallet() ? 'Update Withdrawal Wallet' : 'Add Withdrawal Wallet' }}
+                                </a>
+                                <a href="{{ $user->canRequestWithdrawal() ? route('request.withdrawal') : route('connect.wallet') }}">
+                                    {{ $user->canRequestWithdrawal() ? 'Request Withdrawal' : 'Complete Wallet Setup' }}
+                                </a>
                             </div>
                         </div>
                     </div>

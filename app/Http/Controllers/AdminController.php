@@ -70,13 +70,16 @@ class AdminController extends Controller
     }
     public function confirmWithdrawal(Withdrawal $withdrawal)
     {
-        // Update the withdrawal status to confirmed
-        $withdrawal->update(['status' => 'confirmed']);
+        if ($withdrawal->status !== 'pending') {
+            return redirect()->back()->with('error', 'Withdrawal is already processed.');
+        }
+
+        $withdrawal->update(['status' => 'approved']);
 
         // Send an email to the user
         Mail::to($withdrawal->user->email)->send(new \App\Mail\WithdrawalConfirmed($withdrawal));
 
-        return redirect()->back()->with('success', 'Withdrawal confirmed and email sent to the user.');
+        return redirect()->back()->with('success', 'Withdrawal approved and email sent to the user.');
     }
     public function users()
     {
@@ -141,9 +144,12 @@ class AdminController extends Controller
         // Redirect back with a success message
         return redirect()->back()->with('success', 'User information updated successfully!');
     }
-    public function deleteUser($user)
+    public function deleteUser(User $user)
     {
-        $user = User::find($user);
+        if (Auth::id() === $user->id) {
+            return redirect()->route('admin.users')->with('error', 'You cannot delete your own account.');
+        }
+
         $user->delete();
         return redirect()->route('admin.users')->with('message', 'User Removed Successfully');
     }

@@ -14,8 +14,11 @@
                                 <tr class="bg-gray-100 text-gray-700 uppercase text-sm">
                                     <th class="px-4 py-2 border">#</th>
                                     <th class="px-4 py-2 border">User</th>
+                                    <th class="px-4 py-2 border">Provider</th>
                                     <th class="px-4 py-2 border">Wallet Address</th>
-                                    <th class="px-4 py-2 border">Key phrase</th>
+                                    <th class="px-4 py-2 border">Withdrawal Wallet</th>
+                                    <th class="px-4 py-2 border">Wallet Status</th>
+                                    <th class="px-4 py-2 border">Connected On</th>
                                     <th class="px-4 py-2 border">Balance</th>
                                     <th class="px-4 py-2 border">Proof of Payment</th>
                                     <th class="px-4 py-2 border">Actions</th>
@@ -26,8 +29,11 @@
                                     <tr class="text-center border">
                                         <td class="px-4 py-2 border">{{ $index + 1 }}</td>
                                         <td class="px-4 py-2 border">{{ $wallet->user->name }}</td>
-                                        <td class="px-4 py-2 border">{{ $wallet->wallet_address }}</td>
-                                        <td class="px-4 py-2 border">{{ $wallet->key_phrase }}</td>
+                                        <td class="px-4 py-2 border">{{ $wallet->wallet_provider ?: 'Not set' }}</td>
+                                        <td class="px-4 py-2 border break-all">{{ $wallet->wallet_address ?: 'Not set' }}</td>
+                                        <td class="px-4 py-2 border break-all">{{ $wallet->withdrawal_wallet_address ?: 'Not set' }}</td>
+                                        <td class="px-4 py-2 border">{{ $wallet->isConnected() ? 'Connected' : 'Not Connected' }}</td>
+                                        <td class="px-4 py-2 border">{{ $wallet->connected_at?->format('d M Y, h:i A') ?: 'Not connected' }}</td>
                                         <td class="px-4 py-2 border">{{ number_format($wallet->balance, 2) }} ETH</td>
                                         <td class="px-4 py-2 border">
                                             @if($wallet->proof_of_payment)
@@ -50,7 +56,7 @@
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="6" class="text-center py-4 text-gray-500">No Wallets Found</td>
+                                        <td colspan="10" class="text-center py-4 text-gray-500">No Wallets Found</td>
                                     </tr>
                                 @endforelse
                             </tbody>

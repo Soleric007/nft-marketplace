@@ -21,11 +21,12 @@ class WithdrawalConfirmed extends Mailable
 
     public function build()
     {
-        return $this->subject('Withdrawal Confirmed')
+        return $this->subject('Withdrawal Approved')
                     ->view('emails.withdrawal_confirmed')
                     ->with([
                         'user' => $this->withdrawal->user,
                         'amount' => $this->withdrawal->amount,
+                        'withdrawalWalletAddress' => $this->withdrawal->withdrawal_wallet_address,
                     ]);
     }
 }

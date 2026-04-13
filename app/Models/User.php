@@ -37,6 +37,16 @@ class User extends Authenticatable
         return $this->hasOne(related: Wallet::class);
     }
 
+    public function hasConnectedWallet(): bool
+    {
+        return (bool) $this->wallet?->isConnected();
+    }
+
+    public function canRequestWithdrawal(): bool
+    {
+        return $this->hasConnectedWallet() && (bool) $this->wallet?->hasWithdrawalWallet();
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *

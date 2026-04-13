@@ -42,6 +42,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::get('/profile', [HomeController::class, 'showProfile'])->name('profile');
     Route::post('/profile/update', [UserController::class, 'updateProfile'])->name('profile.update');
+    Route::patch('/profile', [ProfileController::class, 'update']);
+    Route::delete('/profile', [ProfileController::class, 'destroy']);
     Route::get('/create', [HomeController::class, 'showCreate'])->name('create');
     Route::get('/nfts', [NftController::class, 'index'])->name('nfts.index');
     Route::get('/nft/{id}', [NFTController::class, 'show'])->name('nft.details');
@@ -52,11 +54,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/fund-wallet', [HomeController::class, 'showFundWallet'])->name('wallet.fund');
     Route::post('/fund-wallet/store', [WalletController::class, 'fundWallet'])->name('wallet.fund.store');
     Route::get('/connect/wallet', [HomeController::class, 'connectWallet'])->name('connect.wallet');
-    Route::post('/wallet/store', [WalletController::class, 'storeKeyPhrase'])->name('wallet.store');
+    Route::post('/connect/wallet', [WalletController::class, 'connectWallet'])->name('wallet.connect.store');
     Route::get('/withdrawal-wallet', [HomeController::class, 'showWithdrawalWallet'])->name('withdrawal.wallet');
     Route::post('/withdrawal-wallet/store', [WalletController::class, 'storeWalletAddress'])->name('wallet.address.store');
-    Route::get('/request-withdrawal', [HomeController::class, 'showRequestWithdrawal'])->name('request.withdrawal');
-    Route::post('/withdraw', [WalletController::class, 'withdraw'])->name('withdraw');
+    Route::get('/request-withdrawal', [HomeController::class, 'showRequestWithdrawal'])->middleware('wallet.ready')->name('request.withdrawal');
+    Route::post('/withdraw', [WalletController::class, 'withdraw'])->middleware('wallet.ready')->name('withdraw');
 
 });
 Route::get('/dashboard', function () {
@@ -64,10 +66,10 @@ Route::get('/dashboard', function () {
     $nfts = $user->nfts;   // Get the NFTs associated with the user
 
     // Get User's Wallet Information
-    $wallet = Wallet::where('user_id', $user->id)->first();
-    if (!$wallet) {
-        return redirect()->route('dashboard')->with('error', 'Wallet not found. Please contact support.');
-    }
+    $wallet = Wallet::firstOrCreate(
+        ['user_id' => $user->id],
+        ['balance' => 0]
+    );
 
     return view('home.pages.dashboard', compact(
         'user',
@@ -87,7 +89,6 @@ Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
     Route::get('/admin/nfts', [AdminController::class, 'nfts'])->name('admin.nfts');
     Route::post('/admin/nfts/mint/{id}', [NFTController::class, 'mintNFT'])->name('admin.nfts.mint');
     Route::get('/admin/wallets', [AdminController::class, 'wallets'])->name('admin.wallets');
-    Route::get('/admin/wallets/{id}/edit', [NFTController::class, 'editNFT'])->name('admin.nfts.edit');
     Route::put('/admin/nft/{nft}', [NFTController::class, 'update'])->name('admin.nft.update');
     Route::get('/admin/wallets/{id}/edit', [WalletController::class, 'edit'])->name('admin.wallet.edit');
     Route::put('/admin/wallets/{id}', [WalletController::class, 'update'])->name('admin.wallets.update');
@@ -97,14 +98,9 @@ Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
     Route::get('/admin/users', [AdminController::class, 'users'])->name('admin.users');
     Route::get('/admin/edituser/{user}', [AdminController::class, 'showEditUser'])->name('admin.showEditUser');
     Route::post('/admin/users/update/{id}', [AdminController::class, 'updateUser'])->name('admin.users.update');
-    Route::get('/admin/deleteuser/{user}', [AdminController::class, 'deleteUser'])->name('admin.deleteUser');
+    Route::delete('/admin/users/{user}', [AdminController::class, 'deleteUser'])->name('admin.deleteUser');
     Route::get('/admin/nfts/{id}/edit', [AdminController::class, 'editNFT'])->name('admin.nfts.edit');
-    Route::get('/admin/art-nfts', [AdminController::class, 'exploreNfts'])->name('admin.artNfts');
-    Route::get('/admin/art-nfts/{id}/edit', [AdminController::class, 'editExploreNfts'])->name('admin.artNfts.edit');
-    Route::put('/admin/art-nfts/{id}', [AdminController::class, 'updateExploreNft'])->name('admin.artNfts.update');
-    Route::get('/admin/users/{user}/edit', [AdminController::class, 'showEditUser'])->name('admin.users.edit');
-    Route::put('/admin/users/{id}', [AdminController::class, 'updateUser'])->name('admin.users.update');
-    Route::delete('/admin/users/{id}', [AdminController::class, 'deleteUser'])->name('admin.users.delete');
+
 
     Route::get('/admin/explore-nfts', [AdminController::class, 'exploreNfts'])->name('admin.artNfts');
     Route::get('/admin/explore-nfts/edit/{id}', [AdminController::class, 'editExploreNfts'])->name('admin.artNfts.edit');

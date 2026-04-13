@@ -7,7 +7,10 @@
 
 <body>
     <h2>Dear {{ $user->name }},</h2>
-    <p>Your withdrawal request of <strong>${{ number_format($amount, 2) }}</strong> has been confirmed.</p>
+    <p>Your withdrawal request of <strong>${{ number_format($amount, 2) }}</strong> has been approved.</p>
+    @if($withdrawalWalletAddress)
+        <p>It will be processed to <strong>{{ $withdrawalWalletAddress }}</strong>.</p>
+    @endif
     <p>Your balance will be updated shortly.</p>
     <p>Thank you for using our platform.</p>
 </body>

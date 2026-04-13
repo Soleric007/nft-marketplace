@@ -39,7 +39,7 @@ class ArtNFTController extends Controller
     }
 
     public function viewPurchases(){
-        $purchases = NFTPurchase::latest()->paginate(10);
+        $purchases = NftPurchase::with('user', 'artNft')->latest()->paginate(10);
         return view('admin.pages.purchases', compact('purchases'));
     }
 

@@ -19,7 +19,7 @@ class NftPurchase extends Model
 
     public function artNft()
     {
-        return $this->belongsTo(ArtNft::class);
+        return $this->belongsTo(ArtNft::class, 'nft_id');
     }
 
     public function user()

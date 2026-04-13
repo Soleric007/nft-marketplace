@@ -10,7 +10,7 @@ class CreateNftPurchasesTable extends Migration
     {
         Schema::create('nft_purchases', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('nft_id')->constrained()->onDelete('cascade');
+            $table->foreignId('nft_id')->constrained('art_nfts')->onDelete('cascade');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('payment_method')->default('crypto');
             $table->string('proof_of_payment'); // file path

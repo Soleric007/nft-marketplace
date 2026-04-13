@@ -64,7 +64,7 @@
                                 <div class="col-md-6">
                                     <div class="field-set">
                                         <label>Choose a Username:</label>
-                                        <input type='text' name='username' :value="old('username')" required
+                                        <input type='text' name='username' :value="old('username')"
                                             autocomplete="username" id='username' class="form-control">
                                         <x-input-error :messages="$errors->get('username')" class="mt-2" />
 
@@ -74,7 +74,7 @@
                                 <div class="col-md-6">
                                     <div class="field-set">
                                         <label>Phone:</label>
-                                        <input type='text' name='phone' :value="old('phone')" required
+                                        <input type='text' name='phone' :value="old('phone')"
                                             autocomplete="phone" id='phone' class="form-control">
                                         <x-input-error :messages="$errors->get('phone')" class="mt-2" />
 

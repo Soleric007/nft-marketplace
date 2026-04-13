@@ -15,6 +15,7 @@
                                     <th class="px-4 py-2 border">#</th>
                                     <th class="px-4 py-2 border">User</th>
                                     <th class="px-4 py-2 border">Amount</th>
+                                    <th class="px-4 py-2 border">Withdrawal Wallet</th>
                                     <th class="px-4 py-2 border">Proof of Payment</th>
                                     <th class="px-4 py-2 border">Status</th>
                                     <th class="px-4 py-2 border">Date</th>
@@ -27,6 +28,7 @@
                                         <td class="px-4 py-2 border">{{ $index + 1 }}</td>
                                         <td class="px-4 py-2 border">{{ $withdrawal->user->name }}</td>
                                         <td class="px-4 py-2 border">{{ number_format($withdrawal->amount, 2) }} ETH</td>
+                                        <td class="px-4 py-2 border break-all">{{ $withdrawal->withdrawal_wallet_address ?: 'Not captured' }}</td>
                                         <td class="px-4 py-2 border">
                                             <a href="{{ asset('storage/' . $withdrawal->proof_of_payment) }}" target="_blank"
                                                 class="text-blue-500 underline">View Proof</a>
@@ -43,17 +45,17 @@
                                                 <form action="{{ route('admin.withdrawals.confirm', $withdrawal->id) }}" method="POST">
                                                     @csrf
                                                     <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">
-                                                        Confirm Withdrawal
+                                                        Approve Withdrawal
                                                     </button>
                                                 </form>
                                             @else
-                                                <span class="text-gray-500">Confirmed</span>
+                                                <span class="text-gray-500">Approved</span>
                                             @endif
                                         </td>
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="6" class="text-center py-4 text-gray-500">No Withdrawals Found</td>
+                                        <td colspan="8" class="text-center py-4 text-gray-500">No Withdrawals Found</td>
                                     </tr>
                                 @endforelse
                             </tbody>

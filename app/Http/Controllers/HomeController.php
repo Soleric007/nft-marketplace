@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\MintedNFT;
 use App\Models\NFT;
 use App\Models\ArtNft;
+use App\Models\Wallet;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -20,15 +20,27 @@ class HomeController extends Controller
     }
     public function showActivity()
     {
-        return view('home.pages.activity');
+        return view('home.pages.placeholder', [
+            'pageTitle' => 'Activity',
+            'heading' => 'Activity feed is coming soon',
+            'description' => 'We have not wired this section up yet, but the marketplace and wallet flows are ready to use.',
+        ]);
     }
     public function showAuthor()
     {
-        return view('home.pages.author');
+        return view('home.pages.placeholder', [
+            'pageTitle' => 'Authors',
+            'heading' => 'Creator profiles are on the roadmap',
+            'description' => 'For now, you can still browse featured NFTs, collections, and wallet actions without hitting a broken page.',
+        ]);
     }
     public function showCollection()
     {
-        return view('home.pages.collection');
+        return view('home.pages.placeholder', [
+            'pageTitle' => 'Collections',
+            'heading' => 'Collection pages are not published yet',
+            'description' => 'This link now lands on a safe fallback instead of throwing a view error while the dedicated collection experience is being built.',
+        ]);
     }
     public function showContact()
     {
@@ -85,23 +97,44 @@ class HomeController extends Controller
     }
     public function showWallet()
     {
-        return view('home.pages.wallet');
+        return view('home.pages.wallet', [
+            'wallet' => $this->walletForCurrentUser(),
+        ]);
     }
-    public function connectWallet()
+
+    public function connectWallet(Request $request)
     {
-        return view('home.pages.connect');
+        return view('home.pages.connect', [
+            'wallet' => $this->walletForCurrentUser(),
+            'selectedProvider' => $request->query('provider'),
+        ]);
     }
+
     public function showFundWallet()
     {
         return view('home.pages.fund');
     }
+
     public function showWithdrawalWallet()
     {
-        return view('home.pages.withdrawalWallet');
+        return view('home.pages.withdrawalWallet', [
+            'wallet' => $this->walletForCurrentUser(),
+        ]);
     }
+
     public function showRequestWithdrawal()
     {
-        return view('home.pages.requestWithdrawal');
+        return view('home.pages.requestWithdrawal', [
+            'wallet' => $this->walletForCurrentUser(),
+        ]);
+    }
+
+    protected function walletForCurrentUser(): Wallet
+    {
+        return Wallet::firstOrCreate(
+            ['user_id' => Auth::id()],
+            ['balance' => 0]
+        );
     }
 
 }

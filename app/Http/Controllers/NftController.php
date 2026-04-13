@@ -42,7 +42,7 @@ class NFTController extends Controller
             'title' => 'required|string|max:255',
             'price' => 'required|numeric',
             'status' => 'required|in:minted,pending,not_minted',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
         ]);
 
         $nft->title = $request->title;
@@ -119,7 +119,9 @@ class NFTController extends Controller
     // Show Mint Details Page
     public function showMintDetails($id)
     {
-        $nft = NFT::findOrFail($id);
+        $nft = NFT::where('id', $id)
+            ->where('user_id', Auth::id())
+            ->firstOrFail();
 
         return view('home.pages.mint-details', compact('nft'));
     }
@@ -127,7 +129,9 @@ class NFTController extends Controller
     // Show Payment Form
     public function showPaymentForm($id)
     {
-        $nft = NFT::findOrFail($id);
+        $nft = NFT::where('id', $id)
+            ->where('user_id', Auth::id())
+            ->firstOrFail();
 
         if ($nft->status === 'minted') {
             return redirect()->route('dashboard')->with('error', 'NFT is already minted.');
@@ -143,7 +147,9 @@ class NFTController extends Controller
             'proof_of_payment' => 'required|image|mimes:jpeg,png,jpg|max:2048',
         ]);
 
-        $nft = NFT::findOrFail($id);
+        $nft = NFT::where('id', $id)
+            ->where('user_id', Auth::id())
+            ->firstOrFail();
 
         if ($nft->status === 'minted') {
             return redirect()->route('dashboard')->with('error', 'NFT is already minted.');
