@@ -70,7 +70,7 @@
                         <a href="{{ route('create') }}" class="action-button">Create NFT</a>
                         <div class="dropdown-pill" id="moreOptions">
                             <p class="p-1 pl-3 pr-3">
-                                <b>More Options </b> <i class="fas fa-chevron-down"></i>
+                                <b>More Options </b> <i class="fa fa-chevron-down"></i>
                             </p>
 
                             <div class="dropdown-content">

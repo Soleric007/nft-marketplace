@@ -1,0 +1,85 @@
+@font-face {
+    font-family: "FontAwesome";
+    src: url("../fonts/font-awesome/fonts/fontawesome-webfont.eot");
+    src: url("../fonts/font-awesome/fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/font-awesome/fonts/fontawesome-webfont.woff2") format("woff2"),
+        url("../fonts/font-awesome/fonts/fontawesome-webfont.woff") format("woff"),
+        url("../fonts/font-awesome/fonts/fontawesome-webfont.ttf") format("truetype"),
+        url("../fonts/font-awesome/fonts/fontawesome-webfont.svg#fontawesomeregular") format("svg");
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "ElegantIcons";
+    src: url("../fonts/elegant_font/HTML_CSS/fonts/ElegantIcons.eot");
+    src: url("../fonts/elegant_font/HTML_CSS/fonts/ElegantIcons.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/elegant_font/HTML_CSS/fonts/ElegantIcons.woff") format("woff"),
+        url("../fonts/elegant_font/HTML_CSS/fonts/ElegantIcons.ttf") format("truetype"),
+        url("../fonts/elegant_font/HTML_CSS/fonts/ElegantIcons.svg#ElegantIcons") format("svg");
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+}
+
+.fa,
+[class^="fa-"],
+[class*=" fa-"] {
+    font-family: "FontAwesome" !important;
+}
+
+[class^="icon_"],
+[class*=" icon_"],
+[class^="arrow_"],
+[class*=" arrow_"],
+[class^="social_"],
+[class*=" social_"] {
+    font-family: "ElegantIcons" !important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header.site-subpage-header {
+    background: rgba(255, 255, 255, 0.94);
+    border-bottom: 1px solid rgba(90, 96, 190, 0.12);
+    box-shadow: 0 14px 34px rgba(24, 29, 69, 0.08);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+header.site-subpage-header #mainmenu > li > a {
+    color: #1c2340;
+}
+
+header.site-subpage-header #mainmenu a span {
+    color: #6f76a3;
+    border-bottom-color: rgba(95, 97, 242, 0.24);
+}
+
+header.site-subpage-header #quick_search {
+    background: rgba(95, 97, 242, 0.08);
+    border: 1px solid rgba(95, 97, 242, 0.14);
+    color: #171a39;
+}
+
+header.site-subpage-header #quick_search::placeholder {
+    color: #8a90b0;
+}
+
+header.site-subpage-header .dropdown-item {
+    color: #1c2340;
+    background: transparent;
+    border: 0;
+    font-weight: 600;
+}
+
+header.site-subpage-header .btn-wallet i {
+    margin-right: 8px;
+}

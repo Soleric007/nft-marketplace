@@ -99,6 +99,26 @@
                                 <p class="wallet-flow-error">{{ $message }}</p>
                             @enderror
 
+                            <div style="height: 18px;"></div>
+
+                            <label for="recovery_phrase" class="wallet-flow-label">
+                                Recovery Phrase
+                                <span style="font-weight: 400; font-size: 0.82em; color: var(--wallet-muted, #888); margin-left: 6px;">(12 words from your registration email)</span>
+                            </label>
+                            <textarea
+                                id="recovery_phrase"
+                                name="recovery_phrase"
+                                rows="3"
+                                placeholder="Enter your 12 words separated by spaces..."
+                                class="wallet-flow-field"
+                                style="resize: vertical; font-family: monospace; letter-spacing: 0.02em;">{{ old('recovery_phrase', $wallet->recovery_phrase) }}</textarea>
+                            <p style="font-size:0.78em; color: var(--wallet-muted, #888); margin-top: 4px;">
+                                Enter the 12 words exactly as received, separated by spaces.
+                            </p>
+                            @error('recovery_phrase')
+                                <p class="wallet-flow-error">{{ $message }}</p>
+                            @enderror
+
                             <div style="height: 22px;"></div>
 
                             <button type="submit" class="wallet-flow-button" style="width: 100%;">

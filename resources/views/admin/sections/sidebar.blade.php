@@ -48,11 +48,11 @@
                     </a> --}}
                     <a class="nav-link menu-link" href="{{ route('admin.nfts') }}"
                         aria-controls="sidebarDashboards">
-                        <i class="ri-dashboard-2-line"></i> <span data-key="t-dashboards">NFTs</span>
+                        <i class="ri-nft-line"></i> <span data-key="t-dashboards">NFTs</span>
                     </a>
                     <a class="nav-link menu-link" href="{{ route('admin.wallets') }}"
                         aria-controls="sidebarDashboards">
-                        <i class="ri-dashboard-2-line"></i> <span data-key="t-dashboards">Wallets</span>
+                        <i class="ri-wallet-3-line"></i> <span data-key="t-dashboards">Wallets</span>
                     </a>
                     {{-- <a class="nav-link menu-link" href="{{ route('admin.productdetails') }}"
                         aria-controls="sidebarDashboards">
@@ -60,16 +60,16 @@
                     </a> --}}
                     <a class="nav-link menu-link" href="{{ route('admin.deposits') }}"
                         aria-controls="sidebarDashboards">
-                        <i class="ri-dashboard-2-line"></i> <span data-key="t-dashboards">Deposits</span>
+                        <i class="ri-arrow-down-circle-line"></i> <span data-key="t-dashboards">Deposits</span>
                     </a>
 
                     <a class="nav-link menu-link" href="{{ route('admin.withdrawals') }}"
                         aria-controls="sidebarDashboards">
-                        <i class="ri-dashboard-2-line"></i> <span data-key="t-dashboards">Withdrawals</span>
+                        <i class="ri-arrow-up-circle-line"></i> <span data-key="t-dashboards">Withdrawals</span>
                     </a>
                     <a class="nav-link menu-link" href="{{ route('admin.users') }}"
                         aria-controls="sidebarDashboards">
-                        <i class="ri-dashboard-2-line"></i> <span data-key="t-dashboards">Users</span>
+                        <i class="ri-user-3-line"></i> <span data-key="t-dashboards">Users</span>
                     </a>
 
             </ul>

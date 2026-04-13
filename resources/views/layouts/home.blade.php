@@ -17,6 +17,7 @@
     <!-- color scheme -->
     <link id="colors" href="/template/assets/css/colors/scheme-01.css" rel="stylesheet" type="text/css" />
     <link href="/template/assets/css/coloring.css" rel="stylesheet" type="text/css" />
+    <link href="/template/assets/css/site-nav-icon-fix.css" rel="stylesheet" type="text/css" />
     {{--  --}}
     @stack('styles')
 

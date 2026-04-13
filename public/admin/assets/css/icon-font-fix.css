@@ -1,0 +1,52 @@
+@font-face {
+    font-family: "remixicon";
+    src: url("../fonts/remixicon.eot");
+    src: url("../fonts/remixicon.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/remixicon.woff2") format("woff2"),
+        url("../fonts/remixicon.woff") format("woff"),
+        url("../fonts/remixicon.ttf") format("truetype"),
+        url("../fonts/remixicon.svg#remixicon") format("svg");
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+}
+
+[class^="ri-"],
+[class*=" ri-"] {
+    font-family: "remixicon" !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    speak: never;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+    font-family: "Material Design Icons";
+    src: url("../fonts/materialdesignicons-webfont.eot");
+    src: url("../fonts/materialdesignicons-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/materialdesignicons-webfont.woff2") format("woff2"),
+        url("../fonts/materialdesignicons-webfont.woff") format("woff"),
+        url("../fonts/materialdesignicons-webfont.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+}
+
+.mdi-set,
+.mdi:before,
+[class^="mdi-"]::before,
+[class*=" mdi-"]::before {
+    font-family: "Material Design Icons" !important;
+}
+
+.navbar-menu .navbar-nav .nav-link i {
+    text-align: center;
+}
+
+.navbar-menu .navbar-nav .nav-link i::before {
+    display: inline-block;
+}

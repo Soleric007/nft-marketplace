@@ -1,4 +1,4 @@
-<header class="transparent">
+<header class="header-light scroll-light site-subpage-header">
     @php
         $walletCtaLabel = auth()->check() && auth()->user()->hasConnectedWallet() ? 'Wallet Setup' : 'Connect Wallet';
     @endphp
