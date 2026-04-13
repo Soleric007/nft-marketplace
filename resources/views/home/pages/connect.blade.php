@@ -1,6 +1,8 @@
 @section('title', 'Connect Wallet')
 <x-home-layout>
-    @vite('resources/css/app.css')
+    @push('styles')
+        @include('home.partials.wallet-flow-styles')
+    @endpush
 
     @php
         $providers = ['MetaMask', 'Binance Wallet', 'Trust Wallet', 'Bitget Wallet', 'Coinbase Wallet', 'Phantom'];
@@ -8,107 +10,97 @@
     @endphp
 
     <div class="no-bottom no-top" id="content">
-        <div id="top"></div>
-
-        <section id="subheader" class="text-light"
-            data-bgimage="url(/template/assets/images/background/subheader.jpg) top">
-            <div class="relative text-center center-y">
-                <div class="container">
-                    <div class="row">
-                        <div class="text-center col-md-12">
-                            <h1 class="text-[2.5rem] md:text-[4rem] font-bold">Connect Wallet</h1>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section aria-label="section" class="py-12">
-            <div class="container px-4 mx-auto">
-                <div class="max-w-3xl mx-auto mb-8 text-center">
-                    <h3 class="text-3xl font-bold text-indigo-600">Secure wallet setup</h3>
-                    <p class="mt-3 text-gray-600">
-                        Connect the wallet you use on the marketplace before you request any withdrawal.
-                        We only store your public wallet address and provider.
+        <section class="wallet-flow-page">
+            <div class="wallet-flow-shell">
+                <div class="wallet-flow-hero">
+                    <span class="wallet-flow-eyebrow">Step 1</span>
+                    <h1 class="wallet-flow-title">Connect the wallet you use on the marketplace.</h1>
+                    <p class="wallet-flow-text">
+                        This page stores only your public wallet address and provider so the withdrawal flow can verify
+                        that setup is complete before a request is submitted.
                     </p>
                 </div>
 
-                <div class="grid max-w-5xl gap-6 mx-auto md:grid-cols-2">
-                    <div class="p-6 bg-white rounded-lg shadow-md">
-                        <h4 class="mb-4 text-xl font-semibold text-gray-900">Connection status</h4>
+                <div class="wallet-flow-grid two-col">
+                    <div class="wallet-flow-card">
+                        <h2 class="wallet-flow-card-title">Connection status</h2>
 
-                        <div class="space-y-3 text-sm text-gray-700">
-                            <div>
-                                <p class="font-semibold">Status</p>
-                                <p class="{{ $wallet->isConnected() ? 'text-green-600' : 'text-amber-600' }}">
-                                    {{ $wallet->isConnected() ? 'Connected and ready for withdrawals' : 'Not connected yet' }}
+                        <div class="wallet-flow-stat-list">
+                            <div class="wallet-flow-stat {{ $wallet->isConnected() ? 'success' : 'warning' }}">
+                                <span class="wallet-flow-stat-title">Status</span>
+                                <p class="wallet-flow-stat-value">
+                                    {{ $wallet->isConnected() ? 'Connected and ready for the next step.' : 'No wallet is connected yet.' }}
                                 </p>
                             </div>
-                            <div>
-                                <p class="font-semibold">Provider</p>
-                                <p>{{ $wallet->wallet_provider ?: 'Not selected yet' }}</p>
+
+                            <div class="wallet-flow-stat">
+                                <span class="wallet-flow-stat-title">Provider</span>
+                                <p class="wallet-flow-stat-value">{{ $wallet->wallet_provider ?: 'Not selected yet' }}</p>
                             </div>
-                            <div>
-                                <p class="font-semibold">Wallet address</p>
-                                <p class="break-all">{{ $wallet->wallet_address ?: 'No wallet address saved yet.' }}</p>
+
+                            <div class="wallet-flow-stat">
+                                <span class="wallet-flow-stat-title">Wallet address</span>
+                                <p class="wallet-flow-stat-value">{{ $wallet->wallet_address ?: 'No wallet address saved yet.' }}</p>
                             </div>
-                            <div>
-                                <p class="font-semibold">Connected on</p>
-                                <p>{{ $wallet->connected_at?->format('d M Y, h:i A') ?: 'Waiting for connection' }}</p>
+
+                            <div class="wallet-flow-stat">
+                                <span class="wallet-flow-stat-title">Connected on</span>
+                                <p class="wallet-flow-stat-value">{{ $wallet->connected_at?->format('d M Y, h:i A') ?: 'Waiting for connection' }}</p>
                             </div>
                         </div>
 
-                        
+                        <div class="wallet-flow-divider"></div>
+
+                        <div class="wallet-flow-note danger">
+                            <strong>Security notice</strong>
+                            Never enter a recovery phrase or private key here. This setup flow accepts only a public
+                            wallet address.
+                        </div>
                     </div>
 
-                    <div class="p-6 bg-white rounded-lg shadow-md">
-                        <h4 class="mb-4 text-xl font-semibold text-gray-900">Connect a wallet</h4>
+                    <div class="wallet-flow-card">
+                        <h2 class="wallet-flow-card-title">Connect a wallet</h2>
 
-                        <form action="{{ route('wallet.connect.store') }}" method="POST" class="space-y-4">
+                        <form action="{{ route('wallet.connect.store') }}" method="POST">
                             @csrf
 
-                            <div>
-                                <label for="wallet_provider" class="block mb-2 font-semibold text-gray-700">Wallet provider</label>
-                                <select id="wallet_provider" name="wallet_provider"
-                                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600">
-                                    <option value="">Select a wallet provider</option>
-                                    @foreach ($providers as $provider)
-                                        <option value="{{ $provider }}" @selected($currentProvider === $provider)>{{ $provider }}</option>
-                                    @endforeach
-                                </select>
-                                @error('wallet_provider')
-                                    <p class="mt-2 text-danger">{{ $message }}</p>
-                                @enderror
-                            </div>
+                            <label for="wallet_provider" class="wallet-flow-label">Wallet provider</label>
+                            <select id="wallet_provider" name="wallet_provider" class="wallet-flow-select">
+                                <option value="">Select a wallet provider</option>
+                                @foreach ($providers as $provider)
+                                    <option value="{{ $provider }}" @selected($currentProvider === $provider)>{{ $provider }}</option>
+                                @endforeach
+                            </select>
+                            @error('wallet_provider')
+                                <p class="wallet-flow-error">{{ $message }}</p>
+                            @enderror
 
-                            <div>
-                                <label for="wallet_address" class="block mb-2 font-semibold text-gray-700">
-                                    Public wallet address
-                                </label>
-                                <input
-                                    type="text"
-                                    id="wallet_address"
-                                    name="wallet_address"
-                                    value="{{ old('wallet_address', $wallet->wallet_address) }}"
-                                    placeholder="0x..."
-                                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600">
-                                @error('wallet_address')
-                                    <p class="mt-2 text-danger">{{ $message }}</p>
-                                @enderror
-                            </div>
+                            <div style="height: 18px;"></div>
 
-                            <button type="submit"
-                                class="w-full py-3 font-semibold text-white transition bg-indigo-600 rounded-lg hover:bg-indigo-700">
+                            <label for="wallet_address" class="wallet-flow-label">Public wallet address</label>
+                            <input
+                                type="text"
+                                id="wallet_address"
+                                name="wallet_address"
+                                value="{{ old('wallet_address', $wallet->wallet_address) }}"
+                                placeholder="0x..."
+                                class="wallet-flow-field">
+                            @error('wallet_address')
+                                <p class="wallet-flow-error">{{ $message }}</p>
+                            @enderror
+
+                            <div style="height: 22px;"></div>
+
+                            <button type="submit" class="wallet-flow-button" style="width: 100%;">
                                 {{ $wallet->isConnected() ? 'Update Connected Wallet' : 'Connect Wallet' }}
                             </button>
                         </form>
 
-                        <div class="pt-4 mt-6 border-t border-gray-200">
-                            <a href="{{ route('withdrawal.wallet') }}" class="font-semibold text-indigo-600">
-                                Continue to withdrawal wallet setup
-                            </a>
-                        </div>
+                        <div class="wallet-flow-divider"></div>
+
+                        <a href="{{ route('withdrawal.wallet') }}" class="wallet-flow-link">
+                            Continue to withdrawal wallet setup
+                        </a>
                     </div>
                 </div>
             </div>

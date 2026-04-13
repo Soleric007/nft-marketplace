@@ -1,5 +1,9 @@
 @section('title', 'Wallet Setup')
 <x-home-layout>
+    @push('styles')
+        @include('home.partials.wallet-flow-styles')
+    @endpush
+
     @php
         $providers = [
             ['name' => 'MetaMask', 'image' => '/template/assets/images/wallet/1.png', 'label' => 'Most Popular'],
@@ -12,82 +16,85 @@
     @endphp
 
     <div class="no-bottom no-top" id="content">
-        <div id="top"></div>
+        <section class="wallet-flow-page">
+            <div class="wallet-flow-shell">
+                <div class="wallet-flow-hero">
+                    <span class="wallet-flow-eyebrow">Wallet Flow</span>
+                    <h1 class="wallet-flow-title">Set up your wallet once, then withdraw with confidence.</h1>
+                    <p class="wallet-flow-text">
+                        The marketplace withdrawal flow now follows one clear path: connect your marketplace wallet,
+                        save the payout destination, and open the withdrawal form only when both steps are complete.
+                    </p>
 
-        <section id="subheader" class="text-light"
-            data-bgimage="url(/template/assets/images/background/subheader.jpg) top">
-            <div class="relative text-center center-y">
-                <div class="container">
-                    <div class="row">
-                        <div class="text-center col-md-12">
-                            <h1 class="text-[2.5rem] md:text-[4rem] font-bold">Wallet Setup</h1>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section aria-label="section" class="py-12">
-            <div class="container">
-                <div class="grid gap-4 mb-8 md:grid-cols-3">
-                    <div class="p-6 bg-white rounded-lg shadow-md">
-                        <p class="text-sm font-semibold text-gray-500">Step 1</p>
-                        <h4 class="mt-2 text-xl font-semibold">Connect wallet</h4>
-                        <p class="mt-2 text-sm text-gray-600">
-                            {{ $wallet->isConnected() ? 'Connected to ' . $wallet->wallet_provider : 'Choose a provider and save your public wallet address.' }}
-                        </p>
-                        <a href="{{ route('connect.wallet') }}" class="inline-block mt-4 font-semibold text-indigo-600">
-                            {{ $wallet->isConnected() ? 'Manage connected wallet' : 'Connect now' }}
+                    <div class="wallet-flow-actions">
+                        <a href="{{ route('connect.wallet') }}" class="wallet-flow-button">
+                            {{ $wallet->isConnected() ? 'Manage Connected Wallet' : 'Connect Wallet' }}
                         </a>
-                    </div>
-
-                    <div class="p-6 bg-white rounded-lg shadow-md">
-                        <p class="text-sm font-semibold text-gray-500">Step 2</p>
-                        <h4 class="mt-2 text-xl font-semibold">Save payout wallet</h4>
-                        <p class="mt-2 text-sm text-gray-600">
-                            {{ $wallet->hasWithdrawalWallet() ? 'Current destination: ' . $wallet->masked_withdrawal_wallet_address : 'Add the wallet address where approved withdrawals should be sent.' }}
-                        </p>
-                        <a href="{{ route('withdrawal.wallet') }}" class="inline-block mt-4 font-semibold text-indigo-600">
-                            {{ $wallet->hasWithdrawalWallet() ? 'Update payout wallet' : 'Add payout wallet' }}
+                        <a href="{{ route('withdrawal.wallet') }}" class="wallet-flow-button-secondary">
+                            {{ $wallet->hasWithdrawalWallet() ? 'Update Payout Wallet' : 'Add Payout Wallet' }}
                         </a>
-                    </div>
-
-                    <div class="p-6 bg-white rounded-lg shadow-md">
-                        <p class="text-sm font-semibold text-gray-500">Step 3</p>
-                        <h4 class="mt-2 text-xl font-semibold">Request withdrawal</h4>
-                        <p class="mt-2 text-sm text-gray-600">
-                            {{ $wallet->isConnected() && $wallet->hasWithdrawalWallet() ? 'Your withdrawal setup is complete.' : 'Withdrawals unlock after steps 1 and 2 are completed.' }}
-                        </p>
-                        <a href="{{ $wallet->isConnected() && $wallet->hasWithdrawalWallet() ? route('request.withdrawal') : route('connect.wallet') }}"
-                            class="inline-block mt-4 font-semibold text-indigo-600">
-                            {{ $wallet->isConnected() && $wallet->hasWithdrawalWallet() ? 'Open withdrawal form' : 'Finish setup' }}
-                        </a>
+                        @if ($wallet->isConnected() && $wallet->hasWithdrawalWallet())
+                            <a href="{{ route('request.withdrawal') }}" class="wallet-flow-link">Open withdrawal request</a>
+                        @endif
                     </div>
                 </div>
 
-                <div class="mb-6 text-center">
-                    <h3 class="text-3xl font-bold text-indigo-600">Choose your wallet provider</h3>
-                    <p class="mt-2 text-gray-600">
-                        Pick a provider below to prefill the wallet connection page. We never ask for your recovery
-                        phrase or private key.
+                <div class="wallet-flow-step-grid">
+                    <div class="wallet-flow-card">
+                        <span class="wallet-flow-step-number">1</span>
+                        <h2 class="wallet-flow-step-title">Connect marketplace wallet</h2>
+                        <p class="wallet-flow-step-text">
+                            {{ $wallet->isConnected() ? 'Connected to ' . $wallet->wallet_provider . '.' : 'Choose a provider and save the public address you use on the marketplace.' }}
+                        </p>
+                    </div>
+
+                    <div class="wallet-flow-card">
+                        <span class="wallet-flow-step-number">2</span>
+                        <h2 class="wallet-flow-step-title">Choose payout destination</h2>
+                        <p class="wallet-flow-step-text">
+                            {{ $wallet->hasWithdrawalWallet() ? 'Current payout wallet: ' . $wallet->masked_withdrawal_wallet_address : 'Add the address where approved withdrawals should be sent.' }}
+                        </p>
+                    </div>
+
+                    <div class="wallet-flow-card">
+                        <span class="wallet-flow-step-number">3</span>
+                        <h2 class="wallet-flow-step-title">Request a withdrawal</h2>
+                        <p class="wallet-flow-step-text">
+                            {{ $wallet->isConnected() && $wallet->hasWithdrawalWallet() ? 'Your setup is complete and the withdrawal form is now available.' : 'The withdrawal form unlocks only after steps 1 and 2 are complete.' }}
+                        </p>
+                    </div>
+                </div>
+
+                <div class="wallet-flow-hero">
+                    <span class="wallet-flow-eyebrow">Providers</span>
+                    <h2 class="wallet-flow-title">Choose a wallet provider</h2>
+                    <p class="wallet-flow-text">
+                        These shortcuts prefill the connection page so the flow stays quick and consistent. We only
+                        request your public wallet address, never a private key or 12-word phrase.
                     </p>
                 </div>
 
-                <div class="row">
+                <div class="wallet-flow-provider-grid">
                     @foreach ($providers as $provider)
-                        <div class="col-lg-3 mb30">
-                            <a class="box-url" href="{{ route('connect.wallet', ['provider' => $provider['name']]) }}">
-                                @if ($provider['label'])
-                                    <span class="box-url-label">{{ $provider['label'] }}</span>
-                                @endif
-                                <img src="{{ $provider['image'] }}" alt="{{ $provider['name'] }}" class="mb20">
-                                <h4>{{ $provider['name'] }}</h4>
-                                <p>
-                                    {{ $wallet->wallet_provider === $provider['name'] && $wallet->isConnected() ? 'Currently connected on your account.' : 'Use this provider for your marketplace wallet connection.' }}
-                                </p>
-                            </a>
-                        </div>
+                        @php
+                            $isActive = $wallet->wallet_provider === $provider['name'] && $wallet->isConnected();
+                        @endphp
+
+                        <a
+                            href="{{ route('connect.wallet', ['provider' => $provider['name']]) }}"
+                            class="wallet-flow-provider-card{{ $isActive ? ' active' : '' }}">
+                            @if ($provider['label'])
+                                <span class="wallet-flow-badge">{{ $provider['label'] }}</span>
+                            @elseif ($isActive)
+                                <span class="wallet-flow-badge">Connected</span>
+                            @endif
+
+                            <img src="{{ $provider['image'] }}" alt="{{ $provider['name'] }}">
+                            <h3 class="wallet-flow-provider-title">{{ $provider['name'] }}</h3>
+                            <p class="wallet-flow-provider-text">
+                                {{ $isActive ? 'This provider is currently linked to your account.' : 'Use this provider to continue the marketplace wallet setup flow.' }}
+                            </p>
+                        </a>
                     @endforeach
                 </div>
             </div>

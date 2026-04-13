@@ -33,6 +33,32 @@ test('withdrawal page redirects users without a connected wallet', function () {
         ->assertSessionHas('error', 'Connect your wallet before requesting a withdrawal.');
 });
 
+test('wallet setup page renders successfully', function () {
+    $user = User::factory()->create();
+    makeWallet($user);
+
+    $response = $this
+        ->actingAs($user)
+        ->get(route('wallet'));
+
+    $response
+        ->assertOk()
+        ->assertSee('Set up your wallet once, then withdraw with confidence.');
+});
+
+test('connect wallet page renders successfully', function () {
+    $user = User::factory()->create();
+    makeWallet($user);
+
+    $response = $this
+        ->actingAs($user)
+        ->get(route('connect.wallet'));
+
+    $response
+        ->assertOk()
+        ->assertSee('Connect the wallet you use on the marketplace.');
+});
+
 test('withdrawal page redirects users without a payout wallet', function () {
     $user = User::factory()->create();
     makeWallet($user, [
@@ -67,7 +93,7 @@ test('connected users with a payout wallet can open the withdrawal page', functi
 
     $response
         ->assertOk()
-        ->assertSee('Withdrawal request')
+        ->assertSee('Submit request')
         ->assertSee('0xabcdef1234567890abcdef1234567890abcdef12');
 });
 

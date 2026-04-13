@@ -1,103 +1,88 @@
 @section('title', 'Withdrawal Wallet')
 <x-home-layout>
-    @vite('resources/css/app.css')
+    @push('styles')
+        @include('home.partials.wallet-flow-styles')
+    @endpush
 
     <div class="no-bottom no-top" id="content">
-        <div id="top"></div>
-
-        <section id="subheader" class="text-light"
-            data-bgimage="url(/template/assets/images/background/subheader.jpg) top">
-            <div class="relative text-center center-y">
-                <div class="container">
-                    <div class="row">
-                        <div class="text-center col-md-12">
-                            <h1 class="text-[2.5rem] md:text-[4rem] font-bold">Withdrawal Wallet</h1>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section aria-label="section" class="py-12">
-            <div class="container px-4 mx-auto">
-                <div class="max-w-3xl mx-auto mb-8 text-center">
-                    <h3 class="text-3xl font-bold text-indigo-600">Choose where withdrawals should be sent</h3>
-                    <p class="mt-3 text-gray-600">
-                        Add the destination wallet address for payouts. This can be the same as your connected wallet or
-                        a different address you control.
+        <section class="wallet-flow-page">
+            <div class="wallet-flow-shell">
+                <div class="wallet-flow-hero">
+                    <span class="wallet-flow-eyebrow">Step 2</span>
+                    <h1 class="wallet-flow-title">Choose where approved withdrawals should be sent.</h1>
+                    <p class="wallet-flow-text">
+                        Save the payout destination for your withdrawals. This can match your connected wallet or be a
+                        different wallet address that you control.
                     </p>
                 </div>
 
-                <div class="grid max-w-5xl gap-6 mx-auto md:grid-cols-2">
-                    <div class="p-6 bg-white rounded-lg shadow-md">
-                        <h4 class="mb-4 text-xl font-semibold text-gray-900">Wallet checklist</h4>
+                <div class="wallet-flow-grid two-col">
+                    <div class="wallet-flow-card">
+                        <h2 class="wallet-flow-card-title">Wallet checklist</h2>
 
-                        <div class="space-y-4 text-sm text-gray-700">
-                            <div class="p-4 rounded-lg {{ $wallet->isConnected() ? 'bg-green-50 border border-green-200' : 'bg-amber-50 border border-amber-200' }}">
-                                <p class="font-semibold">Connected wallet</p>
-                                <p class="mt-1">
+                        <div class="wallet-flow-stat-list">
+                            <div class="wallet-flow-stat {{ $wallet->isConnected() ? 'success' : 'warning' }}">
+                                <span class="wallet-flow-stat-title">Marketplace wallet</span>
+                                <p class="wallet-flow-stat-value">
                                     {{ $wallet->isConnected() ? ($wallet->wallet_provider . ' - ' . $wallet->wallet_address) : 'Connect your marketplace wallet first.' }}
                                 </p>
                             </div>
 
-                            <div class="p-4 rounded-lg {{ $wallet->hasWithdrawalWallet() ? 'bg-green-50 border border-green-200' : 'bg-slate-50 border border-slate-200' }}">
-                                <p class="font-semibold">Withdrawal destination</p>
-                                <p class="mt-1 break-all">
-                                    {{ $wallet->withdrawal_wallet_address ?: 'No withdrawal wallet added yet.' }}
+                            <div class="wallet-flow-stat {{ $wallet->hasWithdrawalWallet() ? 'success' : '' }}">
+                                <span class="wallet-flow-stat-title">Withdrawal destination</span>
+                                <p class="wallet-flow-stat-value">
+                                    {{ $wallet->withdrawal_wallet_address ?: 'No payout wallet has been saved yet.' }}
                                 </p>
                             </div>
                         </div>
 
                         @if (!$wallet->isConnected())
-                            <div class="p-4 mt-6 border border-amber-200 rounded-lg bg-amber-50">
-                                <p class="font-semibold text-amber-700">Connect your wallet next</p>
-                                <p class="mt-2 text-sm text-amber-700">
-                                    You can save your withdrawal destination now, but withdrawals stay locked until your
-                                    wallet is connected.
-                                </p>
-                                <a href="{{ route('connect.wallet') }}" class="inline-block mt-3 font-semibold text-indigo-600">
-                                    Connect wallet
-                                </a>
+                            <div class="wallet-flow-divider"></div>
+
+                            <div class="wallet-flow-note warning">
+                                <strong>Connect your wallet next</strong>
+                                You can save the payout destination now, but withdrawals stay locked until the
+                                marketplace wallet is connected.
                             </div>
                         @endif
                     </div>
 
-                    <div class="p-6 bg-white rounded-lg shadow-md">
-                        <h4 class="mb-4 text-xl font-semibold text-gray-900">Save withdrawal wallet</h4>
+                    <div class="wallet-flow-card">
+                        <h2 class="wallet-flow-card-title">Save payout wallet</h2>
 
-                        <form action="{{ route('wallet.address.store') }}" method="POST" class="space-y-4">
+                        <form action="{{ route('wallet.address.store') }}" method="POST">
                             @csrf
 
-                            <div>
-                                <label for="withdrawal_wallet_address" class="block mb-2 font-semibold text-gray-700">
-                                    Withdrawal wallet address
-                                </label>
-                                <input
-                                    type="text"
-                                    id="withdrawal_wallet_address"
-                                    name="withdrawal_wallet_address"
-                                    value="{{ old('withdrawal_wallet_address', $wallet->withdrawal_wallet_address) }}"
-                                    placeholder="0x..."
-                                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600">
-                                @error('withdrawal_wallet_address')
-                                    <p class="mt-2 text-danger">{{ $message }}</p>
-                                @enderror
-                            </div>
+                            <label for="withdrawal_wallet_address" class="wallet-flow-label">Withdrawal wallet address</label>
+                            <input
+                                type="text"
+                                id="withdrawal_wallet_address"
+                                name="withdrawal_wallet_address"
+                                value="{{ old('withdrawal_wallet_address', $wallet->withdrawal_wallet_address) }}"
+                                placeholder="0x..."
+                                class="wallet-flow-field">
+                            @error('withdrawal_wallet_address')
+                                <p class="wallet-flow-error">{{ $message }}</p>
+                            @enderror
 
-                            <button type="submit"
-                                class="w-full py-3 font-semibold text-white transition bg-indigo-600 rounded-lg hover:bg-indigo-700">
+                            <div style="height: 22px;"></div>
+
+                            <button type="submit" class="wallet-flow-button" style="width: 100%;">
                                 {{ $wallet->hasWithdrawalWallet() ? 'Update Withdrawal Wallet' : 'Save Withdrawal Wallet' }}
                             </button>
                         </form>
 
-                        @if ($wallet->isConnected() && $wallet->hasWithdrawalWallet())
-                            <div class="pt-4 mt-6 border-t border-gray-200">
-                                <a href="{{ route('request.withdrawal') }}" class="font-semibold text-indigo-600">
-                                    Continue to withdrawal request
-                                </a>
-                            </div>
-                        @endif
+                        <div class="wallet-flow-divider"></div>
+
+                        <div class="wallet-flow-actions">
+                            @if (!$wallet->isConnected())
+                                <a href="{{ route('connect.wallet') }}" class="wallet-flow-link">Connect marketplace wallet</a>
+                            @endif
+
+                            @if ($wallet->isConnected() && $wallet->hasWithdrawalWallet())
+                                <a href="{{ route('request.withdrawal') }}" class="wallet-flow-link">Continue to withdrawal request</a>
+                            @endif
+                        </div>
                     </div>
                 </div>
             </div>
